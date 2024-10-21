@@ -1,0 +1,14 @@
+:root{
+    /* colors */
+    --White: #FFFFFF;
+    --Gray01: #DEDEDE;
+    --Blue01: #8EB4D9;
+    --Blue02: #0B71D7;
+    --Blue03: #44688B;
+    --Blue04: #023850;
+
+    /* fonts*/
+    --Cinzel: "Cinzel", serif;
+    --Josefin: "Josefin Sans", sans-serif;
+}
+
