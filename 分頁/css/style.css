@@ -14,10 +14,12 @@
 
 body{
     background-color: var(--Gray01);
+    font-family: 'Josefin Sans';
+}
+main{
     display: flex;
     flex-flow: column;
     justify-content: center;
-    font-family: 'Josefin Sans';
 }
 h3{
     color: var(--Blue03);
@@ -34,8 +36,11 @@ p{
 .plastic-intro-section{
     display: flex;
     justify-content: space-between;
-    width: 80%;
+    align-items: center;
+    width: 70%;
+    margin-left: 15%;
     flex-wrap: wrap;
+    height: 50rem;
 }
 
 .plastic-intro-section .content{
@@ -59,7 +64,7 @@ p{
 }
 
 .plastic-intro-section img{
-    max-width: 20rem;
+    max-width: 30rem;
 }
 
 .animal-intro-section{
@@ -83,7 +88,7 @@ p{
     margin-bottom: -1rem;
 }
 .main-content{
-    width: 75%;
+    width: 70%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -178,10 +183,36 @@ p{
 }
 
 footer{
+    margin-top: 7rem;
     height: 18rem;
     text-align: center;
-    
 }
 footer hr{
     width: 70%;
+    margin-left: 15%;
+}
+.social-media-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.social-media{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    background-color: var(--White);
+    border-radius: 50px;
+    height: 2rem;
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+    width: 17.5rem;
+}
+.logo{
+    height: 5rem;
+    margin: 1rem;
+}
+h4{
+    color: var(--Blue03);
+    margin-right: 1rem;
 }
