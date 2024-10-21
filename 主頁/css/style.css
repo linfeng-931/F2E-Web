@@ -12,3 +12,109 @@
     --Josefin: "Josefin Sans", sans-serif;
 }
 
+html,body{
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+}
+
+/* Header Section */
+.header-js{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+}
+
+/* Header Left Section */
+.left{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+} 
+
+.logo-area{
+    background: url("../../image/logo-bg.svg") no-repeat left top;
+    background-size: contain;
+    width: 13.542vw;
+}
+
+.logo-padding{
+    position: relative;
+    padding-top: 40%;
+}
+
+.logo-body{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.logo{
+    display: inline-block;
+    width: 5.5555555556vw;
+    margin: 0.875rem 0 0 2.5rem;
+}
+
+.logo .img{
+    display: block;
+    width: 100%;
+}
+
+/* Header Right Section */
+
+.right{
+    position: absolute;
+    top: 0.875rem;
+    right: 2.5rem;
+}
+
+.menu-btn{
+    width: 2.375rem;
+    height: 2.375rem;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid var(--Blue01);
+}
+
+.menu-btn:focus{
+    outline: none;
+}
+
+.menu-btn:hover{
+    background-color: var(--Blue01);
+}
+
+.menu-btn:hover .ri-menu-line{
+    color: #fff;
+}
+
+.ri-menu-line{
+    font-size: 1rem;
+    color: var(--Blue01);
+}
+
+
+/* Media query */
+@media screen and (min-width: 1920px) {
+    .logo{
+        margin: 1.1375rem 0 0 3.25rem;
+    }
+
+    .right{
+        top: 1.1375rem;
+        right: 3.25rem;
+    }
+
+    .menu-btn{
+        width: 3.0875rem;
+        height: 3.0875rem;
+    }
+
+    .ri-menu-line{
+        font-size: 1.3rem;
+    }
+}
