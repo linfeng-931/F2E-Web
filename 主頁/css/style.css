@@ -122,11 +122,11 @@ body{
 }
 
 .banner .bg1{
-    background: url("../../image/background.svg") no-repeat center center;
+    background: url("../../image/background.svg") no-repeat top center;
 }
 
 .banner .bg2{
-    background: url(../../image/cliff.svg) no-repeat center center;
+    background: url(../../image/cliff.svg) no-repeat top center;
 }
 
 /* Media query */
