@@ -5,21 +5,35 @@
     --Blue02: #0B71D7;
     --Blue03: #44688B;
     --Blue04: #023850;
+    --x: 1100px;
 }
 
 *{
     margin: 0;
     box-sizing: border-box;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 body{
     background-color: var(--Gray01);
     font-family: 'Josefin Sans';
+}
+.slider-container{
+    width: var(--x);
 }
 main{
     display: flex;
     flex-flow: column;
     justify-content: center;
+}
+.main-content{
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 70rem;
 }
 h3{
     color: var(--Blue03);
@@ -34,13 +48,15 @@ p{
 }
 
 .plastic-intro-section{
+    position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    width: 70%;
-    margin-left: 15%;
+    flex-direction: column;
     flex-wrap: wrap;
     height: 50rem;
+    margin-bottom: 20rem;
+    gap: 200px;
 }
 
 .plastic-intro-section .content{
@@ -76,24 +92,18 @@ p{
 }
 .animal-intro-section .background-wave{
     position: absolute;
-    z-index: -10;
+    z-index: -18;
 }
 
 .animal-intro-section .background-wave-down{
     position: absolute;
-    z-index: -11;
+    z-index: -19;
     transform: rotate(0.5turn);
     opacity: 0.5;
-    width: 101%;
+    width: 100%;
     margin-bottom: -1rem;
 }
-.main-content{
-    width: 70%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 2rem;
-}
+
 .animal-intro-section .main-content img{
     width: 50%;
     right:0;
@@ -102,9 +112,6 @@ p{
     width: 20rem;
     padding: 0 10px;
 }
-.animal-intro-section .bar{
-
-}
 
 .plastic-section{
     position: relative;
@@ -112,11 +119,11 @@ p{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 130rem;
+    height: 50%;
     background: linear-gradient(var(--Blue01), var(--Gray01));
     z-index: -20;
     margin-top: -10rem;
-    padding-top: 23rem;
+    padding-top: 40%;
     gap: 200px;
 }
 
@@ -172,7 +179,6 @@ p{
 }
 .plastic-section .main-content{
     gap:0;
-    max-width: 63rem;
 }
 .plastic-section a{
     background-color: var(--White);
@@ -215,4 +221,140 @@ footer hr{
 h4{
     color: var(--Blue03);
     margin-right: 1rem;
+}
+
+
+.slider{
+    width: 100%;
+    overflow: hidden;
+}
+.slide-wrapper{
+    display: flex;
+    width: calc(3 * var(--x));
+    transition: 0.5s ease-in-out;
+}
+
+/*Slide contents*/
+
+.slide{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    place-items: center;
+    width: var(--x);
+    aspect-ratio: 2/1;
+    user-select: none;
+    padding: 0 50px;
+    margin: 0 10px;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+.context{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0 40px 0 10px;
+}
+.slide img{
+    width: 100%;
+    aspect-ratio: 1/1;
+    opacity: 0;
+    transform: translateX(300px);
+    transition: transform 0.7s ease-in-out 0.4s, opacity 0.7s ease-in-out;
+}
+.slide.active img{
+    opacity: 1;
+    transform: translateX(0);
+}
+.slide h3{
+    width: max-content;
+    transform: translateX(-20px);
+    transition: all 0.6s ease-in-out 1s;
+    opacity: 0;
+}
+.slide.active h3{
+    transform: translateX(0);
+}
+.slide p{
+    transform: translateX(-20px);
+    transition:  all 0.6s ease-in-out 1.4s;
+    opacity: 0;
+}
+.slide.active p{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/*indicator*/
+.indicator{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    width: 100%;
+}
+.indicator .btn{
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    background: var(--Blue03);
+    margin: 4px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+.btn.active{
+    width: 40px;
+    background: var(--Gray01);
+}
+
+@media (max-width: 1200px){
+    :root{
+        --x: 900px;
+    }
+}
+@media (max-width: 950px){
+    :root{
+        --x: 700px;
+    }
+    .indicator .btn{
+        height: 15px;
+        width:15px;
+    }
+}
+@media (max-width: 720px){
+    :root{
+        --x: 480px;
+    }
+    .slide{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        place-items: unset;
+        row-gap: 20px;
+        aspect-ratio: 4/5;
+        padding: 40px 20px 20px;
+    }
+    .context{
+        align-items: center;
+        text-align: center;
+        padding: 0;
+    }
+    .slide img{
+        width: 60%;
+        margin: auto auto;
+    }
+    .indicator{
+        margin-top: 15px;
+    }
+}
+@media (max-width: 530px){
+    :root{
+        --x: 320px;
+    }
+    .slide{
+        aspect-ratio: 3/4;
+        padding: 40px 15px 20px;
+    }
+    .slide img{
+        width: 80%;
+    }
 }
