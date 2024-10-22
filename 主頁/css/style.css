@@ -42,7 +42,7 @@ body{
 .logo-area{
     background: url("../../image/logo-bg.svg") no-repeat left top;
     background-size: contain;
-    width: 13.542vw;
+    width: 12.542vw;
 }
 
 .logo-padding{
@@ -60,7 +60,7 @@ body{
 .logo{
     display: inline-block;
     width: 5.5555555556vw;
-    margin: 0.875rem 0 0 2.5rem;
+    margin: 0.875rem 0 0 1.5rem;
 }
 
 .logo .img{
@@ -117,22 +117,60 @@ body{
     bottom: 0;
     width: 100%;
     height: 100%;
-    background-size: auto 100%;
-    background-position: center bottom;
 }
 
 .banner .bg1{
-    background: url("../../image/background.svg") no-repeat center center;
+    background: url("../../image/background.svg") no-repeat;
+    background-size: 100%;
 }
 
 .banner .bg2{
-    background: url(../../image/cliff.svg) no-repeat center center;
+    background: url(../../image/cliff.svg) no-repeat;
+    background-size: 100%;
+}
+
+.banner .bg-txt{
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+    color: var(--White);
+    text-align: center;
+    position: absolute;
+    top: 72%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.bg-txt .banner-title{
+    font-family: var(--Cinzel);
+    font-size: 6.15rem;
+}
+
+.bg-txt .banner-sub-title{
+    font-family: var(--Josefin);
+    font-size: 1.538rem;
+    font-weight: 400;
+}
+
+.bg-txt .line{
+    width: 1px;
+    height: 8rem;
+    background: linear-gradient(transparent,#fff);
+    margin: auto;
+}
+
+.bg-txt .tips-txt{
+    font-family: var(--Josefin);
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: .1rem;
+    opacity: 50%;
 }
 
 /* Media query */
 @media screen and (min-width: 1920px) {
     .logo{
-        margin: 1.1375rem 0 0 3.25rem;
+        margin: 1.1375rem 0 0 1.95rem;
     }
 
     .right{
@@ -148,4 +186,31 @@ body{
     .ri-menu-line{
         font-size: 1.3rem;
     }
+
+    .banner .bg{
+        position: absolute;
+        background-size: 100%;
+    }
+
+    .banner .bg-txt{
+        top: 72%;
+        gap: 1.3rem;
+    }
+
+    .bg-txt .banner-title{
+        font-size: 8rem;
+    }
+
+    .bg-txt .banner-sub-title{
+        font-size: 2rem;
+    }
+
+    .bg-txt .line{
+        height: 11rem;
+    }
+
+    .bg-txt .tips-txt{
+        font-size: 1.56rem;
+    }
+
 }
