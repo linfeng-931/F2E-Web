@@ -1,4 +1,4 @@
-const main = document.querySelector(".slider-container");
+/*const main = document.querySelector(".slider-container");
 const slideWrapper = document.querySelector(".slide-wrapper");
 const slides = document.querySelector(".slider");
 const btns = document.querySelector(".btn");
@@ -33,5 +33,43 @@ btns.forEach((btn, index) => {
 
 window.addEventListener("resize", () => {
     updateSlide();
+}); */
+
+const btns = document.querySelectorAll(".btn");
+const slide = document.querySelectorAll(".slide");
+const slideRow = document.getElementById("slide-wrapper");
+const main = document.querySelector(".slider-container");
+
+
+let currentIndex = 0;
+
+function updateSlide() {
+  const mainWidth = main.offsetWidth;
+  const translateValue = currentIndex * -mainWidth;
+  slideRow.style.transform = `translateX(${translateValue}px)`;
+
+  btns.forEach((btn, index) => {
+    btn.classList.toggle("active", index === currentIndex);
+  });
+  slide.forEach((btn, index) => {
+    btn.classList.toggle("active", index === currentIndex);
+  });
+}
+
+btns.forEach((btn, index) => {
+  btn.addEventListener("click", () => {
+    currentIndex = index;
+    updateSlide();
+  });
+});
+slide.forEach((btn, index) => {
+    btn.addEventListener("click", () => {
+        currentIndex = index;
+        updateSlide();
+    });
 });
 
+
+window.addEventListener("resize", () => {
+  updateSlide();
+});

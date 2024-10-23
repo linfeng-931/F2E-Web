@@ -5,6 +5,7 @@
     --Blue02: #0B71D7;
     --Blue03: #44688B;
     --Blue04: #023850;
+    --Yellow: #F7D55B;
     --x: 1100px;
 }
 
@@ -19,9 +20,7 @@ body{
     background-color: var(--Gray01);
     font-family: 'Josefin Sans';
 }
-.slider-container{
-    width: var(--x);
-}
+
 main{
     display: flex;
     flex-flow: column;
@@ -72,10 +71,11 @@ p{
     margin-bottom: 1rem;
 }
 .plastic-intro-section .content .marine-species{
-    margin: 2rem;
+    margin: 4rem 1rem 0 1rem;
     display: flex;
-    width: 3rem;
-    justify-content: space-between;
+    width: 100%;
+    height: 4.3rem;
+    justify-content: right;
     gap: 0.5rem;
 }
 
@@ -119,12 +119,17 @@ p{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 50%;
-    background: linear-gradient(var(--Blue01), var(--Gray01));
-    z-index: -20;
     margin-top: -10rem;
     padding-top: 40%;
     gap: 200px;
+}
+.background-blue-gray{
+    position: absolute;
+    background: linear-gradient(var(--Blue01), var(--Gray01));
+    z-index: -20;
+    height: 150%;
+    width: 100%;
+    margin-top: 110%;
 }
 
 .plastic-section img{
@@ -187,12 +192,17 @@ p{
     text-decoration: none;
     color: var(--Blue04);
 }
+.plastic-section a:hover{
+    background-color: var(--Yellow);
+    color: var(--White);
+}
 
 footer{
     margin-top: 7rem;
     height: 18rem;
     text-align: center;
 }
+
 footer hr{
     width: 70%;
     margin-left: 15%;
@@ -213,17 +223,20 @@ footer hr{
     padding: 0 1rem;
     margin-bottom: 1rem;
     width: 17.5rem;
+    gap: 13px;
 }
-.logo{
-    height: 5rem;
-    margin: 1rem;
-}
+
 h4{
     color: var(--Blue03);
     margin-right: 1rem;
 }
 
 
+
+/*Slide contents*/
+.slider-container{
+    width: var(--x);
+}
 .slider{
     width: 100%;
     overflow: hidden;
@@ -231,12 +244,12 @@ h4{
 .slide-wrapper{
     display: flex;
     width: calc(3 * var(--x));
-    transition: 0.5s ease-in-out;
+    /*transition: 0.5s ease-in-out;*/
+    transition: 0.5s;
 }
 
-/*Slide contents*/
-
 .slide{
+    position: relative;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
@@ -247,7 +260,11 @@ h4{
     padding: 0 50px;
     margin: 0 10px;
     opacity: 0;
-    transition: opacity 2s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
+}
+.slide.active{
+    opacity: 1;
+    transition: opacity 1s ease-in;
 }
 .context{
     display: flex;
@@ -257,54 +274,106 @@ h4{
 }
 .slide img{
     width: 100%;
-    aspect-ratio: 1/1;
-    opacity: 0;
-    transform: translateX(300px);
-    transition: transform 0.7s ease-in-out 0.4s, opacity 0.7s ease-in-out;
-}
-.slide.active img{
-    opacity: 1;
-    transform: translateX(0);
-}
-.slide h3{
-    width: max-content;
-    transform: translateX(-20px);
-    transition: all 0.6s ease-in-out 1s;
-    opacity: 0;
-}
-.slide.active h3{
-    transform: translateX(0);
-}
-.slide p{
-    transform: translateX(-20px);
-    transition:  all 0.6s ease-in-out 1.4s;
-    opacity: 0;
-}
-.slide.active p{
-    opacity: 1;
-    transform: translateX(0);
 }
 
+.slide h3{
+    margin-bottom: 2rem;
+}
+
+
 /*indicator*/
-.indicator{
+.indicator {
     display: flex;
     justify-content: center;
-    margin-top: 30px;
-    width: 100%;
-}
-.indicator .btn{
+    margin-top: 4rem;
+  }
+  
+  .indicator .btn {
     display: inline-block;
-    height: 20px;
-    width: 20px;
-    background: var(--Blue03);
+    height: 15px;
+    width: 15px;
     margin: 4px;
     border-radius: 15px;
+    background: var(--Blue01);
     cursor: pointer;
     transition: all 0.5s ease-in-out;
-}
-.btn.active{
-    width: 40px;
+  }
+  
+  .btn.active {
+    width: 30px;
     background: var(--Gray01);
+  }
+
+/*logo*/
+.header-js{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+}
+
+.left{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+} 
+
+.logo-area{
+    background: url("../../image/logo-bg.svg") no-repeat left top;
+    background-size: contain;
+    width: 13.542vw;
+}
+
+.logo-padding{
+    position: relative;
+    padding-top: 40%;
+}
+
+.logo-body{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.logo{
+    display: inline-block;
+    width: 5.5555555556vw;
+    margin: 0.875rem 0 0 2.5rem;
+}
+
+.logo .img{
+    display: block;
+    width: 100%;
+}
+footer .logo{
+    margin: 2rem 0;
+}
+
+/*@media*/
+@media screen and (min-width: 1920px) {
+    .logo{
+        margin: 1.1375rem 0 0 3.25rem;
+    }
+    footer .logo{
+        margin:1rem 0;
+    }
+
+    .right{
+        top: 1.1375rem;
+        right: 3.25rem;
+    }
+
+    .menu-btn{
+        width: 3.0875rem;
+        height: 3.0875rem;
+    }
+
+    .ri-menu-line{
+        font-size: 1.3rem;
+    }
 }
 
 @media (max-width: 1200px){
