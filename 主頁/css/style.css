@@ -6,6 +6,7 @@
     --Blue02: #0B71D7;
     --Blue03: #44688B;
     --Blue04: #023850;
+    --Blue05: #091454;
 
     /* fonts*/
     --Cinzel: "Cinzel", serif;
@@ -20,6 +21,7 @@ html,body{
 
 body{
     background-color: var(--Blue02);
+    overflow-x: hidden;
 }
 
 /* Header Section */
@@ -174,7 +176,7 @@ body{
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding: 15rem 7.5rem 20.5rem 7.5rem;
+    padding: 15rem 7.5rem 19.5rem 7.5rem;
 }
 
 .sdgs-txt-wrapper{
@@ -197,6 +199,108 @@ body{
     position: absolute;
     right: 0;
     margin-top: 1.5rem;
+}
+
+/*Perpetrators section*/
+
+.perpetrator .bg{
+    width: 100%;
+    height: 100%;
+    background: url("../../image/wave02.svg") no-repeat center center;
+    background-size: cover;
+    position: relative;
+}
+
+.padding{
+    padding: 0 6.25rem;
+    position: relative;
+    top: 1.2rem;
+}
+
+.perpetrator-title{
+    font-size: 4.5rem;
+    font-family: var(--Cinzel);
+    color: var(--Blue03);
+    padding: 6rem 0 2.30rem 0;
+}
+
+.gallery{
+    display: flex;
+}
+
+.gallery-left,.gallery-right{
+    width: 50%;
+}
+
+.detailsWrapper {
+	margin:auto;
+	width:80%;
+}
+
+.details {
+	height:100vh;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+    gap: 1.5rem;
+}
+
+.plastic-title-wrapper,.plastic-text-wrapper{
+    font-family: var(--Josefin);
+}
+
+.plastic-title{
+    font-size: 3.5rem;
+    color: var(--Blue04);
+}
+
+.plastic-txt{
+    font-size: 1.5rem;
+    color: #888;
+}
+
+.plastic-btn{
+    background:linear-gradient(135deg,#0a3990,#4fa1eb);
+    width: 40%;
+    padding: 1rem 2rem;
+    color: var(--White);
+    font-family: var(--Josefin);
+    font-size: 1rem;
+    border-radius: 100px;
+    border: none;
+}
+
+.plastic-btn:hover{
+    background:linear-gradient(#001030,#0a3990);
+    cursor: pointer;
+}
+
+.plastic-btn:focus{
+    outline: none;
+}
+
+.gallery-right {
+	height:100vh;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+}
+
+.photos {
+	width:40vw;
+	height:60vw;
+	position:relative;
+}
+
+.photo {
+	position:absolute;
+	width:100%;
+	height:100%;
+}
+
+.photo img{
+    width: 100%;
+    height: 100%;
 }
 
 /* Media query */
@@ -246,7 +350,7 @@ body{
     }
 
     .sdgs{
-        padding: 19.5rem 9.75rem 26.65rem 9.75rem;
+        padding: 19.5rem 9.75rem 25.65rem 9.75rem;
     }
 
     .sdgs-txt-wrapper{
@@ -261,6 +365,34 @@ body{
 
     .sdgs-txt-wrapper .sdgs-source{
         font-size: 1.5rem;
+    }
+
+    .padding{
+        padding: 0 8.125rem;
+        top: 1.56rem;
+    }
+
+    .perpetrator-title{
+        font-size: 5.85rem;
+        padding: 7.8rem 0 2.99rem 0;
+    }
+
+    .details {
+        gap: 1.95rem;
+    }
+
+    .plastic-title{
+        font-size: 4.55rem;
+    }
+
+    .plastic-txt{
+        font-size: 1.95rem;
+    }
+
+    .plastic-btn{
+        padding: 1.3rem 2.6rem;
+        font-size: 1.3rem;
+        border-radius: 130px;
     }
 
 }
