@@ -6,6 +6,7 @@
     --Blue02: #0B71D7;
     --Blue03: #44688B;
     --Blue04: #023850;
+    --Blue05: #091454;
 
     /* fonts*/
     --Cinzel: "Cinzel", serif;
@@ -20,6 +21,7 @@ html,body{
 
 body{
     background-color: var(--Blue02);
+    overflow-x: hidden;
 }
 
 /* Header Section */
@@ -42,7 +44,7 @@ body{
 .logo-area{
     background: url("../../image/logo-bg.svg") no-repeat left top;
     background-size: contain;
-    width: 13.542vw;
+    width: 12.542vw;
 }
 
 .logo-padding{
@@ -60,7 +62,7 @@ body{
 .logo{
     display: inline-block;
     width: 5.5555555556vw;
-    margin: 0.875rem 0 0 2.5rem;
+    margin: 0.875rem 0 0 1.5rem;
 }
 
 .logo .img{
@@ -117,22 +119,20 @@ body{
     bottom: 0;
     width: 100%;
     height: 100%;
-    background-size: auto 100%;
-    background-position: center bottom;
 }
 
 .banner .bg1{
-    background: url("../../image/background.svg") no-repeat top center;
+    background: url("../../image/background.svg") no-repeat center center;
 }
 
 .banner .bg2{
-    background: url(../../image/cliff.svg) no-repeat top center;
+    background: url(../../image/cliff.svg) no-repeat center center;
 }
 
 /* Media query */
 @media screen and (min-width: 1920px) {
     .logo{
-        margin: 1.1375rem 0 0 3.25rem;
+        margin: 1.1375rem 0 0 1.95rem;
     }
 
     .right{
@@ -147,5 +147,77 @@ body{
 
     .ri-menu-line{
         font-size: 1.3rem;
+    }
+
+    .banner .bg{
+        position: absolute;
+        background-size: 100%;
+    }
+
+    .banner .bg-txt{
+        top: 72%;
+        gap: 1.3rem;
+    }
+
+    .bg-txt .banner-title{
+        font-size: 8rem;
+    }
+
+    .bg-txt .banner-sub-title{
+        font-size: 2rem;
+    }
+
+    .bg-txt .line{
+        height: 11rem;
+    }
+
+    .bg-txt .tips-txt{
+        font-size: 1.56rem;
+    }
+
+    .sdgs{
+        padding: 19.5rem 9.75rem 25.65rem 9.75rem;
+    }
+
+    .sdgs-txt-wrapper{
+        max-width: 65rem;
+    }
+
+    .sdgs-txt-wrapper .sdgs-txt{
+        font-size: 3.445rem;
+        line-height: 4.496375rem;
+        letter-spacing: 0.24375rem;
+    }
+
+    .sdgs-txt-wrapper .sdgs-source{
+        font-size: 1.5rem;
+    }
+
+    .padding{
+        padding: 0 8.125rem;
+        top: 1.56rem;
+    }
+
+    .perpetrator-title{
+        font-size: 5.85rem;
+        padding: 7.8rem 0 2.99rem 0;
+    }
+
+    .details {
+        gap: 1.95rem;
+    }
+
+    .plastic-title{
+        font-size: 4.55rem;
+    }
+
+    .plastic-txt{
+        font-size: 1.95rem;
+    }
+
+    .plastic-btn{
+        padding: 1.3rem 2.6rem;
+        font-size: 1.3rem;
+        border-radius: 130px;
     }
 }
