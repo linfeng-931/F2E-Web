@@ -1,0 +1,422 @@
+:root{
+    /* colors */
+    --White: #FFFFFF;
+    --Gray01: #DEDEDE;
+    --Blue01: #8EB4D9;
+    --Blue02: #0B71D7;
+    --Blue03: #44688B;
+    --Blue04: #023850;
+    --Blue05: #091454;
+
+    /* fonts*/
+    --Cinzel: "Cinzel", serif;
+    --Josefin: "Josefin Sans", sans-serif;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+}
+
+body{
+    background-color: var(--Blue02);
+    overflow-x: hidden;
+}
+
+/* Header Section */
+.header-js{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+}
+
+/* Header Left Section */
+.left{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+} 
+
+.logo-area{
+    background: url("../../image/logo-bg.svg") no-repeat left top;
+    background-size: contain;
+    width: 12.542vw;
+}
+
+.logo-padding{
+    position: relative;
+    padding-top: 40%;
+}
+
+.logo-body{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.logo{
+    display: inline-block;
+    width: 5.5555555556vw;
+    margin: 0.875rem 0 0 1.5rem;
+}
+
+.logo .img{
+    display: block;
+    width: 100%;
+}
+
+/* Header Right Section */
+
+.right{
+    position: absolute;
+    top: 0.875rem;
+    right: 2.5rem;
+}
+
+.menu-btn{
+    width: 2.375rem;
+    height: 2.375rem;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid var(--Blue01);
+}
+
+.menu-btn:focus{
+    outline: none;
+}
+
+.menu-btn:hover{
+    background-color: var(--Blue01);
+}
+
+.menu-btn:hover .ri-menu-line{
+    color: #fff;
+}
+
+.ri-menu-line{
+    font-size: 1rem;
+    color: var(--Blue01);
+}
+
+/* Main Section */
+
+/* Banner Section */
+.banner{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner .bg{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.banner .bg1{
+    background: url("../../image/background.svg") no-repeat;
+    background-size: 100%;
+}
+
+.banner .bg2{
+    background: url(../../image/cliff.svg) no-repeat;
+    background-size: 100%;
+}
+
+.banner .bg-txt{
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+    color: var(--White);
+    text-align: center;
+    position: absolute;
+    top: 72%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.bg-txt .banner-title{
+    font-family: var(--Cinzel);
+    font-size: 6.15rem;
+}
+
+.bg-txt .banner-sub-title{
+    font-family: var(--Josefin);
+    font-size: 1.538rem;
+    font-weight: 400;
+}
+
+.bg-txt .line{
+    width: 1px;
+    height: 8rem;
+    background: linear-gradient(transparent,#fff);
+    margin: auto;
+}
+
+.bg-txt .tips-txt{
+    font-family: var(--Josefin);
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: .1rem;
+    opacity: 50%;
+}
+
+/* SDGS section */
+
+.sdgs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 15rem 7.5rem 19.5rem 7.5rem;
+}
+
+.sdgs-txt-wrapper{
+    color: var(--White);
+    font-family: var(--Josefin);
+    max-width: 50rem;
+    position: relative;
+}
+
+.sdgs-txt-wrapper .sdgs-txt{
+    font-size: 2.65rem;
+    font-weight: 300;
+    line-height: 3.45875rem;
+    letter-spacing: 0.1875rem;
+}
+
+.sdgs-txt-wrapper .sdgs-source{
+    font-size: 1.15rem;
+    font-weight: 400;
+    position: absolute;
+    right: 0;
+    margin-top: 1.5rem;
+}
+
+/*Perpetrators section*/
+
+.perpetrator .bg{
+    width: 100%;
+    height: 100%;
+    background: url("../../image/wave02.svg") no-repeat center center;
+    background-size: cover;
+    position: relative;
+}
+
+.perpetrator .padding{
+    padding: 0 6.25rem;
+    position: relative;
+    top: 1.2rem;
+}
+
+.perpetrator-title{
+    font-size: 4.5rem;
+    font-family: var(--Cinzel);
+    color: var(--Blue03);
+    padding: 6rem 0 2.30rem 0;
+}
+
+.gallery{
+    display: flex;
+}
+
+.gallery-left,.gallery-right{
+    width: 50%;
+}
+
+.detailsWrapper {
+	margin:auto;
+	width:80%;
+}
+
+.details {
+	height:100vh;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+    gap: 1.5rem;
+}
+
+.plastic-title-wrapper,.plastic-text-wrapper{
+    font-family: var(--Josefin);
+}
+
+.plastic-title{
+    font-size: 3.5rem;
+    color: var(--Blue04);
+}
+
+.plastic-txt{
+    font-size: 1.5rem;
+    color: #888;
+    line-height: 1.5;
+}
+
+.plastic-btn{
+    background:linear-gradient(135deg,#0a3990,#4fa1eb);
+    width: 40%;
+    padding: 1rem 2rem;
+    color: var(--White);
+    font-family: var(--Josefin);
+    font-size: 1rem;
+    border-radius: 100px;
+    border: none;
+}
+
+.plastic-btn:hover{
+    background:linear-gradient(#001030,#0a3990);
+    cursor: pointer;
+}
+
+.plastic-btn:focus{
+    outline: none;
+}
+
+.gallery-right {
+	height:100vh;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+    align-items: c;
+}
+
+.photos {
+	width:100%;
+	height:60vw;
+	position:relative;
+}
+
+.photo {
+	position:absolute;
+	width:100%;
+	height:100%;
+}
+
+.photo img{
+    width: 100%;
+    height: 100%;
+}
+
+.bag-img,.micro-img{
+    top: 2rem;
+}
+
+/* Humanity Section */
+.humanity .bg{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#0B71D7,#A9BED3,#CACACA);
+}
+
+.humanity .padding{
+    padding: 0 6.25rem;
+}
+
+.humanity-content-wrapper{
+    display: flex;
+}
+
+.humanity-txt-wrapper,.humanity-img-wrapper{
+    width: 50%;
+}
+
+/* Media query */
+@media screen and (min-width: 1920px) {
+    .logo{
+        margin: 1.1375rem 0 0 1.95rem;
+    }
+
+    .right{
+        top: 1.1375rem;
+        right: 3.25rem;
+    }
+
+    .menu-btn{
+        width: 3.0875rem;
+        height: 3.0875rem;
+    }
+
+    .ri-menu-line{
+        font-size: 1.3rem;
+    }
+
+    .banner .bg{
+        position: absolute;
+        background-size: 100%;
+    }
+
+    .banner .bg-txt{
+        top: 72%;
+        gap: 1.3rem;
+    }
+
+    .bg-txt .banner-title{
+        font-size: 8rem;
+    }
+
+    .bg-txt .banner-sub-title{
+        font-size: 2rem;
+    }
+
+    .bg-txt .line{
+        height: 11rem;
+    }
+
+    .bg-txt .tips-txt{
+        font-size: 1.56rem;
+    }
+
+    .sdgs{
+        padding: 19.5rem 9.75rem 25.65rem 9.75rem;
+    }
+
+    .sdgs-txt-wrapper{
+        max-width: 65rem;
+    }
+
+    .sdgs-txt-wrapper .sdgs-txt{
+        font-size: 3.445rem;
+        line-height: 4.496375rem;
+        letter-spacing: 0.24375rem;
+    }
+
+    .sdgs-txt-wrapper .sdgs-source{
+        font-size: 1.5rem;
+    }
+
+    .padding{
+        padding: 0 8.125rem;
+        top: 1.56rem;
+    }
+
+    .perpetrator-title{
+        font-size: 5.85rem;
+        padding: 7.8rem 0 2.99rem 0;
+    }
+
+    .details {
+        gap: 1.95rem;
+    }
+
+    .plastic-title{
+        font-size: 4.55rem;
+    }
+
+    .plastic-txt{
+        font-size: 1.95rem;
+    }
+
+    .plastic-btn{
+        padding: 1.3rem 2.6rem;
+        font-size: 1.3rem;
+        border-radius: 130px;
+    }
+}
