@@ -33,7 +33,7 @@ body{
 .logo-area{
     background: url("../../image/logo-bg.svg") no-repeat left top;
     background-size: contain;
-    width: 13.542vw;
+    width: 12.542vw;
 }
 
 .logo-padding{
@@ -51,7 +51,7 @@ body{
 .logo{
     display: inline-block;
     width: 5.5555555556vw;
-    margin: 0.875rem 0 0 2.5rem;
+    margin: 0.875rem 0 0 1.5rem;
 }
 
 /* plastic-intro-section */
@@ -307,37 +307,156 @@ body{
     background: var(--Gray01);
   }
 
-.plastic-section{
+/* plastic-link-section */
+.plastic-link-section{
+    background-color: var(--Blue01);
+    width: 85%;
+    color: var(--White);
+    top: 5rem;
+    margin-bottom: 10.25rem;
+    box-shadow: 1.5rem 2rem 0 rgba(255, 255, 255, 0.5);
+}
+
+.plastic-link-section>img{
+    left: 4.875rem;
+    top: 15rem;
+    width: 30.125rem;
+    
+}
+
+.plastic-link-section .padding{
+    padding-top: 5rem;
+}
+
+.plastic-intro-section .column .right{
+    flex: 1;
+    padding-top: 8rem;
+}
+
+.plastic-link-section .learn-more-btn,.learn-more-txt{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.learn-more-btn{
+    margin-top: 1.5rem;
+    transition: .8s ease-out;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.learn-more-btn:hover .learn-more-txt{
+    border-bottom: 3px solid #fff;
+}
+
+.learn-more-btn:hover .arrow-wrapper{
+    background-color: #fff;
+    color: var(--Blue02);
+}
+
+.learn-more-btn:hover .learn-more-img{
+    transform: rotate(35deg) scale(1.1);
+}
+
+.learn-more-btn .learn-more-img{
+    width: 4rem;
+    height: 4rem;
+    position: relative;
+    transform: rotate(35deg);
+}
+
+.learn-more-img img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: .8s ease-out;
+}
+
+.learn-more-txt{
+    border-bottom: 3px dashed #fff;
+    padding-bottom: .5rem;
+    transition: .8s ease-out;
+}
+
+.learn-more-txt h2{
+    font-size: 1.2rem;
+}
+
+.arrow-wrapper{
+    background-color: var(--Blue02);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    position: relative;
+}
+
+.arrow-wrapper .ri-arrow-right-line{
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+/* plastic link right section */
+.link-right-section{
+    right: -15%;
+}
+
+.plastic-link-section.link-right-section{
+    box-shadow: -1.5rem 2rem 0 rgba(255, 255, 255, 0.5);
+}
+
+.plastic-link-section.link-right-section .padding{
+    padding-left: 10rem;
+    padding-right: 7.375rem;
+}
+
+.plastic-link-section.link-right-section>img{
+    left: 7.875rem;   
+}
+
+.plastic-link-section.link-right-section .column{
+    gap: 4.1rem;
+}
+/* .plastic-section{
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    /* margin-top: -10rem; */
-    /* padding-top: 40%; */
+    margin-top: -10rem;
+    padding-top: 40%;
     gap: 200px;
-}
-.background-blue-gray{
+} */
+/* .background-blue-gray{
     position: absolute;
     background: linear-gradient(var(--Blue01), var(--Gray01));
     z-index: -20;
     height: 150%;
     width: 100%;
     margin-top: 110%;
-}
+} */
 
-.plastic-section img{
+/* .plastic-section img{
     width: 35rem;
-}
+} */
 
-.plastic-section .content-container{
+/* .plastic-section .content-container{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     margin: 0 20px;
-}
-.plastic-section .content1{
+} */
+/* .plastic-section .content1{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -348,15 +467,15 @@ body{
     height: 22.5rem;
     width: 22.5rem;
     margin-bottom: 30px;
-}
-.content1 h3{
+} */
+/* .content1 h3{
     margin-bottom: 25px;
     text-align: center;
-}
-.content1 p{
+} */
+/* .content1 p{
     width: 75%;
-}
-.plastic-section .content2{
+} */
+/* .plastic-section .content2{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -367,29 +486,29 @@ body{
     height: 22.5rem;
     width: 22.5rem;
     margin-bottom: 30px;
-}
-.content2 h3{
+} */
+/* .content2 h3{
     color: var(--White);
     margin-bottom: 25px;
     text-align: center;
-}
-.content2 p{
+} */
+/* .content2 p{
     width: 75%;
-}
-.plastic-section .main-content{
+} */
+/* .plastic-section .main-content{
     gap:0;
-}
-.plastic-section a{
+} */
+/* .plastic-section a{
     background-color: var(--White);
     border-radius: 50px;
     padding: 0.7rem 17%;
     text-decoration: none;
     color: var(--Blue04);
-}
-.plastic-section a:hover{
+} */
+/* .plastic-section a:hover{
     background-color: var(--Yellow);
     color: var(--White);
-}
+} */
 
 /* footer{
     margin-top: 7rem;
