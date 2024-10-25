@@ -62,9 +62,9 @@ body{
 
 .plastic-intro-section>img{
     position: absolute;
-    left: 4.875rem;
-    top: 20rem;
-    width: 36.125rem;
+    left: 7.875rem;
+    top: 16rem;
+    width: 30.125rem;
 
 }
 
@@ -328,8 +328,7 @@ body{
     padding-top: 5rem;
 }
 
-.plastic-intro-section .column .right{
-    flex: 1;
+.plastic-link-section .column .right{
     padding-top: 8rem;
 }
 
