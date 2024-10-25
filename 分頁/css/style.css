@@ -425,210 +425,38 @@ body{
 .plastic-link-section.link-right-section .column{
     gap: 4.1rem;
 }
-/* .plastic-section{
-    position: relative;
+
+footer{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    margin-top: -10rem;
-    padding-top: 40%;
-    gap: 200px;
-} */
-/* .background-blue-gray{
-    position: absolute;
-    background: linear-gradient(var(--Blue01), var(--Gray01));
-    z-index: -20;
-    height: 150%;
-    width: 100%;
-    margin-top: 110%;
-} */
+    gap: 1.2rem;
+    margin-top: 15rem;
+    padding: 2rem 1rem;
+    background-color: #989898;
+}
 
-/* .plastic-section img{
-    width: 35rem;
-} */
+footer .footer-img-wrappper{
+    width: 20%;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px dashed #fff;
+}
 
-/* .plastic-section .content-container{
+.footer-img-wrappper img{
+    margin: auto;
+    width: 25%;
+}
+
+.footer-media-wrapper{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 0 20px;
-} */
-/* .plastic-section .content1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    color: var(--Blue03);
-    background-color: var(--Gray01);
-    border-radius: 50%;
-    height: 22.5rem;
-    width: 22.5rem;
-    margin-bottom: 30px;
-} */
-/* .content1 h3{
-    margin-bottom: 25px;
-    text-align: center;
-} */
-/* .content1 p{
-    width: 75%;
-} */
-/* .plastic-section .content2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    color: var(--White);
-    background-color: var(--Blue01);
-    border-radius: 50%;
-    height: 22.5rem;
-    width: 22.5rem;
-    margin-bottom: 30px;
-} */
-/* .content2 h3{
-    color: var(--White);
-    margin-bottom: 25px;
-    text-align: center;
-} */
-/* .content2 p{
-    width: 75%;
-} */
-/* .plastic-section .main-content{
-    gap:0;
-} */
-/* .plastic-section a{
-    background-color: var(--White);
-    border-radius: 50px;
-    padding: 0.7rem 17%;
-    text-decoration: none;
-    color: var(--Blue04);
-} */
-/* .plastic-section a:hover{
-    background-color: var(--Yellow);
-    color: var(--White);
-} */
+    justify-content: space-evenly;
+    font-size: 2rem;
+    width: 20%;
+    color: #fff;
+}
 
-/* footer{
-    margin-top: 7rem;
-    height: 18rem;
-    text-align: center;
-} */
+.footer-media-wrapper>*{
+    display: inline-block;
+}
 
-/* footer hr{
-    width: 70%;
-    margin-left: 15%;
-} */
-/* .social-media-container{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-} */
-/* .social-media{
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    background-color: var(--White);
-    border-radius: 50px;
-    height: 2rem;
-    padding: 0 1rem;
-    margin-bottom: 1rem;
-    width: 17.5rem;
-    gap: 13px;
-} */
-
-/* h4{
-    color: var(--Blue03);
-    margin-right: 1rem;
-} */
-
-
-
-
-
-
-
-/* .logo .img{
-    display: block;
-    width: 100%;
-} */
-/* footer .logo{
-    margin: 2rem 0;
-} */
-
-/*@media*/
-/* @media screen and (min-width: 1920px) {
-    .logo{
-        margin: 1.1375rem 0 0 3.25rem;
-    }
-    footer .logo{
-        margin:1rem 0;
-    }
-
-    .right{
-        top: 1.1375rem;
-        right: 3.25rem;
-    }
-
-    .menu-btn{
-        width: 3.0875rem;
-        height: 3.0875rem;
-    }
-
-    .ri-menu-line{
-        font-size: 1.3rem;
-    }
-} */
-
-/* @media (max-width: 1200px){
-    :root{
-        --x: 900px;
-    }
-} */
-/* @media (max-width: 950px){
-    :root{
-        --x: 700px;
-    }
-    .indicator .btn{
-        height: 15px;
-        width:15px;
-    }
-} */
-/* @media (max-width: 720px){
-    :root{
-        --x: 480px;
-    }
-    .slide{
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(2, 1fr);
-        place-items: unset;
-        row-gap: 20px;
-        aspect-ratio: 4/5;
-        padding: 40px 20px 20px;
-    }
-    .context{
-        align-items: center;
-        text-align: center;
-        padding: 0;
-    }
-    .slide img{
-        width: 60%;
-        margin: auto auto;
-    }
-    .indicator{
-        margin-top: 15px;
-    }
-} */
-/* @media (max-width: 530px){
-    :root{
-        --x: 320px;
-    }
-    .slide{
-        aspect-ratio: 3/4;
-        padding: 40px 15px 20px;
-    }
-    .slide img{
-        width: 80%;
-    }
-} */

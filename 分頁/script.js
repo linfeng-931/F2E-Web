@@ -45,7 +45,7 @@ imgBtn.forEach((e) => {
         currentIndex = targetIndex;
         updateSlide();
         window.scrollTo({
-          top: 950,
+          top: 900,
           behavior: "smooth",
         });
       }
