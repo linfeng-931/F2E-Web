@@ -9,6 +9,10 @@
     --x: 1200px;
 }
 
+html,body{
+    font-size: 16px;
+}
+
 body{
     background-color: var(--Gray01);
     font-family: 'Josefin Sans';
@@ -61,6 +65,7 @@ h2{
 
 .plastic-intro-section{
     position: relative;
+    font-size: 1rem;
 }
 
 .plastic-intro-section>img{
@@ -98,7 +103,7 @@ h2{
 }
 
 .section-title h1 span:nth-child(2){
-    margin-left: 1rem;
+    margin-left: 1em;
 }
 
 .txt{
@@ -554,6 +559,10 @@ h2{
 
 
 footer{
+    width: 100%;
+    background-color: #989898;
+}
+.footer-wrapper{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -561,7 +570,7 @@ footer{
     gap: 1.2rem;
     margin-top: 15rem;
     padding: 2rem 1rem;
-    background-color: #989898;
+    width: 100%;
 }
 
 footer .footer-img-wrappper{
@@ -592,9 +601,7 @@ footer .footer-img-wrappper{
 
 /*media*/
 @media screen and (min-width: 1920px){
-    .plastic-intro-section{
-        margin-left: 3rem;
-    }
+
     .plastic-link-section>img{
         left: 15rem;
         top: 13rem;
