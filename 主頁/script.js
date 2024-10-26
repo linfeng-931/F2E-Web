@@ -9,7 +9,7 @@ const animation = gsap.to(".photo:not(:first-child)", {
 
 ScrollTrigger.create({
   trigger: ".gallery",
-  start: "top -160rem",
+  start: "top -150rem",
   end: "bottom bottom",
   pin: ".gallery-right",
   animation: animation,
