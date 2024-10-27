@@ -202,12 +202,16 @@ body{
 }
 
 /* Perpetrators section */
+
+.perpetrator{
+    background: url(../../image/wave03.svg)no-repeat top center;
+    background-size: 120%;
+    position: relative;
+}
+
 .perpetrator .wrapper {
     overflow-x: hidden;
     position: relative;
-    background: url(../../image/wave03.svg)no-repeat top center;
-    background-size: cover;
-    
 }
 
 .container {
@@ -224,6 +228,10 @@ body{
 
 .container .mask {
     width: 0;
+}
+
+.perpetrator-title img{
+    width: 4rem;
 }
 
 .col {

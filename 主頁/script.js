@@ -9,9 +9,9 @@ let scrollTween = gsap.to(sections, {
   scrollTrigger: {
     trigger: ".container",
     pin: true,
-    scrub: 1,
+    scrub: 3,
     end: "+=3200",
-    //snap: 1 / (sections.length - 1),
+    snap: 1 / (sections.length - 1),
     markers: true,
   },
 });
@@ -21,7 +21,7 @@ gsap.to(mask, {
   scrollTrigger: {
     trigger: ".wrapper",
     start: "top left",
-    scrub: 1,
+    scrub: 3,
   },
 });
 
@@ -31,11 +31,10 @@ sections.forEach((section) => {
   if (text.length === 0) return;
 
   gsap.from(text, {
-    // y: 130,
     opacity: 0,
-    duration: 2,
+    duration: 5,
     ease: "elastic",
-    stagger: 0.1,
+    stagger: 0.5,
     scrollTrigger: {
       trigger: section,
       containerAnimation: scrollTween,
