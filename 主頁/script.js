@@ -1,9 +1,4 @@
-// // Menu
-// const tl = gsap.timeline({ pause: true });
-// const path = document.querySelector("path");
-// const spanBefore = CSSRulePlugin.getRule(".hamburger span:before");
-// gsap.set(spanBefore, { background: "#000" });
-// gsap.set(".menu", { visibility: "hidden" });
+// Menu
 
 //SDGS
 gsap.from(".sdgs-txt", {
