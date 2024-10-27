@@ -11,6 +11,12 @@
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
       rel="stylesheet"
     />
+
+    <!--font-family:'Cinzel'-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    
     <!-- stylesheet -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/reset.css" />
@@ -36,10 +42,33 @@
         </div>
       </div>
     </header>
+    <div class="table-of-contents">
+      <hr>
+      <a class="toc" data-id="1">
+        <p>Introduction</p>
+        <h4>1</h4>
+      </a>
+      
+      <a class="toc" data-id="2">
+        <p>Animals</p>
+        <h4>2</h4>
+      </a>
+
+      <a class="toc" data-id="3">
+        <p>News</p>
+        <h4>3</h4>
+      </a>
+
+      <a class="toc" data-id="4">
+        <p>Other</p>
+        <h4>4</h4>
+      </a>
+      <hr>
+    </div>
 
     <main>
       <!-- plastic-intro-section -->
-      <section class="plastic-intro-section">
+      <section class="plastic-intro-section" >
         <img src="../image/fishing-net-new.svg" alt="" />
         <div class="padding">
           <div class="column">
@@ -47,7 +76,7 @@
               <div class="section-title">
                 <h1><span>01</span><span>Fishing Net</span></h1>
               </div>
-              <p class="txt">
+              <p class="txt" id="area1">
                 How do fishing nets impact seabirds and marine mammals?
               </p>
             </div>
@@ -104,7 +133,7 @@
                 <div class="slide-wrapper" id="slide-wrapper">
                   <div class="slide active" id="dolphin">
                     <div class="context">
-                      <h3>DOLPHINS</h3>
+                      <h3 id="area2">DOLPHINS</h3>
                       <p>
                         Dolphins are highly intelligent mammals with excellent
                         memory. They often appear in human sight in various
@@ -164,7 +193,7 @@
           <h3>NEWS</h3>
           <div class="padding">
             <div class="column">
-              <div class="news-container dolphin-news">
+              <div class="news-container dolphin-news"  id="area3">
                 <img src="../image/dolphin.jpg" alt="dolphin" />
                 <h2 class="sub-title">Dolphin</h2>
                 <div class="txt">
@@ -234,6 +263,7 @@
         </div>
       </section>
       <!-- plastic-link-section -->
+      <div class="plastic-link-section-bg"></div>
       <div class="plastic-link-bg">
         <section class="plastic-link-section plastic-intro-section">
           <img src="../image/plasticbag-new.svg" alt="plastic bag" />
@@ -241,7 +271,7 @@
             <div class="column">
               <div class="left">
                 <div class="section-title">
-                  <h1><span>02</span><br /><span>PLASTIC BAGS</span></h1>
+                  <h1><span>02</span><br /><span  id="area4">PLASTIC BAGS</span></h1>
                 </div>
               </div>
               <div class="right">
@@ -305,9 +335,13 @@
     </main>
 
     <footer>
+      <div class="footer-bg">
+        <div class="circle"></div>
+        <div class="circle-2"></div>
+      </div>
       <div class="footer-wrapper">
         <div class="footer-img-wrappper">
-          <img src="../image/logo.png" alt="" />
+          <a href="../主頁/index.html"><img src="../image/logo.png" alt="" /></a>
         </div>
         <div class="footer-media-wrapper">
           <a href="https://www.instagram.com/greenpeacekorea"
