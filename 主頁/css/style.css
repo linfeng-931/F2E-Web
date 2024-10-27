@@ -70,37 +70,176 @@ body{
     width: 100%;
 }
 
+
 /* Header Right Section */
 
-.right{
+.svg-overlay{
     position: absolute;
-    top: 0.875rem;
-    right: 2.5rem;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    z-index: 0;
+}
+.svg-overlay svg path{
+    fill: transparent;
 }
 
-.menu-btn{
+#toggle-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
     width: 2.375rem;
     height: 2.375rem;
-    border-radius: 50%;
-    background: #fff;
-    border: 1px solid var(--Blue01);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+    z-index: 2;
+    cursor: pointer;
 }
 
-.menu-btn:focus{
-    outline: none;
+.btn-outline{
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    border: 1px solid transparent;
+    background-color: #f9f9f9;
 }
 
-.menu-btn:hover{
-    background-color: var(--Blue01);
+.btn-outline-1{
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    animation: change 4s linear infinite;
 }
 
-.menu-btn:hover .ri-menu-line{
-    color: #fff;
+.btn-outline-2{
+    border-radius: 53% 47% 43% 57% / 51% 39% 63% 49%;
 }
 
-.ri-menu-line{
-    font-size: 1rem;
-    color: var(--Blue01);
+@keyframes change {
+    0%{
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+
+    50%{
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
+    
+    100%{
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+    
+}
+
+.hambuger{
+    position: relative;
+    width: 1rem;
+    height: 1rem;
+    z-index: 2;
+}
+
+.hambuger span{
+    position: absolute;
+    top: 100%;
+    left: -0.25rem;
+    display: inline-block;
+    width: 1.5rem;
+    height: 0.1rem;
+    background-color: var(--Blue02);
+    transition: transform 0.25s;
+}
+
+.hambuger span::before{
+    content: '';
+    position: relative;
+    right: 0;
+    display: inline-block;
+    width: 1rem;
+    height: 0.1rem;
+    background-color: var(--Blue02);
+    transform: translateY(-1.5rem);
+}
+
+.hambuger .active span{
+    transform: rotate(45deg);
+}
+
+.hambuger .active span::before{
+    width: 1.5rem;
+    transform: rotate(-90deg);
+} 
+
+.menu{
+    position: relative;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    visibility: hidden;
+}
+
+.menu>div{
+    display: flex;
+    height: 100%;
+}
+
+.menu a {
+    position: relative;
+    line-height: 1.1;
+    text-decoration: none;
+    color: #f9f9f9;
+}
+
+.menu a span{
+    font-size: 5rem;
+    margin-right: 2rem ;
+}
+
+.menu-item{
+    position: relative;
+}
+
+.menu-item::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -2.5rem;
+    width: 150%;
+    height: 100%;
+    background-color: #fff;
+    margin: 0 auto;
+}
+
+.menu-container{
+    width: 70%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-container .menu-wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.primary-menu{
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.primary-menu .menu-container .menu-wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 /* Main Section */

@@ -1,5 +1,11 @@
-//SDGS
+// // Menu
+// const tl = gsap.timeline({ pause: true });
+// const path = document.querySelector("path");
+// const spanBefore = CSSRulePlugin.getRule(".hamburger span:before");
+// gsap.set(spanBefore, { background: "#000" });
+// gsap.set(".menu", { visibility: "hidden" });
 
+//SDGS
 gsap.from(".sdgs-txt", {
   y: 100,
   opacity: 0,
@@ -38,7 +44,7 @@ let scrollTween = gsap.to(sections, {
   scrollTrigger: {
     trigger: ".container",
     pin: true,
-    scrub: 3,
+    scrub: 4,
     end: "+=3200",
     snap: 1 / (sections.length - 1),
     markers: false,
