@@ -548,6 +548,9 @@ h1, h3{
     background-color: var(--White);
     color: var(--Blue03);
 }
+#fishingnet-link .plastic-link-section .right .txt p{
+    color: var(--Blue03);
+}
 
 /*plasticbag-link*/
 #plasticbag-link .section-title h1 span{
@@ -856,4 +859,117 @@ footer .footer-img-wrappper{
 }
 #page-2 footer .circle-2{
     background-color: var(--Blue03);
+}
+
+/*page-3*/
+#page-3{
+    background-color: var(--Blue02);
+}
+
+#page-3 .table-of-contents h4{
+    background-color: var(--Gray01);
+    color: var(--Blue03)
+}
+#page-3 .table-of-contents p{
+    background-color: var(--Gray01);
+    color: var(--Blue03);
+}
+#page-3 .table-of-contents hr{
+    border: 1.5px dashed var(--Gray01);
+}
+#page-3 h3{
+    color: var(--Blue01);
+}
+
+/*page-3 plastic-intro*/
+#page-3 .plastic-intro-section .sub-title{
+    color: var(--White);
+}
+#page-3 .plastic-intro-section h1{
+    color:var(--White);
+}
+#page-3 .plastic-intro-section .left .txt{
+    color:var(--Gray01);
+}
+#page-3 .plastic-intro-section .right .txt{
+    color:var(--Gray01);
+}
+
+#page-3 .animal-intro-section{
+    margin-top: 10rem;
+}
+.micro-content{
+    width: 75%;
+    margin-top: 20rem;
+}
+
+.micro-content h3{
+    line-height: 6.5rem;
+    font-size: 5rem;
+    margin-bottom: 2rem;
+    max-width: 20rem;
+    margin-right: 20%;
+}
+.micro-content hr{
+    margin-left: 0;
+    width: 100%;
+    border: 2px dashed var(--Blue01);
+}
+
+.micro-content .related-article{
+    margin-top: 4rem;
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    margin-left: 45%;
+}
+.micro-content .related-article img{
+    position: relative;
+    height: 4rem;
+    border-radius: 50%;
+    z-index: 1;
+    border: 4px solid var(--White);
+    margin-left: 0.3rem;
+}
+.micro-content .related-article button{
+    position: absolute;
+    border-radius: 50px;
+    background-color: var(--Blue01);
+    box-shadow: 0 0 5px var(--Gray01);
+    padding: 1.3rem 1rem 1.3rem 6.5rem;
+    margin-top: 0rem;
+}
+.micro-content .related-article .learn-more-btn .learn-more-txt{
+    border-bottom: none;
+    padding: 0;
+}
+.micro-content .related-article .learn-more-btn .learn-more-txt h2{
+    color: var(--White);
+}
+.micro-content .learn-more-btn .arrow-wrapper{
+    background-color: var(--White);
+    color: var(--Blue02);
+}
+.micro-content .related-article:hover button{
+    background-color: var(--Blue03);
+}
+.micro-content .learn-more-btn:hover .arrow-wrapper{
+    background-color: var(--Blue01);
+    color: var(--White);
+}
+
+/*page-3 plastic-link*/
+#page-3 .plastic-link-section-bg{
+    background: linear-gradient(to bottom, var(--White), var(--Blue02));
+}
+#page-3 #fishingnet-link .txt{
+    color: var(--Blue03);
+}
+
+/*page-3 footer*/
+#page-3 footer .circle{
+    background-color: var(--White);
+}
+#page-3 footer .circle-2{
+    background-color: var(--Blue04);
 }
