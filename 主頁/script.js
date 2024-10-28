@@ -52,7 +52,7 @@ function scrollToSection(id) {
     ".menu",
     { right: "0", opacity: 1, scale: 1 },
     { right: "-100vw", opacity: 0.5, scale: 0, duration: 2 },
-    "-=1"
+    "-=1.2"
   );
   hamburgerLine.classList.remove("hamburger-animation-1");
   hamburgerLine.classList.remove("hamburger-animation-2");
@@ -111,10 +111,10 @@ let scrollTween = gsap.to(sections, {
   scrollTrigger: {
     trigger: ".container",
     pin: true,
-    scrub: 4,
-    end: "+=3200",
-    snap: 1 / (sections.length - 1),
-    markers: false,
+    scrub: 1,
+    end: "+=3250",
+    snap: 1 / 4,
+    markers: true,
   },
 });
 
@@ -123,7 +123,7 @@ gsap.to(mask, {
   scrollTrigger: {
     trigger: ".wrapper",
     start: "top left",
-    scrub: 3,
+    scrub: 5,
   },
 });
 
@@ -141,7 +141,7 @@ sections.forEach((section) => {
       trigger: section,
       containerAnimation: scrollTween,
       start: "left center",
-      markers: false,
+      markers: true,
     },
   });
 });
@@ -171,13 +171,3 @@ revealType.forEach((char, i) => {
     },
   });
 });
-
-//平滑滾動
-const lenis = new lenis();
-
-function raf(time) {
-  lenis.raf(time);
-  requestAnimationFrame(raf);
-}
-
-requestAnimationFrame(raf);
