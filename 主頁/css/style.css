@@ -705,4 +705,38 @@ footer .footer-img-wrappper{
     .sdgs-txt-wrapper .sdgs-source{
         font-size: 1.5rem;
     }
+    
+    .container svg {
+        top: 20.8rem;
+    }
+    
+    .perpetrator-title img{
+        width: 5.2rem;
+    }
+    
+    .col {
+        gap: 3.9rem;
+        margin-top: 2.6rem;
+    }
+    
+    .col p {
+        font-size: 1.56rem;
+    }
+    
+    .more-btn-link::before {
+        top: 0.9425rem;
+        border-radius: 4.875rem;
+    }
+    
+    .more-btn-body:hover .inner{
+        transform: translateY(0.9425rem);
+    }
+
+    footer{
+        height: 31rem;
+    }
+
+    .footer-wrapper{
+        padding-top: 16.9rem;
+    }
 }
