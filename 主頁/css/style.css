@@ -142,7 +142,8 @@ body{
     right: 0;
     width: 100vw;
     height: 100vh;
-    display: flex;
+    display: block;
+    opacity: 1;
 }
 
 .menu-bg{
@@ -185,17 +186,24 @@ body{
     line-height: 1.5;
 }
 
-.menu-item:hover .line{
+.menu-item span{
+    font-size: 4rem;
+    margin-right: 2rem;
+} 
+
+
+.menu-item:hover .menu-line{
     animation: changeWidth 1s ease-out both;
 }
 
-.line{
+.menu-line{
     width: 100%;
     height: 2px;
     background-color: #fff;
     margin-top: .5rem;
     opacity: 0;
 }
+
 
 @keyframes changeWidth {
     from{
@@ -206,12 +214,6 @@ body{
         width: 100%;
         opacity: 1;
     }
-}
-
-
-.menu-item span{
-    font-size: 4rem;
-    margin-right: 2rem;
 }
 
 
@@ -319,6 +321,7 @@ body{
     background: url(../../image/wave03.svg)no-repeat top center;
     background-size: 120%;
     position: relative;
+    padding-bottom: 20rem;
 }
 
 .perpetrator .wrapper {
