@@ -125,6 +125,21 @@ body{
     width: 2rem;
     height: .1rem;
     background-color: var(--Blue02);
+    
+}
+
+.hamburger-animation-1{
+    animation: lineRotate 1s both;
+}
+
+@keyframes lineRotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(45deg);
+    }
+    
 }
 
 .hamburger span::after{
@@ -134,7 +149,25 @@ body{
     height: 100%;
     background-color: var(--Blue02);
     margin-top: .5rem;
+    
 }
+
+.hamburger-animation-2::after{
+    animation: lineRotateWithTranslate 1s both;
+}
+
+@keyframes lineRotateWithTranslate {
+
+    from{
+        transform: rotate(0deg) translate(0);
+    }
+    to{
+        transform: rotate(-90deg) translate(7px);
+    }
+    
+}
+
+
 
 .menu{
     position: absolute;
@@ -142,8 +175,12 @@ body{
     right: 0;
     width: 100vw;
     height: 100vh;
+    display: none;
+    transform-origin: right top;
+}
+
+.menu-open{
     display: block;
-    opacity: 1;
 }
 
 .menu-bg{
@@ -177,6 +214,13 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.menu-item{
+    position: relative;
+    top: 0;
+    right: 0;
+    cursor: pointer;
 }
 
 .menu-item a{
