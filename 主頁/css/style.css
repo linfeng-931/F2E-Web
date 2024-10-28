@@ -70,38 +70,196 @@ body{
     width: 100%;
 }
 
-/* Header Right Section */
 
+/* Header Right Section */
 .right{
     position: absolute;
-    top: 0.875rem;
-    right: 2.5rem;
+    right: 0;
+    top: 0;
 }
-
 .menu-btn{
-    width: 2.375rem;
-    height: 2.375rem;
-    border-radius: 50%;
-    background: #fff;
-    border: 1px solid var(--Blue01);
+    width: 4rem;
+    height: 4rem;
+    position: relative;
+    margin: 1rem 2rem;
+    z-index: 1;
+    cursor: pointer;
 }
 
-.menu-btn:focus{
-    outline: none;
+.btn-outline{
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    border: 1px solid #f2f2f2;
+    background-color: #f2f2f2;
+}
+.btn-outline-1 {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    animation: change 4s linear infinite;
 }
 
-.menu-btn:hover{
-    background-color: var(--Blue01);
+.btn-outline-2 {
+    border-radius: 53% 47% 43% 57% / 51% 39% 63% 49%;
 }
 
-.menu-btn:hover .ri-menu-line{
+@keyframes change {
+    0% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+    50% {
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
+    100% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+}
+
+.hamburger{
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
+.hamburger span{
+    display: inline-block;
+    width: 2rem;
+    height: .1rem;
+    background-color: var(--Blue02);
+    
+}
+
+.hamburger-animation-1{
+    animation: lineRotate 1s both;
+}
+
+@keyframes lineRotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(45deg);
+    }
+    
+}
+
+.hamburger span::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: var(--Blue02);
+    margin-top: .5rem;
+    
+}
+
+.hamburger-animation-2::after{
+    animation: lineRotateWithTranslate 1s both;
+}
+
+@keyframes lineRotateWithTranslate {
+
+    from{
+        transform: rotate(0deg) translate(0);
+    }
+    to{
+        transform: rotate(-90deg) translate(7px);
+    }
+    
+}
+
+
+
+.menu{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    transform-origin: right top;
+}
+
+.menu-open{
+    display: block;
+}
+
+.menu-bg{
+    position: absolute;
+    right: -12rem;
+    top: -18rem;
+    width: 100%;
+    height: 100vh;
+}
+
+.menu-bg img{
+    animation: bgRotate 15s ease-in infinite;
+}
+
+@keyframes bgRotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.menu-container{
+    position: absolute;
+    right: 40%;
+    top: 15%;
+}
+
+.menu-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-item{
+    position: relative;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+.menu-item a{
+    display: inline-block;
+    text-decoration: none;
     color: #fff;
+    line-height: 1.5;
 }
 
-.ri-menu-line{
-    font-size: 1rem;
-    color: var(--Blue01);
+.menu-item span{
+    font-size: 4rem;
+    margin-right: 2rem;
+} 
+
+
+.menu-item:hover .menu-line{
+    animation: changeWidth 1s ease-out both;
 }
+
+.menu-line{
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    margin-top: .5rem;
+    opacity: 0;
+}
+
+
+@keyframes changeWidth {
+    from{
+        width: 0;
+        opacity: 0;
+    }
+    to{
+        width: 100%;
+        opacity: 1;
+    }
+}
+
 
 /* Main Section */
 
@@ -207,6 +365,7 @@ body{
     background: url(../../image/wave03.svg)no-repeat top center;
     background-size: 120%;
     position: relative;
+    padding-bottom: 20rem;
 }
 
 .perpetrator .wrapper {

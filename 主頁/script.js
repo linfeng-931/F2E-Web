@@ -1,5 +1,46 @@
-//SDGS
+// Menu
 
+let menuBtn = document.querySelector(".menu-btn");
+const menu = document.querySelector(".menu");
+const hamburgerLine = document.querySelector(".hamburger span");
+menuBtn.addEventListener("click", menuOpen);
+
+function menuOpen() {
+  menu.classList.toggle("menu-open");
+  hamburgerLine.classList.toggle("hamburger-animation-1");
+  hamburgerLine.classList.toggle("hamburger-animation-2");
+
+  let tl = gsap.timeline();
+  tl.fromTo(
+    ".menu",
+    { right: "-100vw", opacity: 0.5, scale: 0 },
+    { right: "0", opacity: 1, scale: 1, duration: 2 }
+  );
+
+  tl.fromTo(
+    ".menu-item",
+    { right: "-100vw", opacity: 0.5, scale: 0 },
+    { right: "0", opacity: 1, scale: 1, duration: 1, stagger: 0.2 }
+  );
+}
+
+function scrollToSection(id) {
+  const element = document.getElementById(id);
+  //console.log(element.id);
+  if (element.id == "humanity") {
+    let offset = 580;
+    let elementPosition = element.getBoundingClientRect().top + window.scrollY;
+    let offsetPosition = elementPosition - offset;
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth",
+    });
+  } else {
+    element.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+}
+
+//SDGS
 gsap.from(".sdgs-txt", {
   y: 100,
   opacity: 0,
@@ -38,7 +79,7 @@ let scrollTween = gsap.to(sections, {
   scrollTrigger: {
     trigger: ".container",
     pin: true,
-    scrub: 3,
+    scrub: 4,
     end: "+=3200",
     snap: 1 / (sections.length - 1),
     markers: false,
