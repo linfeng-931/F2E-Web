@@ -114,7 +114,7 @@ let scrollTween = gsap.to(sections, {
     scrub: 1,
     end: "+=3250",
     snap: 1 / 4,
-    markers: true,
+    markers: false,
   },
 });
 
@@ -141,7 +141,7 @@ sections.forEach((section) => {
       trigger: section,
       containerAnimation: scrollTween,
       start: "left center",
-      markers: true,
+      markers: false,
     },
   });
 });
