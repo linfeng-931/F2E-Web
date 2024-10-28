@@ -611,18 +611,55 @@ footer .footer-img-wrappper{
         margin: 1.1375rem 0 0 1.95rem;
     }
 
-    .right{
-        top: 1.1375rem;
-        right: 3.25rem;
-    }
-
     .menu-btn{
-        width: 3.0875rem;
-        height: 3.0875rem;
+        width: 5.2rem;
+        height: 5.2rem;
+        margin: 1.3rem 2.6rem;
+    }
+    
+    .btn-outline{
+        width: 5.2rem;
+        height: 5.2rem;
+    }
+    
+    .hamburger{
+        top: 1.5rem;
+        left: 1.3rem;
+    }
+    
+    .hamburger span{
+        width: 2.6rem;
+        height: .13rem;
     }
 
-    .ri-menu-line{
-        font-size: 1.3rem;
+    .hamburger span::after{
+        margin-top: .65rem;
+    }
+    
+    @keyframes lineRotateWithTranslate {
+    
+        from{
+            transform: rotate(0deg) translate(0);
+        }
+        to{
+            transform: rotate(-90deg) translate(9.1px);
+        }
+        
+    }
+    
+    .menu-bg{
+        right: -15.6rem;
+        top: -21rem;
+    }
+    
+    .menu-item span{
+        font-size: 5.2rem;
+        margin-right: 2.6rem;
+    } 
+    
+    .menu-line{
+        height: 2.6px;
+        margin-top: .65rem;
     }
 
     .banner .bg{
