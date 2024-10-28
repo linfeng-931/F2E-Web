@@ -732,6 +732,10 @@ footer .footer-img-wrappper{
         transform: translateY(0.9425rem);
     }
 
+    .humanity-content-wrapper>img{
+        width: 33rem;
+    }
+
     footer{
         height: 31rem;
     }
