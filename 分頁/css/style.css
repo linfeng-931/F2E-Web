@@ -386,7 +386,7 @@ h1, h3{
 .news-intro-section{
     position: absolute;
     top: 20rem;
-    height: 53rem;
+    height: 55rem;
     width: 100%;
     overflow: hidden;
     margin-bottom: -5rem;
@@ -762,7 +762,9 @@ footer .footer-img-wrappper{
 
 /*media*/
 @media screen and (min-width: 1920px){
-    
+    .txt{
+        font-size: 1.5rem;
+    }
     .plastic-link-section>img{
         left: 15rem;
         top: 13rem;
@@ -772,12 +774,15 @@ footer .footer-img-wrappper{
         margin-top: 10rem;
     }
     .news-intro-section-bg{
+        margin-top: -35rem;
         padding-top: 30rem;
         padding-bottom: 50rem;
     }
     .news-intro-section{
         margin-bottom: -22.4rem;
         margin-top: 15rem;
+        top: 5rem;
+        height: 60rem;
     }
 }
 
