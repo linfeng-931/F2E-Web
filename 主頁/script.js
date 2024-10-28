@@ -6,14 +6,13 @@ const hamburgerLine = document.querySelector(".hamburger span");
 menuBtn.addEventListener("click", menuOpen);
 
 let isMenuOpen = true;
+let tl = gsap.timeline();
 function menuOpen() {
   menu.classList.add("menu-open");
-  hamburgerLine.classList.toggle("hamburger-animation-1");
-  hamburgerLine.classList.toggle("hamburger-animation-2");
-
-  let tl = gsap.timeline();
 
   if (isMenuOpen) {
+    hamburgerLine.classList.add("hamburger-animation-1");
+    hamburgerLine.classList.add("hamburger-animation-2");
     tl.fromTo(
       ".menu",
       { right: "-100vw", opacity: 0.5, scale: 0 },
@@ -26,6 +25,8 @@ function menuOpen() {
       { right: "0", opacity: 1, scale: 1, duration: 1, stagger: 0.2 }
     );
   } else {
+    hamburgerLine.classList.remove("hamburger-animation-1");
+    hamburgerLine.classList.remove("hamburger-animation-2");
     tl.fromTo(
       ".menu-item",
       { right: "0", opacity: 1, scale: 1 },
@@ -42,6 +43,20 @@ function menuOpen() {
 }
 
 function scrollToSection(id) {
+  tl.fromTo(
+    ".menu-item",
+    { right: "0", opacity: 1, scale: 1 },
+    { right: "-100vw", opacity: 0.5, scale: 0, duration: 1, stagger: 0.2 }
+  );
+  tl.fromTo(
+    ".menu",
+    { right: "0", opacity: 1, scale: 1 },
+    { right: "-100vw", opacity: 0.5, scale: 0, duration: 2 },
+    "-=1"
+  );
+  hamburgerLine.classList.remove("hamburger-animation-1");
+  hamburgerLine.classList.remove("hamburger-animation-2");
+  isMenuOpen = !isMenuOpen;
   const element = document.getElementById(id);
   //console.log(element.id);
   if (element.id == "humanity") {
