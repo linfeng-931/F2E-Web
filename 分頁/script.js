@@ -7,6 +7,7 @@ const tocBtn = document.querySelectorAll("table-of-contents a");
 
 let currentIndex = 0;
 
+
 function updateSlide() {
   const mainWidth = main.offsetWidth;
   const translateValue = currentIndex * -mainWidth;
@@ -92,5 +93,4 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 });
-
 

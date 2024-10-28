@@ -386,7 +386,7 @@ h1, h3{
 .news-intro-section{
     position: absolute;
     top: 20rem;
-    height: 53rem;
+    height: 55rem;
     width: 100%;
     overflow: hidden;
     margin-bottom: -5rem;
@@ -762,7 +762,9 @@ footer .footer-img-wrappper{
 
 /*media*/
 @media screen and (min-width: 1920px){
-    
+    .txt{
+        font-size: 1.5rem;
+    }
     .plastic-link-section>img{
         left: 15rem;
         top: 13rem;
@@ -772,12 +774,15 @@ footer .footer-img-wrappper{
         margin-top: 10rem;
     }
     .news-intro-section-bg{
+        margin-top: -35rem;
         padding-top: 30rem;
         padding-bottom: 50rem;
     }
     .news-intro-section{
         margin-bottom: -22.4rem;
         margin-top: 15rem;
+        top: 5rem;
+        height: 60rem;
     }
 }
 
@@ -921,6 +926,10 @@ footer .footer-img-wrappper{
     display: flex;
     text-decoration: none;
     align-items: center;
+    margin-left: 87%;
+    transition: all .7s;
+}
+.micro-content .related-article:hover{
     margin-left: 45%;
 }
 .micro-content .related-article img{
@@ -936,12 +945,22 @@ footer .footer-img-wrappper{
     border-radius: 50px;
     background-color: var(--Blue01);
     box-shadow: 0 0 5px var(--Gray01);
-    padding: 1.3rem 1rem 1.3rem 6.5rem;
+    padding: 1.3rem;
     margin-top: 0rem;
+    transition: all .7s;
 }
+.micro-content .related-article:hover button{
+    padding: 1.3rem 1rem 1.3rem 6.5rem;
+}
+
 .micro-content .related-article .learn-more-btn .learn-more-txt{
     border-bottom: none;
     padding: 0;
+    margin-left: -10.5rem;
+    transition: all .7s;
+}
+.micro-content .related-article:hover .learn-more-btn .learn-more-txt{
+    margin-left: 0rem;
 }
 .micro-content .related-article .learn-more-btn .learn-more-txt h2{
     color: var(--White);
@@ -957,6 +976,18 @@ footer .footer-img-wrappper{
     background-color: var(--Blue01);
     color: var(--White);
 }
+@media screen and (min-width: 1920px){
+    #page-3 .related-article{
+        margin-left: 60%;
+    }
+}
+
+#page-3 .news-intro-section .column{
+    gap: 15rem;
+}
+#page-3 .news-intro-section h3{
+    border-top: none;
+}
 
 /*page-3 plastic-link*/
 #page-3 .plastic-link-section-bg{
@@ -964,6 +995,9 @@ footer .footer-img-wrappper{
 }
 #page-3 #fishingnet-link .txt{
     color: var(--Blue03);
+}
+#page-3 #plasticbag-link .txt{
+    color: var(--White);
 }
 
 /*page-3 footer*/
