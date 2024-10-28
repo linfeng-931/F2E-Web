@@ -962,6 +962,15 @@ footer .footer-img-wrappper{
     background-color: var(--Blue01);
     color: var(--White);
 }
+@media screen and (min-width: 1920px){
+    #page-3 .related-article{
+        margin-left: 60%;
+    }
+}
+
+#page-3 .news-intro-section .column{
+    gap: 15rem;
+}
 
 /*page-3 plastic-link*/
 #page-3 .plastic-link-section-bg{
