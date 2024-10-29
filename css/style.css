@@ -389,6 +389,9 @@ body{
     width: 0;
 }
 
+.perpetrator-title{
+    font-family: var(--Cinzel);
+}
 .perpetrator-title img{
     width: 4rem;
 }
@@ -401,6 +404,7 @@ body{
 
 .col p {
     font-size: 1.2rem;
+    font-family: var(--Josefin);
 }
 
 .col .more-btn {
@@ -431,6 +435,9 @@ body{
     height: 100%;
     position: relative;
     z-index: 2;
+}
+.more-btn .txt{
+    font-family: var(--Josefin);
 }
 
 .more-btn-body:hover .inner{
@@ -512,6 +519,7 @@ body{
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--Blue03);
+    font-family: var(--Josefin);
 }
 
 .pin h1 {
@@ -541,6 +549,7 @@ body{
     color: #FFFFFF;
     margin-top: 5rem;
     margin-left: 5rem;
+    font-family: var(--Cinzel);
 }
 
 .humanity-content-wrapper{
@@ -550,6 +559,7 @@ body{
     width: 80%;
     height: 100vh;
     margin: auto;
+    font-family: var(--Josefin);
 }
 
 .humanity-content-wrapper>img{
