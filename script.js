@@ -113,7 +113,7 @@ let scrollTween = gsap.to(sections, {
     pin: true,
     scrub: 1,
     end: "+=3250",
-    snap: 1 / 4,
+    //snap: 1 / 4,
     markers: false,
   },
 });

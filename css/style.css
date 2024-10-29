@@ -42,7 +42,7 @@ body{
 } 
 
 .logo-area{
-    background: url("../../image/logo-bg.svg") no-repeat left top;
+    background: url("../image/logo-bg.svg") no-repeat left top;
     background-size: contain;
     width: 12.542vw;
 }
@@ -280,12 +280,12 @@ body{
 }
 
 .banner .bg1{
-    background: url("../../image/background.svg") no-repeat;
+    background: url("../image/background.svg") no-repeat;
     background-size: 100%;
 }
 
 .banner .bg2{
-    background: url(../../image/cliff.svg) no-repeat;
+    background: url(../image/cliff.svg) no-repeat;
     background-size: 100%;
 }
 
@@ -362,7 +362,7 @@ body{
 /* Perpetrators section */
 
 .perpetrator{
-    background: url(../../image/wave03.svg)no-repeat top center;
+    background: url(../image/wave03.svg)no-repeat top center;
     background-size: 120%;
     position: relative;
     padding-bottom: 20rem;
@@ -565,7 +565,7 @@ body{
 
 footer{
     width: 100%;
-    background: url(../../image/footer-wave.svg) no-repeat center;
+    background: url(../image/footer-wave.svg) no-repeat center;
     height: 25rem;
     background-size: cover;
 }
