@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Firebase 註冊</title>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script>
+    // 初始化 Firebase
+    const firebaseConfig = {
+      // ... 你的 Firebase 設定
+    };
+    firebase.initializeApp(firebaseConfig);
+
+    // 取得 Firestore 資料庫
+    const db = firebase.firestore();
+
+    // 註冊函式
+    function registerUser(email, password) {
+      firebase.auth().createUserWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+          // 註冊成功
+          const user = userCredential.user;
+          console.log('註冊成功：', user);
+
+          // 將用戶資料寫入 Firestore
+          db.collection('users').doc(user.uid).set({
+            email: user.email,
+            // 其他用戶資料
+          })
+            .then(() => {
+              console.log('用戶資料寫入成功！');
+            })
+            .catch((error) => {
+              console.error('寫入用戶資料失敗：', error);
+            });
+        })
+        .catch((error) => {
+          // 註冊失敗
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          console.error('註冊失敗：', errorCode, errorMessage);
+        });
+    }
+
+    // 註冊表單
+    function handleRegister() {
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      registerUser(email, password);
+    }
+  </script>
+</head>
+<body>
+  <h1>Firebase 註冊</h1>
+  <form onsubmit="handleRegister(); return false;">
+    <label for="email">電子郵件地址：</label>
+    <input type="email" id="email" name="email" required><br><br>
+    <label for="password">密碼：</label>
+    <input type="password" id="password" name="password" required><br><br>
+    <input type="submit" value="註冊">
+  </form>
+</body>
+</html>

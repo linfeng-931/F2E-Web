@@ -47,7 +47,7 @@ imgBtn.forEach((e) => {
         currentIndex = targetIndex;
         updateSlide();
         window.scrollTo({
-          top: 990,
+          top: 860,
           behavior: "smooth",
         });
       }
@@ -93,4 +93,5 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 });
+
 
