@@ -23,12 +23,24 @@ gsap.from(".animal-intro-section", {
       markers: false,
     },
   });
+  gsap.from(".decoration-img-1", {
+    y: 300,
+    opacity: 1,
+    duration: 10,
+    scrollTrigger: {
+      trigger: ".decoration-img-1",
+      start: "top 100%",
+      end: "top -50%",
+      scrub: 1,
+      markers: false,
+    },
+  });
   gsap.from(".decoration-img-2", {
-    y: 500,
+    y: 200,
     opacity: 1,
     duration: 100,
     scrollTrigger: {
-      trigger: ".decoration-img",
+      trigger: ".decoration-img-2",
       start: "top 100%",
       end: "top -50%",
       scrub: 1,
@@ -50,6 +62,18 @@ gsap.from(".animal-intro-section", {
   
   //浮現
   gsap.from(".slider", {
+    y: 100,
+    opacity: 0,
+    duration: 2,
+    scrollTrigger: {
+      trigger: ".slider",
+      start: "top 60%",
+      end: "top 30%",
+      scrub: 1,
+      markers: false,
+    },
+  });
+  gsap.from(".indicator", {
     y: 100,
     opacity: 0,
     duration: 2,
@@ -87,23 +111,41 @@ gsap.from(".animal-intro-section", {
   });
   
   //data
-  const dataColor = document.querySelector('.data-color');
+  const dataColor = document.querySelector('.data-color-1');
   const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) { // 如果元素进入视口
         // 执行动画
-        gsap.fromTo(".data-color", 
+        gsap.fromTo(".data-color-1", 
           { 
             width: 0,  
           },
           { 
-            width: "100%", 
+            width: "95%", 
+            duration: 4, 
+          }
+        );
+        gsap.fromTo(".data-color-2", 
+          { 
+            width: 0,  
+          },
+          { 
+            width: "85%", 
+            duration: 4, 
+          }
+        );
+        gsap.fromTo(".data-color-3", 
+          { 
+            width: 0,  
+          },
+          { 
+            width: "60%", 
             duration: 4, 
           }
         );
         
         gsap.from(".data-num", {
-          textContent: 0 + "%",
+          textContent: 0,
           duration: 4,
           snap: { textContent: 1 }
         });

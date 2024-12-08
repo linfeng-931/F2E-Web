@@ -58,13 +58,18 @@
       </a>
 
       <a class="toc" data-id="3">
-        <p>News</p>
+        <p>Data</p>
         <h4>3</h4>
       </a>
 
       <a class="toc" data-id="4">
-        <p>Other</p>
+        <p>News</p>
         <h4>4</h4>
+      </a>
+
+      <a class="toc" data-id="5">
+        <p>Other</p>
+        <h4>5</h4>
       </a>
       <hr />
     </div>
@@ -127,6 +132,7 @@
           </div>
         </div>
       </section>
+
       <!-- animal-intro-section -->
       <section class="animal-intro-section">
         <div class="bg">
@@ -179,48 +185,68 @@
                   </div>
                 </div>
               </div>
-
-              <div class="indicator">
-                <span class="btn active"></span>
-                <span class="btn"></span>
-                <span class="btn"></span>
+              <div class="decoration-img">
+                <img src="../image/garbage03.svg" alt="image" class="decoration-img-1">
               </div>
+
             </div>
           </div>
         </div>
       </section>
+      <div class="indicator">
+        <span class="btn active"></span>
+        <span class="btn"></span>
+        <span class="btn"></span>
+      </div>
 
       <div class="decoration-img">
-        <img src="/image/fishing-net-new.svg" alt="image" class="decoration-img-2">
+        <img src="../image/garbage01.svg" alt="image" class="decoration-img-2">
       </div>
 
       <!--data-garbage-->
       <section class="data-garbage-section">
         <div class="data-garbage-bg"></div>
-        <div class="data-garbage-container">
+        <div class="data-garbage-container" id="area3">
           <div class="padding">
             <div class="column">
               <div class="left">
                 <div class="section-title">
-                  <h1><span>03</span><span>Amount Of Waste</span></h1>
+                  <h1 id="special-num"><span>03</span></h1>
+                  <h1><span>Amount Of Waste</span></h1>
                 </div>
-                <p class="txt" id="area1">
-                  2023 - 2024
-                </p>
                 <div class="circle-container">
                   <div class="data-bg-circle"></div>
                   <div class="data-bg-circle2"></div>
                 </div>
               </div>
               <div class="right">
+                <h2>2024統計數據</h2>
                 <div class="data">
-                  <div class="data-color" id="Datacolor">
-                    <div class="data-num">80</div>
+                  <div class="data-color-1" id="Datacolor-1">
+                    <h4>漁船用具</h4>
+                    <div class="data-num">6638</div>
                   </div>
                 </div>
-                <p class="txt">
-                  統計資料來自：iOcean
-                </p>
+                <div class="data">
+                  <div class="data-color-2">
+                    <h4>漁網</h4>
+                    <div class="data-num">5941</div>
+                  </div>
+                </div>
+                <div class="data">
+                  <div class="data-color-3">
+                    <h4>釣魚漁具</h4>
+                    <div class="data-num">4063</div>
+                  </div>
+                </div>
+                  
+                <a href="https://iocean.oca.gov.tw/OCA_OceanConservation/PUBLIC/Marine_Litter_v2.aspx">
+                  <div class="txt">
+                    <p>單位：個</p>
+                    <p>統計資料來自：iOcen</p>
+                  </div>
+                </a>
+                  
               </div>
             </div>
           </div>
@@ -233,7 +259,7 @@
           <h3>NEWS</h3>
           <div class="padding">
             <div class="column">
-              <div class="news-container marine-creature-1-news" id="area3">
+              <div class="news-container marine-creature-1-news" id="area4">
                 <img src="../image/dolphin.jpg" alt="dolphin" />
                 <h2 class="sub-title">Dolphin</h2>
                 <div class="txt">
@@ -304,7 +330,7 @@
       </section>
 
       <div class="decoration-img">
-        <img src="/image/fishing-net-new.svg" alt="image" class="decoration-img-3">
+        <img src="../image/garbage02.svg" alt="image" class="decoration-img-3">
       </div>
 
       <!-- plastic-link-section -->
@@ -320,7 +346,7 @@
               <div class="left">
                 <div class="section-title">
                   <h1>
-                    <span>02</span><br /><span id="area4">PLASTIC BAG</span>
+                    <span>02</span><br /><span id="area5">PLASTIC BAG</span>
                   </h1>
                 </div>
               </div>
@@ -433,9 +459,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script src="https://unpkg.com/split-type"></script>
-    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.jss"></script>
-    <script src="script.js"></script>
-    <script src="gsap-script.js"></script>
+    
+    <script src="js/gsap-script.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
