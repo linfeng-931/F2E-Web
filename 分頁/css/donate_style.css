@@ -218,9 +218,14 @@ input:focus {
     width: 45%; 
 }
     
-.next.disable, .previous.disable{
-    cursor: none;
+button:disabled,
+button[disabled]{
+    cursor:auto;
     opacity: .5;
+}
+button:hover:disabled{
+    background-color: var(--White);
+    color: var(--Blue03);
 }
 .wall{
     position: absolute;
@@ -250,6 +255,10 @@ input:focus {
     color: var(--White);
     cursor: pointer;
     margin: 2rem 0 2rem 0;
+}
+
+.money-field:disabled{
+    opacity: 0.5;
 }
 #selection-1{background-color: var(--Gray01);}
 #selection-2{background-color: var(--Gray01);}
