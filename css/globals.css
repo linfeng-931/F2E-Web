@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    @apply w-full h-full text-base overflow-x-hidden;
+  }
+}
+
+@layer utilities {
+  .logo-area {
+    background: url("../../image/logo-bg.svg") no-repeat left top;
+    background-size: contain;
+  }
+
+  .more-btn-link::before {
+    @apply absolute inset-x-0 top-[0.425rem] h-full w-full rounded-[3.75rem] bg-[#356a9c] z-0;
+    content: "";
+  }
+
+  .more-btn-body:hover .inner {
+    transform: translateY(0.425rem);
+  }
+
+  .more-btn-link:hover::before {
+    animation: pulse 1s infinite;
+    content: "";
+  }
+
+  .more-btn-body:hover {
+    animation: pulse 1s infinite;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    70% {
+      transform: scale(0.9);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .inner {
+    @apply flex justify-around items-center relative z-[3] bg-white w-full border-[0.25px] rounded-[3.75rem];
+    padding: 0.5rem;
+    border-color: "#DEDEDE";
+  }
+
+  .inner .txt {
+    @apply text-[#356a9c] font-bold tracking-[.1rem] md:text-base lg:text-[1.2rem];
+  }
+
+  .inner .icon {
+    @apply relative bg-[#356a9c] rounded-full sm:w-[1.5rem] sm:h-[1.5rem] lg:w-[2rem] lg:h-[2rem];
+  }
+
+  .icon .ri-arrow-right-up-line {
+    @apply text-white absolute sm:text-[1.3rem] lg:text-[1.5rem];
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .footer-media-wrapper > * {
+    @apply inline-block;
+  }
+}

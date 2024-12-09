@@ -1,0 +1,11 @@
+/*Donation Page*/
+.show {
+  display: flex;
+  flex-direction: column;
+}
+
+.ri-stethoscope-line,
+.ri-recycle-line,
+.ri-speak-line {
+  font-size: 2rem;
+}
