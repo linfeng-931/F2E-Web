@@ -104,3 +104,26 @@ menuBtn.addEventListener("click", displayMenu);
 function displayMenu() {
   menuList.classList.toggle("show");
 }
+
+const question = document.querySelectorAll(".question");
+question.forEach((e) => e.addEventListener("click", displayFAQ));
+
+function displayFAQ(e) {
+  const currentQuestion = e.currentTarget;
+  console.log(currentQuestion);
+  const arrow = currentQuestion.querySelector(".arrow");
+  const ans = currentQuestion
+    .closest(".question")
+    .querySelector(".question .ans");
+  if (ans.classList.contains("hidden")) {
+    arrow.style.transform = "rotate(180deg)";
+    ans.classList.remove("closeAnimation");
+    ans.classList.add("openAnimation");
+    ans.classList.remove("hidden");
+  } else {
+    arrow.style.transform = "rotate(0deg)";
+    ans.classList.add("closeAnimation");
+    ans.classList.remove("openAnimation");
+    ans.classList.add("hidden");
+  }
+}

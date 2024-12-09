@@ -1,11 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./主頁/**/*.html",
-    "./主頁/**/*.js",
-    "./分頁/**/*.html",
-    "./分頁/**/*.js",
-  ],
+  content: ["./index.html", "./分頁/**/*.html", "./分頁/**/*.js"],
   theme: {
     extend: {
       screens: {

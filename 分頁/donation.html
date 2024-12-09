@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Donation Platform</title>
     <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="../主頁/css/output.css" />
+    <link rel="stylesheet" href="../css/output.css" />
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -23,7 +23,7 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body class="pb-8">
     <!-- home section -->
     <section class="bg- py-8 md:mb-8">
       <div class="container max-w-[80rem] mx-auto px-4">
@@ -218,7 +218,7 @@
         </div>
       </div>
       <div
-        class="donate-form absolute top-0 left-0 flex flex-col justify-center items-center w-full bg-[rgb(9,20,84,0.8)] p-8 lg:h-[100vh]"
+        class="hidden donate-form absolute top-0 left-0 flex-col justify-center items-center w-full bg-[rgb(9,20,84,0.8)] p-8 lg:h-[100vh]"
       >
         <!-- Create a form to input user data -->
         <form
@@ -325,6 +325,298 @@
         </form>
       </div>
     </section>
+    <!-- question section -->
+    <div class="question-wrapper">
+      <h1
+        class="font-Josefin font-semibold text-gray-900 text-xl md:text-4xl text-center mb-4"
+      >
+        FAQ
+      </h1>
+      <section class="question mt-4">
+        <div class="block text-left m-auto w-[16rem] md:w-[30rem] lg:w-[55rem]">
+          <div>
+            <button
+              type="button"
+              class="question inline-flex flex-col w-full justify-between items-center rounded-md bg-white px-8 py-4 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 md:flex-row"
+              id="menu-button"
+              aria-expanded="true"
+              aria-haspopup="true"
+            >
+              <h4
+                class="flex flex-col items-center font-normal font-Josefin text-gray-900 text-lg md:flex-row md:text-xl lg:text-2xl"
+              >
+                <span
+                  class="font-semibold text-xl md:pr-4 md:text-2xl lg:text-3xl"
+                  >Q1</span
+                >
+                How will we use this money?
+              </h4>
+              <svg
+                class="arrow -mr-1 size-8 text-gray-400"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+                data-slot="icon"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <div
+            class="ans hidden w-full z-10 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none"
+            role="menu"
+            aria-orientation="vertical"
+            aria-labelledby="menu-button"
+            tabindex="-1"
+          >
+            <div class="py-5" role="none">
+              <p
+                class="font-Josefin font-light px-8 py-4 text-xl text-gray-700"
+              >
+                We will use this money for research related to ocean litter
+                cleanup, hiring marine conservation personnel, and operating
+                funds for marine conservation measures.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="question mt-4">
+        <div class="block text-left m-auto w-[16rem] md:w-[30rem] lg:w-[55rem]">
+          <div>
+            <button
+              type="button"
+              class="question inline-flex flex-col w-full justify-between items-center rounded-md bg-white px-8 py-4 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 md:flex-row"
+              id="menu-button"
+              aria-expanded="true"
+              aria-haspopup="true"
+            >
+              <h4
+                class="flex flex-col items-center font-normal font-Josefin text-gray-900 text-lg md:flex-row md:text-xl lg:text-2xl"
+              >
+                <span
+                  class="font-semibold text-xl md:pr-4 md:text-2xl lg:text-3xl"
+                  >Q2</span
+                >
+                Why do we need to fundraise?
+              </h4>
+              <svg
+                class="arrow -mr-1 size-8 text-gray-400"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+                data-slot="icon"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <div
+            class="ans hidden w-full z-10 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none"
+            role="menu"
+            aria-orientation="vertical"
+            aria-labelledby="menu-button"
+            tabindex="-1"
+          >
+            <div class="py-5" role="none">
+              <p
+                class="font-Josefin font-light px-8 py-4 text-xl text-gray-700"
+              >
+                We hope to raise funds to launch new conservation projects, such
+                as the development of tools for ocean cleanup, research on
+                methods for cleaning microplastics, and studies on plastic
+                degradation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="question mt-4">
+        <div class="block text-left m-auto w-[16rem] md:w-[30rem] lg:w-[55rem]">
+          <div>
+            <button
+              type="button"
+              class="question inline-flex flex-col w-full justify-between items-center rounded-md bg-white px-8 py-4 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 md:flex-row"
+              id="menu-button"
+              aria-expanded="true"
+              aria-haspopup="true"
+            >
+              <h4
+                class="flex flex-col items-center font-normal font-Josefin text-gray-900 text-lg md:flex-row md:text-xl lg:text-2xl"
+              >
+                <span
+                  class="font-semibold text-xl md:pr-4 md:text-2xl lg:text-3xl"
+                  >Q3</span
+                >
+                Will personal information be leaked?
+              </h4>
+              <svg
+                class="arrow -mr-1 size-8 text-gray-400"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+                data-slot="icon"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <div
+            class="ans hidden w-full z-10 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none"
+            role="menu"
+            aria-orientation="vertical"
+            aria-labelledby="menu-button"
+            tabindex="-1"
+          >
+            <div class="py-5" role="none">
+              <p
+                class="font-Josefin font-light px-8 py-4 text-xl text-gray-700"
+              >
+                Your real name and identity-related information will only be
+                used for internal statistics and verification purposes. This
+                personal data will not be disclosed in public. We will only use
+                the anonymous information you provide for thank-you
+                announcements on the website.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="question mt-4">
+        <div class="block text-left m-auto w-[16rem] md:w-[30rem] lg:w-[55rem]">
+          <div>
+            <button
+              type="button"
+              class="question inline-flex flex-col w-full justify-between items-center rounded-md bg-white px-8 py-4 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 md:flex-row"
+              id="menu-button"
+              aria-expanded="true"
+              aria-haspopup="true"
+            >
+              <h4
+                class="flex flex-col items-center font-normal font-Josefin text-gray-900 text-lg md:flex-row md:text-xl lg:text-2xl"
+              >
+                <span
+                  class="font-semibold text-xl md:pr-4 md:text-2xl lg:text-3xl"
+                  >Q4</span
+                >
+                Payment Methods Available
+              </h4>
+              <svg
+                class="arrow -mr-1 size-8 text-gray-400"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+                data-slot="icon"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <div
+            class="ans hidden w-full z-10 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none"
+            role="menu"
+            aria-orientation="vertical"
+            aria-labelledby="menu-button"
+            tabindex="-1"
+          >
+            <div class="py-5" role="none">
+              <ul class="px-8 py-4 list-disc flex flex-col gap-4">
+                <li class="font-Josefin font-light text-xl text-gray-700">
+                  Online remittance can be made using credit cards.
+                </li>
+                <li class="font-Josefin font-light text-xl text-gray-700">
+                  If you encounter any issues with the process, please email:
+                  nobody@gmail.com, and no one will have a specialist contact
+                  you.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="question mt-4">
+        <div class="block text-left m-auto w-[16rem] md:w-[30rem] lg:w-[55rem]">
+          <div>
+            <button
+              type="button"
+              class="question inline-flex flex-col w-full justify-between items-center rounded-md bg-white px-8 py-4 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 md:flex-row"
+              id="menu-button"
+              aria-expanded="true"
+              aria-haspopup="true"
+            >
+              <h4
+                class="flex flex-col items-center font-normal font-Josefin text-gray-900 text-lg md:flex-row md:text-xl lg:text-2xl"
+              >
+                <span
+                  class="font-semibold text-xl md:pr-4 md:text-2xl lg:text-3xl"
+                  >Q5</span
+                >
+                Does the association have a need for volunteers?
+              </h4>
+              <svg
+                class="arrow -mr-1 size-8 text-gray-400"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+                data-slot="icon"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <div
+            class="ans hidden w-full z-10 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none"
+            role="menu"
+            aria-orientation="vertical"
+            aria-labelledby="menu-button"
+            tabindex="-1"
+          >
+            <div class="py-5" role="none">
+              <ul class="px-8 py-4 flex flex-col gap-4">
+                <li class="font-Josefin font-light text-xl text-gray-700">
+                  Anyone interested in becoming a volunteer for the association
+                  must complete both "basic training" and "advanced training."
+                </li>
+                <li class="font-Josefin font-light text-xl text-gray-700">
+                  For information on the training schedule and location, please
+                  send us an email, and we will have a dedicated person contact
+                  you.
+                </li>
+                <li class="font-Josefin font-light text-xl text-gray-700">
+                  email: nobody@gmail.com
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
     <script src="js/app.js" type="module"></script>
     <script src="js/script.js"></script>
   </body>
