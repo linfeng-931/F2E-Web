@@ -98,6 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+
 const menuBtn = document.querySelector(".menuBtn");
 const menuList = document.querySelector(".menuList");
 menuBtn.addEventListener("click", displayMenu);

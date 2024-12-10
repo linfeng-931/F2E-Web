@@ -85,6 +85,54 @@ gsap.from(".animal-intro-section", {
       markers: false,
     },
   });
+  gsap.from(".news-intro-section", {
+    y: 100,
+    opacity: 0,
+    duration: 2,
+    scrollTrigger: {
+      trigger: ".data",
+      start: "top 60%",
+      end: "top 30%",
+      scrub: 1,
+      markers: false,
+    },
+  });
+  gsap.from(".marine-creature-1-news", {
+    y: 100,
+    opacity: 0,
+    duration: 2,
+    scrollTrigger: {
+      trigger: ".marine-creature-1-news",
+      start: "top 60%",
+      end: "top 30%",
+      scrub: 1,
+      markers: false,
+    },
+  });
+  gsap.from(".marine-creature-2-news", {
+    y: 100,
+    opacity: 0,
+    duration: 2,
+    scrollTrigger: {
+      trigger: ".marine-creature-2-news",
+      start: "top 60%",
+      end: "top 30%",
+      scrub: 1,
+      markers: false,
+    },
+  });
+  gsap.from(".marine-creature-3-news", {
+    y: 100,
+    opacity: 0,
+    duration: 2,
+    scrollTrigger: {
+      trigger: ".marine-creature-3-news",
+      start: "top 60%",
+      end: "top 30%",
+      scrub: 1,
+      markers: false,
+    },
+  });
   gsap.from("#plasticbag-link", {
     y: 100,
     opacity: 0,
@@ -109,7 +157,19 @@ gsap.from(".animal-intro-section", {
       markers: false,
     },
   });
-  
+  gsap.from("#fishingnet-link", {
+    y: 100,
+    opacity: 0,
+    duration: 2,
+    scrollTrigger: {
+      trigger: "#fishingnet-link",
+      start: "top 60%",
+      end: "top 30%",
+      scrub: 1,
+      markers: false,
+    },
+  });
+
   //data
   const dataColor = document.querySelector('.data-color-1');
   const observer = new IntersectionObserver((entries, observer) => {
@@ -134,12 +194,39 @@ gsap.from(".animal-intro-section", {
             duration: 4, 
           }
         );
+        gsap.fromTo("#page-2 .data-color-2", 
+          { 
+            width: 0,  
+          },
+          { 
+            width: "80%", 
+            duration: 4, 
+          }
+        );
         gsap.fromTo(".data-color-3", 
           { 
             width: 0,  
           },
           { 
             width: "60%", 
+            duration: 4, 
+          }
+        );
+        gsap.fromTo("#page-2 .data-color-3", 
+          { 
+            width: 0,  
+          },
+          { 
+            width: "40%", 
+            duration: 4, 
+          }
+        );
+        gsap.fromTo("#page-2 .data-color-4", 
+          { 
+            width: 0,  
+          },
+          { 
+            width: "35%", 
             duration: 4, 
           }
         );

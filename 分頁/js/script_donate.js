@@ -290,19 +290,15 @@ $(document).ready(function () {
         timeStamp: Date.now(),
       });
 
-      $(".total_money").html(total);
-      gsap.from(".total_money", {
-        textContent: orgintotal,
-        duration: 3,
-        snap: { textContent: 10 },
-      });
-
       // EMPTY INPUT FIELD
-      $nameField.val("");
-      $name2Field.val("");
-      $nicknameField.val("");
-      $emailField.val("");
-      $moneyField.val("");
+      $nameField.val('');
+      $name2Field.val('');
+      $nicknameField.val('');
+      $emailField.val('');
+      $moneyField.val('');
+      $cardField.val('');
+      $expiration.val('');
+      $code.val('');
       $nameField.css("background-color", "white");
       $name2Field.css("background-color", "white");
       $nicknameField.css("background-color", "white");
@@ -311,19 +307,16 @@ $(document).ready(function () {
       $("#selection-3").css("background-color", "#DEDEDE");
       $("#selection-1").css("background-color", "#DEDEDE");
       $("#selection-2").css("background-color", "#DEDEDE");
+
+      $(".total_money").html(total);
+      gsap.from(".total_money", {
+        textContent: orgintotal,
+        duration: 3,
+        snap: { textContent: 10 },
+      });
     }
-
-    $("#money-field").on("input", function () {
-      var moneyValue = $(this).val(); // 获取输入框的值
-
-      // 如果输入框为空，禁用按钮；如果有内容，启用按钮
-      if (moneyValue === "") {
-        $("#btndonate").prop("disabled", true);
-      } else {
-        $("#btndonate").prop("disabled", false);
-      }
     });
-  });
+  
 
   /*-----page-----*/
   for (let i = 0; i < sectionButtons.length; i++) {
@@ -388,7 +381,7 @@ $(document).ready(function () {
 
   previousButton2.addEventListener("click", function () {
     if (currentSection > 0) {
-      sectionButtons[currentSection - 2].click();
+      sectionButtons[currentSection - 3].click();
     }
   });
 
