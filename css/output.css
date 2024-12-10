@@ -1196,6 +1196,10 @@ html,
   background-image: url('../image/jamar-penny-ZgmGq_eFmUs-unsplash.jpg');
 }
 
+.bg-\[url\(\'\.\/image\/cliff\.svg\'\)\] {
+  background-image: url('./image/cliff.svg');
+}
+
 .from-transparent {
   --tw-gradient-from: transparent var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(0 0 0 / 0) var(--tw-gradient-to-position);
