@@ -1819,10 +1819,6 @@ html,
     display: flex;
   }
 
-  .md\:h-\[100vh\] {
-    height: 100vh;
-  }
-
   .md\:w-16 {
     width: 4rem;
   }
