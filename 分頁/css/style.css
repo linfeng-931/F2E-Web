@@ -34,7 +34,7 @@ h1, h3{
 
 /* Header Section */
 .header-js{
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     z-index: 5;
@@ -395,7 +395,7 @@ h1, h3{
   .decoration-img{
     position: absolute;
     width: 100%;
-    height: 70rem;
+    height: 50rem;
     z-index: 9;
     display: flex;
     overflow: hidden;
@@ -407,7 +407,6 @@ h1, h3{
     width: 35rem;
     height: 35rem;
     padding-top: -35rem;
-    margin-top: -35rem;
   }
   .decoration-img-2{
     width: 20rem;
@@ -418,7 +417,7 @@ h1, h3{
     width: 40rem;
     height: 40rem;
     padding-top: -35rem;
-    margin-top: -35rem;
+    margin-top: -10rem;
   }
 
   /*data-garbage-section*/
@@ -555,7 +554,11 @@ h1, h3{
     width: 0%;
     height:4rem;
     background-color: var(--Gray01);
-
+  }
+  .data-color-4{
+    width: 0%;
+    height:3rem;
+    background-color: var(--Blue03);
   }
   .data-num{
     font-size: 1.5rem;
@@ -1014,6 +1017,20 @@ footer .footer-img-wrappper{
     background: var(--Blue01);
 }
 
+/*page-2 data*/
+#page-2 .data{
+    margin-top: 1rem;
+}
+#page-2 .data-color-1{
+    height:4rem;
+  }
+#page-2 .data-color-2{
+    height:4rem;
+  }
+#page-2 .data-color-3{
+    height:4rem;
+  }
+
 /*page-2 news*/
 #page-2 .news-intro-section h3{
     border-top: 0.1rem dashed var(--Blue04);
@@ -1197,6 +1214,17 @@ footer .footer-img-wrappper{
 }
 
 @media screen and (max-width: 769px) {
+    .logo-area {
+        width: 7rem;
+    }
+    .logo-body a{
+        width: 3rem;
+    }
+    .logo-body img{
+        margin-left: -0.2rem;
+        margin-top: -0.2rem;
+    }
+
     /*plastic-intro*/
     .plastic-intro-section .padding{
         padding-top: 8rem;
@@ -1238,7 +1266,9 @@ footer .footer-img-wrappper{
     .animal-intro-section .decoration-img{
         margin-left: 15rem;
     }
-
+    .decoration-img-2 {
+        margin-top: 19rem;
+    }
     /*garbage-data-section*/
     .data-garbage-container .left {
         margin-bottom: 2.5rem;
@@ -1412,7 +1442,7 @@ footer .footer-img-wrappper{
         margin-left: 35%;
         width: 15rem;
         height: 15rem;
-        margin-top: -18rem;
+        margin-top: -40rem;
     }
     .indicator{
         margin-top: 2rem;
@@ -1441,7 +1471,7 @@ footer .footer-img-wrappper{
     .decoration-img-2 {
         width: 15rem;
         height: 15rem;
-        margin-top: 4rem;
+        margin-top: 0rem;
         margin-left: -2rem;
     }
     /*news*/
@@ -1482,7 +1512,7 @@ footer .footer-img-wrappper{
         margin-bottom: -1.5rem;
     }
     .plastic-link-section-bg{
-        top: 340rem;
+        top: 335rem;
     }
     .plastic-link-section .column{
         width:74%;
@@ -1500,12 +1530,29 @@ footer .footer-img-wrappper{
         width: 2rem;
         height: 2rem;
     }
-    .plastic-link-section .link-right-section .padding{
-        padding-left: 9.7rem;
-        padding-top: 3rem;
+    .link-right-section .section-title {
+        margin-top: 4rem;
+        letter-spacing: 0.05rem;
+        margin-left: 4rem;
     }
-    .plastic-link-section .section-title{
-        padding-top: 4rem;
+    #microplastic-link .section-title h1 span {
+        font-size: 2rem;
+    }
+    .plastic-link-section.link-right-section .padding {
+        padding-left: 9.5rem;
+        padding-right: 18rem;
+    }
+    .plastic-link-section.link-right-section>img {
+        margin-top: -4rem;
+    }
+    .decoration-img {
+        margin-top: -11rem;
+    }
+    #fishingnet-link .learn-more-btn {
+        margin-top: -2rem;
+    }
+    #fishingnet-link>img {
+        top: 32rem;
     }
 
 }
