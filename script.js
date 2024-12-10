@@ -185,19 +185,27 @@ timeline.from(".pollution-list li", {
   // ease: "power2.out",
 });
 
-gsap.from(".section-title", {
-  y: 100,
-  opacity: 0,
-  duration: 2,
+timeline = gsap.timeline({
   scrollTrigger: {
     trigger: ".humanity",
-    start: "top 20%",
+    start: "top 70%",
     end: "top 50%",
-    scrub: 1,
+    scrub: 4,
     markers: false,
   },
 });
 
+timeline.from(".section-title", {
+  y: 100,
+  opacity: 0,
+  duration: 2,
+});
+
+timeline.from(".antialiased", {
+  y: 100,
+  opacity: 0,
+  duration: 2,
+});
 // Humanity Section
 const panes = document.querySelectorAll(".pane");
 let activePaneIndex = 0;
