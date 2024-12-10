@@ -24,7 +24,7 @@ module.exports = {
         B500: "#091454",
       },
       // backgroundImage: {
-      //   mainBg: "url('./image/background.svg')",
+      //   mainBg: "url('../image/background.svg')",
       //   cliff: "url('./image/cliff.svg')",
       //   wave: "url('./image/wave03.svg')",
       //   outside: "url('./image/olia-gozha-u7xln_gMQyY-unsplash.jpg')",
@@ -32,7 +32,6 @@ module.exports = {
       //   food: "url('./image/farhad-ibrahimzade-S92tBP-BvwQ-unsplash.jpg')",
       //   paint: "url('./image/karl-solano-eQ-8iUrb07g-unsplash.jpg')",
       //   construction: "url('./image/jamar-penny-ZgmGq_eFmUs-unsplash.jpg')",
-      //   footerBg: "url('./image/footer-wave.svg')",
       // },
       backgroundPosition: {
         TC: "top center",
