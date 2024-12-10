@@ -6,6 +6,13 @@
     <title>Donation Platform</title>
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="../css/output.css" />
+    <!-- Add additional services that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-storage-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore-compat.js"></script>
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,6 +29,8 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
       rel="stylesheet"
     />
+
+    <link rel="stylesheet" href="css/donate_style.css" />
   </head>
   <body class="pb-8">
     <!-- home section -->
@@ -168,7 +177,7 @@
         <h1
           class="font-Josefin font-semibold text-gray-900 text-xl md:text-4xl text-center mb-16"
         >
-          Latest to donate
+          Support us
         </h1>
         <div>
           <div
@@ -197,7 +206,10 @@
                 <h6 class="font-light text-gray-400 text-sm md:text-lg">
                   Goals :
                   <span class="font-semibold text-gray-900 text-md md:text-lg"
-                    >$25000</span
+                    ><div id="doc">
+                      $
+                      <div class="total_money">0</div>
+                    </div></span
                   >
                 </h6>
 
@@ -218,69 +230,152 @@
         </div>
       </div>
       <div
-        class="hidden donate-form absolute top-0 left-0 flex-col justify-center items-center w-full bg-[rgb(9,20,84,0.8)] p-8 lg:h-[100vh]"
+        class="flex absolute top-0 left-0 flex-col justify-center items-center w-full p-8 font-Josefin bg-[rgba(11,113,215,0.8)] h-[100vh]"
       >
-        <!-- Create a form to input user data -->
-        <form
-          id="userForm"
-          class="font-Josefin flex flex-col justify-evenly gap-4 bg-white p-8 rounded-xl w-[16rem] md:w-[30rem]"
-        >
-          <label class="text-lg font-semibold">Name</label>
-          <div class="name-wrapper md:flex gap-2">
-            <div class="name-label-wrapper">
-              <input
-                class="inline-block border-B300 border py-2 px-4 w-full"
-                type="text"
-                id="first"
-                name="first"
-                required
-              />
-              <label class="inline-block text-sm text-gray-400" for="first"
-                >First</label
+        <div class="donate-main bg-white p-8 rounded-xl w-[16rem] md:w-[30rem]">
+          <ul class="progress nav flex justify-center text-white gap-4">
+            <li
+              data-cont="r1"
+              class="active inline-flex bg-gray-300 w-5 h-5 p-5 rounded-[50%] items-center justify-center"
+            >
+              1
+            </li>
+            <li
+              data-cont="r2"
+              class="inline-flex bg-gray-300 w-5 h-5 p-5 rounded-[50%] items-center justify-center"
+            >
+              2
+            </li>
+            <li
+              data-cont="r3"
+              class="inline-flex bg-gray-300 w-5 h-5 p-5 rounded-[50%] items-center justify-center"
+            >
+              3
+            </li>
+            <li
+              data-cont="r4"
+              class="inline-flex bg-gray-300 w-5 h-5 p-5 rounded-[50%] items-center justify-center"
+            >
+              4
+            </li>
+            <div class="wall"></div>
+          </ul>
+
+          <section id="r1" class="section section-one active mt-6">
+            <form>
+              <h3 class="mb-2">Name</h3>
+              <div
+                class="name-input flex flex-col gap-2 md:flex-row md:justify-between md:gap-4"
               >
-            </div>
-            <div class="name-label-wrapper">
+                <div class="name-space">
+                  <input
+                    type="text"
+                    class="form-control-plaintext name-field inline-block border-B300 border py-2 px-4 w-full"
+                    id="name-field"
+                    placeholder="First name"
+                  />
+                  <label for="fname" class="inline-block text-sm text-gray-400"
+                    >First Name</label
+                  >
+                </div>
+                <div class="name-space">
+                  <input
+                    type="text"
+                    class="form-control-plaintext name2-field inline-block border-B300 border py-2 px-4 w-full"
+                    id="name2-field"
+                    placeholder="Last name"
+                  />
+                  <label for="fname" class="inline-block text-sm text-gray-400"
+                    >Last Name</label
+                  >
+                </div>
+              </div>
+
+              <label for="fname" class="inline-block mb-2 mt-4">Nickname</label>
               <input
-                class="inline-block border-B300 border py-2 px-4 w-full"
                 type="text"
-                id="last"
-                name="last"
-                required
+                class="form-control-plaintext nickname-field inline-block border-B300 border py-2 px-4 w-full"
+                id="nickname-field"
+                placeholder="Enter your nickname"
               />
-              <label class="inline-block text-sm text-gray-400" for="last"
-                >Last</label
+
+              <label for="fname" class="inline-block mb-2 mt-4">Email</label>
+              <input
+                type="email"
+                class="form-control-plaintext email-field inline-block border-B300 border py-2 px-4 w-full"
+                id="email-field"
+                placeholder="Enter your email"
+              />
+            </form>
+            <button
+              class="next btnn w-full mt-8 px-4 py-2 bg-B200 rounded-full font-Josefin font-semibold text-white text-lg hover:bg-blue-800 transition ease-in-out duration-500"
+              id="next1"
+            >
+              Next
+            </button>
+          </section>
+
+          <section id="r2" class="section section-two mt-6">
+            <h3 class="text-base mb-4 font-semibold md:text-lg lg:text-xl">
+              How much money would you like to donate?
+            </h3>
+            <div
+              class="select-money-field flex flex-col items-center gap-2 md:flex-row justify-around"
+            >
+              <div
+                class="select-money w-20 h-20 rounded-full flex justify-center items-center bg-gray-300 text-white cursor-pointer"
+                id="selection-1"
               >
+                $500
+              </div>
+              <div
+                class="select-money w-20 h-20 rounded-full flex justify-center items-center bg-gray-300 text-white cursor-pointer"
+                id="selection-2"
+              >
+                $2000
+              </div>
+              <div
+                class="select-money w-20 h-20 rounded-full flex justify-center items-center bg-gray-300 text-white cursor-pointer"
+                id="selection-3"
+              >
+                $5000
+              </div>
             </div>
-          </div>
+            <input
+              type="number"
+              class="form-control-plaintext money-field inline-block border-B300 border py-2 px-4 w-full mt-8"
+              id="money-field"
+              placeholder="Other money..."
+            />
 
-          <label for="email" class="text-lg font-semibold">Email</label>
-          <input
-            class="inline-block border-B300 border py-2 px-4 w-full"
-            type="email"
-            id="email"
-            name="email"
-            required
-          />
+            <div
+              class="btn2 flex flex-col justify-center md:flex-row md:justify-between md:gap-4"
+            >
+              <button
+                class="previous disable btnn w-full mt-8 px-4 py-2 bg-B200 rounded-full font-Josefin font-semibold text-white text-lg hover:bg-blue-800 transition ease-in-out duration-500"
+                id="previous"
+              >
+                Previous
+              </button>
+              <button
+                type="button"
+                class="btn btnn w-full mt-4 px-4 py-2 bg-B200 rounded-full font-Josefin font-semibold text-white text-lg hover:bg-blue-800 transition ease-in-out duration-500 md:mt-8"
+                id="next2"
+              >
+                Next
+              </button>
+            </div>
+          </section>
 
-          <label for="amount" class="text-lg font-semibold"
-            >Donation Amount</label
-          >
-          <input
-            class="inline-block border-B300 border py-2 px-4 w-full"
-            type="number"
-            id="amount"
-            name="amount"
-            required
-          />
-
-          <label class="text-lg font-semibold">Creadit Card</label>
-          <div class="card-laber-wrapper">
+          <section id="r3" class="section section-three mt-6">
+            <h3 class="font-semibold mt-8">Creadit Card</h3>
             <input
               class="inline-block border-B300 border py-2 px-4 w-full"
               type="text"
               id="card"
               name="card"
               required
+              placeholder="************"
             />
             <label class="inline-block text-sm text-gray-400" for="card"
               >Card Number</label
@@ -289,10 +384,11 @@
               <div class="card">
                 <input
                   class="inline-block border-B300 border py-2 px-4 w-full"
-                  type="date"
+                  type="text"
                   id="expiration"
                   name="expiration"
                   required
+                  placeholder="MM/YYYY"
                 />
                 <label
                   class="inline-block text-sm text-gray-400"
@@ -314,15 +410,66 @@
                 >
               </div>
             </div>
-          </div>
 
-          <button
-            class="w-full mt-4 px-4 py-2 bg-B200 font-Josefin font-semibold text-white text-lg hover:bg-B400 transition ease-in-out duration-500"
-            type="submit"
-          >
-            Submit
-          </button>
-        </form>
+            <div
+              class="btn2 flex flex-col justify-center md:flex-row md:justify-between md:gap-4"
+            >
+              <button
+                class="previous disable btnn w-full mt-8 px-4 py-2 bg-B200 rounded-full font-Josefin font-semibold text-white text-lg hover:bg-blue-800 transition ease-in-out duration-500"
+                id="previous1"
+              >
+                Previous
+              </button>
+              <button
+                type="button"
+                class="btn btnn w-full mt-4 px-4 py-2 bg-B200 rounded-full font-Josefin font-semibold text-white text-lg hover:bg-blue-800 transition ease-in-out duration-500 md:mt-8"
+                id="btndonate"
+              >
+                Donate
+              </button>
+            </div>
+          </section>
+
+          <section id="r4" class="section section-four mt-8">
+            <div class="section04-content flex flex-col items-center">
+              <div class="svg-container">
+                <svg
+                  class="ft-green-tick"
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="100"
+                  width="100"
+                  viewBox="0 0 48 48"
+                  aria-hidden="true"
+                >
+                  <circle
+                    class="circle"
+                    fill="#5bb543"
+                    cx="24"
+                    cy="24"
+                    r="22"
+                  />
+                  <path
+                    class="tick"
+                    fill="none"
+                    stroke="#FFF"
+                    stroke-width="6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-miterlimit="10"
+                    d="M14 27l5.917 4.917L34 17"
+                  />
+                </svg>
+              </div>
+              <h3>Thank you!</h3>
+            </div>
+            <button
+              class="previous btnn next btnn w-full mt-8 px-4 py-2 bg-B200 rounded-full font-Josefin font-semibold text-white text-lg hover:bg-blue-800 transition ease-in-out duration-500"
+              id="return"
+            >
+              Return
+            </button>
+          </section>
+        </div>
       </div>
     </section>
     <!-- question section -->
@@ -371,7 +518,6 @@
             class="ans hidden w-full z-10 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none"
             role="menu"
             aria-orientation="vertical"
-            aria-labelledby="menu-button"
             tabindex="-1"
           >
             <div class="py-5" role="none">
@@ -425,7 +571,6 @@
             class="ans hidden w-full z-10 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none"
             role="menu"
             aria-orientation="vertical"
-            aria-labelledby="menu-button"
             tabindex="-1"
           >
             <div class="py-5" role="none">
@@ -480,7 +625,6 @@
             class="ans hidden w-full z-10 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none"
             role="menu"
             aria-orientation="vertical"
-            aria-labelledby="menu-button"
             tabindex="-1"
           >
             <div class="py-5" role="none">
@@ -536,7 +680,6 @@
             class="ans hidden w-full z-10 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none"
             role="menu"
             aria-orientation="vertical"
-            aria-labelledby="menu-button"
             tabindex="-1"
           >
             <div class="py-5" role="none">
@@ -593,7 +736,6 @@
             class="ans hidden w-full z-10 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none"
             role="menu"
             aria-orientation="vertical"
-            aria-labelledby="menu-button"
             tabindex="-1"
           >
             <div class="py-5" role="none">
@@ -617,7 +759,8 @@
       </section>
     </div>
 
-    <script src="js/app.js" type="module"></script>
+    <script src="js/jQuery.js"></script>
+    <script src="js/script_donate.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
