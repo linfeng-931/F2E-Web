@@ -4,6 +4,29 @@
   flex-direction: column;
 }
 
+.openAnimation {
+  display: block;
+  animation: open ease-out 0.1s;
+}
+
+.closeAnimation {
+  display: none;
+}
+
+@keyframes open {
+  from {
+    opacity: 0;
+    display: none;
+    transform: scale(0.95);
+  }
+
+  to {
+    opacity: 100;
+    display: block;
+    transform: scale(1);
+  }
+}
+
 .ri-stethoscope-line,
 .ri-recycle-line,
 .ri-speak-line {

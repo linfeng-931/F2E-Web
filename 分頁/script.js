@@ -46,7 +46,7 @@ imgBtn.forEach((e) => {
         currentIndex = targetIndex;
         updateSlide();
         window.scrollTo({
-          top: 860,
+          top: 990,
           behavior: "smooth",
         });
       }
@@ -98,13 +98,13 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
 const menuBtn = document.querySelector(".menuBtn");
 const menuList = document.querySelector(".menuList");
 menuBtn.addEventListener("click", displayMenu);
 function displayMenu() {
   menuList.classList.toggle("show");
 }
+<<<<<<< HEAD:分頁/js/script.js
 
 const question = document.querySelectorAll(".question");
 question.forEach((e) => e.addEventListener("click", displayFAQ));
@@ -128,3 +128,5 @@ function displayFAQ(e) {
     ans.classList.add("hidden");
   }
 }
+=======
+>>>>>>> 867293518e591e638837200295c0ed2d0225a812:分頁/script.js

@@ -5,4 +5,6 @@ dist/
 *.tmp
 *.cache
 .tailwind/
-test.html
+
+主頁/css/style.css
+主頁/css/reset.css
