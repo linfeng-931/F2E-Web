@@ -1196,7 +1196,7 @@ footer .footer-img-wrappper{
     background-color: var(--Blue04);
 }
 
-@media screen and (max-width: 721px) {
+@media screen and (max-width: 769px) {
     /*plastic-intro*/
     .plastic-intro-section .padding{
         padding-top: 8rem;
@@ -1218,11 +1218,11 @@ footer .footer-img-wrappper{
         position: absolute;
         height: 0;
         width: 0;
-        right: 0;
+        left: 0;
         z-index: -10;
     }
     .column{
-        flex-flow: wrap;
+        flex-direction: column;
     }
     .context{
         padding: 0 10px 0 10px;
@@ -1238,14 +1238,274 @@ footer .footer-img-wrappper{
     .animal-intro-section .decoration-img{
         margin-left: 15rem;
     }
+
+    /*garbage-data-section*/
+    .data-garbage-container .left {
+        margin-bottom: 2.5rem;
+    }
+    .data-garbage-container .section-title{
+        margin-left: 5rem;
+    }
+    .circle-container{
+        margin-left: 4rem;
+    }
+
+    /*news*/
+    .full-bg{
+        position: absolute;
+        height: 30rem;
+        width: 100%;
+        background-color: var(--White);
+        z-index: -5;
+        margin-top: -25rem;
+    }
+    .news-intro-section-bg{
+        padding-top: 95rem;
+        margin-top: 10rem;
+    }
+    .news-intro-section{
+        top: 0;
+        height: 140rem;
+    }
+    .news-intro-section h3{
+        margin-bottom: 6rem;
+    }
+    .news-container img{
+        box-shadow: 0 0.2rem var(--Blue02);
+        margin-top: -4rem;
+        width: 22rem;
+    }
+    .marine-creature-2-news img{
+        box-shadow: 0 0.2rem #BBBBBB;
+    }
+    .marine-creature-3-news img{
+        box-shadow: 0 0.2rem var(--Yellow);
+    }
+    .news-container .txt{
+        opacity: 1;
+        width:22rem;
+        text-align: center;
+        background-color: var(--White);
+        border-radius: 11rem;
+        box-shadow: 0 0 6px var(--Gray01);  
+        margin-top: -29rem;
+        padding: 22rem 2rem 4rem 2rem;
+    }
+    .news-intro-section .column{
+        gap: 5rem;
+    }
     /*plastic-link-section*/
     .plastic-link-bg{
         width: 100%;
         overflow: hidden;
     }
+    .plastic-link-section{
+        height: 54rem;
+    }
+    .plastic-link-section .section-title{
+        margin-left: 5rem;
+    }
     .plastic-link-section>img{
         left: 22rem;
-        top: 30rem;
-        width: 20rem;
+        top: 28rem;
+        width: 21rem;
     }
+    .plastic-link-section .column .left{
+        width: 100%;
+        margin-left: -4.5rem;
+    }
+    .plastic-link-section .column .right{
+        padding-top: 0rem;
+        padding-bottom: 8rem;
+    }
+    .plastic-link-bg .txt{
+        padding-bottom: 10rem;
+    }
+    .plastic-link-section.link-right-section .padding{
+        padding-left: 4.2rem;
+        padding-right: 5rem;
+    }
+    .plastic-link-section.link-right-section>img{
+        left: 20rem;
+    }
+}
+
+@media screen and (max-width: 321px) {
+    span{
+        display: block;
+    }
+    h1{
+        font-size:2.5rem;
+    }
+    .learn-more-btn h2{
+        font-size: 1rem;
+    }
+    .section-title h1 span:nth-child(2){
+        margin-left: 0;
+    }
+    /*plastic-intro*/
+    .plastic-intro-section{
+        width: 100%;
+        overflow: hidden;
+    }
+    .plastic-intro-section>img{
+        left: 2.5rem;
+        top: 16rem;
+        width: 16rem;
+    }
+    .plastic-intro-section .padding{
+        padding-left: 2rem;
+        padding-right: 1.7rem;
+        padding-top: 5rem;
+    }
+    .column .right{
+        padding-top: 13rem;
+    }
+    .sub-title{
+        font-size: 1.4rem;
+    }
+    .img-wrapper .img-bg{
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+    .img-bg .circle{
+        width: 0.7rem;
+        height: 0.7rem;
+    }
+    
+    .circle-small{
+        width: 0.8rem;
+        height: 0.8rem;
+    }
+    .circle-small .ri-arrow-right-up-line{
+        font-size: 0.5rem;
+        left: 0.14rem;
+        top: 0.12rem;
+    }
+
+    /*animal-intro*/
+    .slide{
+        margin: 0 0.06rem;
+        height: 48rem;
+    }
+    .slider-container{
+        margin-top: 5rem;
+    }
+    .slide h3{
+        font-size: 2.5rem;
+    }
+    .context{
+        width: 50%;
+        margin-top: -10rem;
+    }
+    .context p{
+        font-size: 1.2rem;
+    }
+    .slide img{
+        width:40%;
+        margin-bottom: -35rem;
+    }
+    .animal-intro-section .decoration-img{
+        margin-left: 30rem;
+    }
+    .decoration-img-1{
+        margin-left: 35%;
+        width: 15rem;
+        height: 15rem;
+        margin-top: -18rem;
+    }
+    .indicator{
+        margin-top: 2rem;
+    }
+
+    /*garbage-data*/
+    .circle-container{
+        margin-left: -8rem;
+    }
+    #special-num {
+        color: var(--White);
+        font-size: 4rem;
+        font-weight: 300;
+    }
+    .data-garbage-container .section-title{
+        margin-left: -2rem;
+    }
+    .data{
+        margin-top: 1.3rem;
+    }
+    .data-garbage-container .right .txt {
+        font-size: 0.65rem;
+        margin: 0.3rem;
+        padding: 0.5rem;
+    }
+    .decoration-img-2 {
+        width: 15rem;
+        height: 15rem;
+        margin-top: 4rem;
+        margin-left: -2rem;
+    }
+    /*news*/
+    .news-container img{
+        width: 18rem;
+    }
+    .news-container .txt{
+        width: 18rem;
+        margin-top: -24.9rem;
+        padding: 18rem 2rem 4rem 2rem;
+    }
+
+    .decoration-img-3{
+        margin-left: 40%;
+        width: 30rem;
+        height: 30rem;
+        margin-top: -35rem;
+    }
+    /*plastic-link*/
+    .plastic-link-bg{
+        width: 30rem;
+        margin-left: -10rem;
+    }
+    .plastic-link-section{
+        margin-left: 0;
+        border-radius: 30rem;
+        height: 50rem;
+        width: 50rem;
+    }
+    .plastic-link-section .padding{
+        padding-left: 12rem;
+        padding-right: 15.4rem;
+    }
+    .plastic-link-section .section-title h1{
+       line-height: 2.5rem;
+    }
+    .plastic-link-section .section-title span{
+        margin-bottom: -1.5rem;
+    }
+    .plastic-link-section-bg{
+        top: 340rem;
+    }
+    .plastic-link-section .column{
+        width:74%;
+    }
+
+    .plastic-link-section .learn-more-btn{
+        margin-top: -7rem;
+    }
+    .plastic-link-section>img {
+        left: 21rem;
+        top: 35rem;
+        width: 7rem;
+    } 
+    .learn-more-btn .learn-more-img {
+        width: 2rem;
+        height: 2rem;
+    }
+    .plastic-link-section .link-right-section .padding{
+        padding-left: 9.7rem;
+        padding-top: 3rem;
+    }
+    .plastic-link-section .section-title{
+        padding-top: 4rem;
+    }
+
 }

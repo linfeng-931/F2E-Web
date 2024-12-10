@@ -85,6 +85,54 @@ gsap.from(".animal-intro-section", {
       markers: false,
     },
   });
+  gsap.from(".news-intro-section", {
+    y: 100,
+    opacity: 0,
+    duration: 2,
+    scrollTrigger: {
+      trigger: ".data",
+      start: "top 60%",
+      end: "top 30%",
+      scrub: 1,
+      markers: false,
+    },
+  });
+  gsap.from(".marine-creature-1-news", {
+    y: 100,
+    opacity: 0,
+    duration: 2,
+    scrollTrigger: {
+      trigger: ".marine-creature-1-news",
+      start: "top 60%",
+      end: "top 30%",
+      scrub: 1,
+      markers: false,
+    },
+  });
+  gsap.from(".marine-creature-2-news", {
+    y: 100,
+    opacity: 0,
+    duration: 2,
+    scrollTrigger: {
+      trigger: ".marine-creature-2-news",
+      start: "top 60%",
+      end: "top 30%",
+      scrub: 1,
+      markers: false,
+    },
+  });
+  gsap.from(".marine-creature-3-news", {
+    y: 100,
+    opacity: 0,
+    duration: 2,
+    scrollTrigger: {
+      trigger: ".marine-creature-3-news",
+      start: "top 60%",
+      end: "top 30%",
+      scrub: 1,
+      markers: false,
+    },
+  });
   gsap.from("#plasticbag-link", {
     y: 100,
     opacity: 0,
