@@ -120,6 +120,84 @@ gsap.from(".sdgs-source", {
   },
 });
 
+//Perpetrators
+
+gsap.registerPlugin(ScrollTrigger);
+
+let timeline = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#perpetrator",
+    start: "top 90%",
+    end: "top -40%",
+    scrub: 4,
+    markers: false,
+  },
+});
+
+timeline
+  .from(".carousel-item1", {
+    x: window.innerWidth,
+    opacity: 0,
+    duration: 2,
+  })
+  .from(".carousel-item2", {
+    x: -window.innerWidth,
+    opacity: 0,
+    duration: 2,
+  })
+  .from(".carousel-item3", {
+    x: window.innerWidth,
+    opacity: 0,
+    duration: 1.5,
+  });
+
+// chart
+
+timeline = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".pollution",
+    start: "top 90%",
+    end: "top 50%",
+    scrub: 4,
+    markers: false,
+  },
+});
+
+timeline.from(".chart-wrapper", {
+  opacity: 0,
+  scale: 0,
+  duration: 2,
+  ease: "power2.out",
+});
+
+timeline.from(".pollution-title", {
+  x: 100,
+  opacity: 0,
+  duration: 2,
+  ease: "power2.out",
+});
+
+timeline.from(".pollution-list li", {
+  x: 100,
+  opacity: 0,
+  stagger: 0.4,
+  duration: 2,
+  // ease: "power2.out",
+});
+
+gsap.from(".section-title", {
+  y: 100,
+  opacity: 0,
+  duration: 2,
+  scrollTrigger: {
+    trigger: ".humanity",
+    start: "top 20%",
+    end: "top 50%",
+    scrub: 1,
+    markers: false,
+  },
+});
+
 // Humanity Section
 const panes = document.querySelectorAll(".pane");
 let activePaneIndex = 0;

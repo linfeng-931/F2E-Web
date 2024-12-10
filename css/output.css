@@ -1132,40 +1132,72 @@ html,
   --tw-bg-opacity: 0.3;
 }
 
-.bg-cliff {
-  background-image: url('../../image/cliff.svg');
+.bg-\[url\(\'\.\.\/image\/background\.svg\'\)\] {
+  background-image: url('../image/background.svg');
 }
 
-.bg-construction {
-  background-image: url(../../image/jamar-penny-ZgmGq_eFmUs-unsplash.jpg);
+.bg-\[url\(\'\.\.\/image\/cliff\.svg\'\)\] {
+  background-image: url('../image/cliff.svg');
 }
 
-.bg-food {
-  background-image: url(../../image/farhad-ibrahimzade-S92tBP-BvwQ-unsplash.jpg);
+.bg-\[url\(\'\/image\/farhad-ibrahimzade-S92tBP-BvwQ-unsplash\.jpg\'\)\] {
+  background-image: url('/image/farhad-ibrahimzade-S92tBP-BvwQ-unsplash.jpg');
+}
+
+.bg-\[url\(\'\/image\/jamar-penny-ZgmGq_eFmUs-unsplash\.jpg\'\)\] {
+  background-image: url('/image/jamar-penny-ZgmGq_eFmUs-unsplash.jpg');
+}
+
+.bg-\[url\(\'\/image\/karl-solano-eQ-8iUrb07g-unsplash\.jpg\'\)\] {
+  background-image: url('/image/karl-solano-eQ-8iUrb07g-unsplash.jpg');
+}
+
+.bg-\[url\(\'\/image\/le-quan-mPzjn-ix_O0-unsplash\.jpg\'\)\] {
+  background-image: url('/image/le-quan-mPzjn-ix_O0-unsplash.jpg');
+}
+
+.bg-\[url\(\'\/image\/olia-gozha-u7xln_gMQyY-unsplash\.jpg\'\)\] {
+  background-image: url('/image/olia-gozha-u7xln_gMQyY-unsplash.jpg');
+}
+
+.bg-\[url\(\'\/image\/wave03\.svg\'\)\] {
+  background-image: url('/image/wave03.svg');
 }
 
 .bg-gradient-to-b {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
 }
 
-.bg-indoor {
-  background-image: url(../../image/le-quan-mPzjn-ix_O0-unsplash.jpg);
+.bg-\[url\(\'\.\.\/image\/wave03\.svg\'\)\] {
+  background-image: url('../image/wave03.svg');
 }
 
-.bg-mainBg {
-  background-image: url('../../image/background.svg');
+.bg-\[url\(\'\.\/image\/background\.svg\'\)\] {
+  background-image: url('./image/background.svg');
 }
 
-.bg-outside {
-  background-image: url(../../image/olia-gozha-u7xln_gMQyY-unsplash.jpg);
+.bg-\[url\(\'\.\.\/image\/olia-gozha-u7xln_gMQyY-unsplash\.jpg\'\)\] {
+  background-image: url('../image/olia-gozha-u7xln_gMQyY-unsplash.jpg');
 }
 
-.bg-paint {
-  background-image: url(../../image/karl-solano-eQ-8iUrb07g-unsplash.jpg);
+.bg-\[url\(\'\.\.\/image\/le-quan-mPzjn-ix_O0-unsplash\.jpg\'\)\] {
+  background-image: url('../image/le-quan-mPzjn-ix_O0-unsplash.jpg');
 }
 
-.bg-wave {
-  background-image: url(../../image/wave03.svg);
+.bg-\[url\(\'\.\.\/image\/farhad-ibrahimzade-S92tBP-BvwQ-unsplash\.jpg\'\)\] {
+  background-image: url('../image/farhad-ibrahimzade-S92tBP-BvwQ-unsplash.jpg');
+}
+
+.bg-\[url\(\'\.\.\/image\/karl-solano-eQ-8iUrb07g-unsplash\.jpg\'\)\] {
+  background-image: url('../image/karl-solano-eQ-8iUrb07g-unsplash.jpg');
+}
+
+.bg-\[url\(\'\.\.\/image\/jamar-penny-ZgmGq_eFmUs-unsplash\.jpg\'\)\] {
+  background-image: url('../image/jamar-penny-ZgmGq_eFmUs-unsplash.jpg');
+}
+
+.bg-\[url\(\'\.\/image\/cliff\.svg\'\)\] {
+  background-image: url('./image/cliff.svg');
 }
 
 .from-transparent {
@@ -1817,10 +1849,6 @@ html,
 
   .md\:flex {
     display: flex;
-  }
-
-  .md\:h-\[100vh\] {
-    height: 100vh;
   }
 
   .md\:w-16 {
