@@ -259,8 +259,10 @@ $(document).ready(function () {
 
     if (moneysel != 0) {
       sendmoney = moneysel;
+      $moneyField.css("background-color", "#FFECEC");
     } else {
       sendmoney = $moneyField.val();
+      $moneyField.css("background-color", "#FFECEC");
     }
 
     sendmoney = parseInt(sendmoney);
