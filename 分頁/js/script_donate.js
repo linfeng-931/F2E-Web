@@ -25,14 +25,33 @@ $(document).ready(function () {
   const money_donate_Ref = db.collection("money_donate");
   const user_money_Ref = money_donate_Ref.doc("user_money");
   const total_money_Ref = money_donate_Ref.doc("total_money");
-  const donateBtn = document.querySelector(".donate-btn");
   const donate = document.querySelector(".donate");
   const closeBtn = document.querySelector(".close-btn");
+  const donateBtn = document.querySelector(".donate-btn");
   let x = 0;
   let total = 0;
   let orgintotal = total;
   let goal = 50000;
   let datanum = "data-" + x;
+
+  /*page*/
+  let currentSection = 0;
+  let sections = document.querySelectorAll(".section");
+  let sectionButtons = document.querySelectorAll(".nav > li");
+  let nextButton = document.querySelector("#next1");
+  let nextButton1 = document.querySelector("#next2");
+  let nextButton2 = document.querySelector("#btndonate");
+  let previousButton = document.querySelector("#previous");
+  let previousButton1 = document.querySelector("#previous1");
+  let previousButton2 = document.querySelector("#return");
+
+  /*money-selection*/
+  let $selection01 = $("#selection-1");
+  let $selection02 = $("#selection-2");
+  let $selection03 = $("#selection-3");
+
+  let moneysel = 0;
+  let flag = -1;
 
   var bar = new ProgressBar.Line(container, {
     strokeWidth: 4,
@@ -72,24 +91,6 @@ $(document).ready(function () {
     donate.classList.remove("flex");
     donate.classList.add("hidden");
   }
-  /*page*/
-  let currentSection = 0;
-  let sections = document.querySelectorAll(".section");
-  let sectionButtons = document.querySelectorAll(".nav > li");
-  let nextButton = document.querySelector("#next1");
-  let nextButton1 = document.querySelector("#next2");
-  let nextButton2 = document.querySelector("#btndonate");
-  let previousButton = document.querySelector("#previous");
-  let previousButton1 = document.querySelector("#previous1");
-  let previousButton2 = document.querySelector("#return");
-
-  /*money-selection*/
-  let $selection01 = $("#selection-1");
-  let $selection02 = $("#selection-2");
-  let $selection03 = $("#selection-3");
-
-  let moneysel = 0;
-  let flag = -1;
 
   function IsEmail(email) {
     const regex =
@@ -259,23 +260,21 @@ $(document).ready(function () {
 
     if (moneysel != 0) {
       sendmoney = moneysel;
-      $moneyField.css("background-color", "#FFECEC");
     } else {
       sendmoney = $moneyField.val();
-      $moneyField.css("background-color", "#FFECEC");
     }
 
     sendmoney = parseInt(sendmoney);
-    if (sendmoney > 10000) {
+    if (sendmoney > 999999) {
       currentSection = currentSection - 1;
-      window.alert("Donation limit 10000");
+      window.alert("Donation limit 999999");
     } else if (sendmoney < 100) {
       currentSection = currentSection - 1;
       window.alert("Minimum donation limit 100");
     } else if (
       senderName == "" ||
       sendernickName == "" ||
-      sendmoney == "" ||
+      ($moneyField.val() == "" && moneysel == 0) ||
       (IsEmail(sendemail) === false && sendemail != "") ||
       (Iscard(sendCreditCard) === false && sendCreditCard != "") ||
       (Isdate(sendExpirarion) === false && sendExpirarion != "") ||
@@ -338,7 +337,6 @@ $(document).ready(function () {
           timeStamp: Date.now(),
         })
         .then(() => {
-          // 在更新完成后重新动画
           let progress = Math.min(total / goal, 1);
           bar.animate(progress);
         });
