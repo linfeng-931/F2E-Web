@@ -33,6 +33,10 @@
       rel="stylesheet"
     />
 
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=close"
+    />
     <link rel="stylesheet" href="css/donate_style.css" />
   </head>
   <body class="pb-8">
@@ -209,22 +213,26 @@
                 <h6 class="font-light text-gray-400 text-sm md:text-lg">
                   Goals :
                   <span class="font-semibold text-gray-900 text-md md:text-lg"
-                    ><div id="doc">
+                    ><span>
                       $
-                      <div class="total_money">0</div>
-                    </div></span
+                      <span class="goal">50000</span>
+                    </span></span
                   >
                 </h6>
 
                 <h6 class="font-light text-gray-400 text-sm md:text-lg">
                   Raised :
                   <span class="font-semibold text-gray-900 text-md md:text-lg"
-                    >$21000</span
+                    ><span id="doc">
+                      $
+                      <span class="total_money">0</span>
+                    </span></span
                   >
                 </h6>
               </div>
+              <div id="container" class="mt-4 w-full h-2 relative"></div>
               <button
-                class="w-full mt-4 px-4 py-2 bg-B200 font-Josefin font-semibold text-white text-lg hover:bg-B400 transition ease-in-out duration-500 md:w-[20rem]"
+                class="donate-btn w-full mt-8 px-4 py-2 bg-B200 font-Josefin font-semibold text-white text-lg hover:bg-B400 transition ease-in-out duration-500 md:w-[20rem]"
               >
                 Donate
               </button>
@@ -233,9 +241,14 @@
         </div>
       </div>
       <div
-        class="flex absolute top-0 left-0 flex-col justify-center items-center w-full p-8 font-Josefin bg-[rgba(11,113,215,0.8)] h-[100vh]"
+        class="donate hidden absolute top-0 left-0 flex-col justify-center items-center w-full p-8 font-Josefin bg-[rgba(11,113,215,0.8)] h-[100vh]"
       >
-        <div class="donate-main bg-white p-8 rounded-xl w-[16rem] md:w-[30rem]">
+        <div
+          class="relative donate-main bg-white p-8 rounded-xl w-[16rem] md:w-[30rem]"
+        >
+          <button class="close-btn absolute right-2 top-2">
+            <span class="material-symbols-outlined"> close </span>
+          </button>
           <ul class="progress nav flex justify-center text-white gap-4">
             <li
               data-cont="r1"
@@ -761,7 +774,7 @@
         </div>
       </section>
     </div>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/progressbar.js/1.0.1/progressbar.min.js"></script>
     <script src="js/jQuery.js"></script>
     <script src="js/script_donate.js"></script>
     <script src="js/script.js"></script>

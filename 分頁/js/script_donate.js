@@ -25,11 +25,53 @@ $(document).ready(function () {
   const money_donate_Ref = db.collection("money_donate");
   const user_money_Ref = money_donate_Ref.doc("user_money");
   const total_money_Ref = money_donate_Ref.doc("total_money");
+  const donateBtn = document.querySelector(".donate-btn");
+  const donate = document.querySelector(".donate");
+  const closeBtn = document.querySelector(".close-btn");
   let x = 0;
   let total = 0;
   let orgintotal = total;
+  let goal = 50000;
   let datanum = "data-" + x;
 
+  var bar = new ProgressBar.Line(container, {
+    strokeWidth: 4,
+    easing: "easeInOut",
+    duration: 1400,
+    color: "#FFEA82",
+    trailColor: "#eee",
+    trailWidth: 1,
+    svgStyle: { width: "100%", height: "100%" },
+    text: {
+      style: {
+        color: "#999",
+        position: "absolute",
+        right: "0",
+        top: "8px",
+        padding: 0,
+        margin: 0,
+        transform: null,
+      },
+      autoStyleContainer: false,
+    },
+    from: { color: "#FFEA82" },
+    to: { color: "#ED6A5A" },
+    step: (state, bar) => {
+      bar.setText(Math.round(bar.value() * 100) + " %");
+    },
+  });
+
+  donateBtn.addEventListener("click", show);
+  function show() {
+    donate.classList.remove("hidden");
+    donate.classList.add("flex");
+  }
+
+  closeBtn.addEventListener("click", close);
+  function close() {
+    donate.classList.remove("flex");
+    donate.classList.add("hidden");
+  }
   /*page*/
   let currentSection = 0;
   let sections = document.querySelectorAll(".section");
@@ -162,6 +204,9 @@ $(document).ready(function () {
     x = doc.data().total_user;
     $(".total_money").html(total);
     orgintotal = total;
+
+    let progress = Math.min(total / goal, 1);
+    bar.animate(progress);
   });
 
   // email正則驗證
@@ -219,9 +264,9 @@ $(document).ready(function () {
     }
 
     sendmoney = parseInt(sendmoney);
-    if (sendmoney > 999999) {
+    if (sendmoney > 10000) {
       currentSection = currentSection - 1;
-      window.alert("Donation limit 999999");
+      window.alert("Donation limit 10000");
     } else if (sendmoney < 100) {
       currentSection = currentSection - 1;
       window.alert("Minimum donation limit 100");
@@ -284,21 +329,27 @@ $(document).ready(function () {
       x++;
 
       total = total + sendmoney;
-      total_money_Ref.update({
-        money: total,
-        total_user: x,
-        timeStamp: Date.now(),
-      });
+      total_money_Ref
+        .update({
+          money: total,
+          total_user: x,
+          timeStamp: Date.now(),
+        })
+        .then(() => {
+          // 在更新完成后重新动画
+          let progress = Math.min(total / goal, 1);
+          bar.animate(progress);
+        });
 
       // EMPTY INPUT FIELD
-      $nameField.val('');
-      $name2Field.val('');
-      $nicknameField.val('');
-      $emailField.val('');
-      $moneyField.val('');
-      $cardField.val('');
-      $expiration.val('');
-      $code.val('');
+      $nameField.val("");
+      $name2Field.val("");
+      $nicknameField.val("");
+      $emailField.val("");
+      $moneyField.val("");
+      $cardField.val("");
+      $expiration.val("");
+      $code.val("");
       $nameField.css("background-color", "white");
       $name2Field.css("background-color", "white");
       $nicknameField.css("background-color", "white");
@@ -315,8 +366,7 @@ $(document).ready(function () {
         snap: { textContent: 10 },
       });
     }
-    });
-  
+  });
 
   /*-----page-----*/
   for (let i = 0; i < sectionButtons.length; i++) {

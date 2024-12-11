@@ -662,6 +662,30 @@ html,
   top: 75%;
 }
 
+.top-4 {
+  top: 1rem;
+}
+
+.-right-4 {
+  right: -1rem;
+}
+
+.-right-8 {
+  right: -2rem;
+}
+
+.-right-0 {
+  right: -0px;
+}
+
+.top-2 {
+  top: 0.5rem;
+}
+
+.right-2 {
+  right: 0.5rem;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -783,10 +807,6 @@ html,
   margin-top: 9rem;
 }
 
-.ml-8 {
-  margin-left: 2rem;
-}
-
 .block {
   display: block;
 }
@@ -860,6 +880,14 @@ html,
   height: 100vh;
 }
 
+.h-6 {
+  height: 1.5rem;
+}
+
+.h-2 {
+  height: 0.5rem;
+}
+
 .min-h-14 {
   min-height: 3.5rem;
 }
@@ -904,6 +932,10 @@ html,
   width: 100%;
 }
 
+.w-6 {
+  width: 1.5rem;
+}
+
 .min-w-14 {
   min-width: 3.5rem;
 }
@@ -930,10 +962,6 @@ html,
 
 .max-w-\[90rem\] {
   max-width: 90rem;
-}
-
-.max-w-60 {
-  max-width: 15rem;
 }
 
 .flex-grow {
@@ -1308,10 +1336,6 @@ html,
 
 .pt-60 {
   padding-top: 15rem;
-}
-
-.pt-8 {
-  padding-top: 2rem;
 }
 
 .text-left {
@@ -1788,11 +1812,6 @@ html,
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
-
-  .sm\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
 }
 
 @media (min-width: 768px) {
@@ -1830,10 +1849,6 @@ html,
 
   .md\:mt-8 {
     margin-top: 2rem;
-  }
-
-  .md\:mt-0 {
-    margin-top: 0px;
   }
 
   .md\:flex {
@@ -1925,10 +1940,6 @@ html,
     padding-right: 1rem;
   }
 
-  .md\:text-left {
-    text-align: left;
-  }
-
   .md\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
@@ -1937,6 +1948,11 @@ html,
   .md\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
+  }
+
+  .md\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
   }
 
   .md\:text-6xl {
@@ -1979,16 +1995,6 @@ html,
   .md\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
-  }
-
-  .md\:text-3xl {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-  }
-
-  .md\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
   }
 
   .md\:leading-7 {
