@@ -199,7 +199,6 @@ timeline = gsap.timeline({
 
 timeline.from(".support-card", {
   y: 100,
-  rotate: 90,
   scale: 0.4,
   opacity: 0,
   duration: 1,
