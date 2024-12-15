@@ -2,7 +2,7 @@
 let questions = [
     {
         numb: 1,
-        question: "According to current statistics, which type of debris is most common in the ocean?",
+        question: "According to current statistics, which type of debris can ve seen most commonly in the ocean?",
         answer: "A. Plastic",
         options : [
             "A. Plastic",
@@ -17,12 +17,12 @@ let questions = [
         options:[
             "A. Support research projects",
             "B. Organize cleanup activities",
-            "C. Used for waste cleanup",
+            "C. waste cleanup",
             "D. All of the above"
         ]
     },{
         numb:3,
-        question: "Based on the statistics shown on our iOcean website, which type of plastic waste is the most abundant?",
+        question: "Based on the statistics shown on our iOcean website, which type of plastic waste is the most discard?",
         answer: "B. PET bottles",
         options:[
             "A. Straws",
@@ -32,7 +32,7 @@ let questions = [
         ]
     },{
         numb:4,
-        question: "The hazards of plastic microplastics include which of the following?",
+        question: "Which of the following may be negatively affected by microplastics?",
         answer: "D. All of the above",
         options:[
             "A. Paint",
@@ -42,7 +42,7 @@ let questions = [
         ]
     },{
         numb:5,
-        question: "In the experimental tests, what is the proportion of animal and plant proteins containing plastic microplastics?",
+        question: "In the experimental tests, which is the proportion of microplastics contained in animal and plant proteins?",
         answer: "D. 90%",
         options:[
             "A. 30%",

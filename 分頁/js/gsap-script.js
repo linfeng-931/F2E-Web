@@ -11,6 +11,7 @@ gsap.from(".animal-intro-section", {
       markers: false,
     },
   });
+  
   gsap.from(".data-garbage-section", {
     y: 200,
     opacity: 1,
@@ -73,6 +74,18 @@ gsap.from(".animal-intro-section", {
       markers: false,
     },
   });
+  gsap.from(".micro-content", {
+    y: 100,
+    opacity: 0,
+    duration: 2,
+    scrollTrigger: {
+      trigger: ".micro-content",
+      start: "top 60%",
+      end: "top 30%",
+      scrub: 1,
+      markers: false,
+    },
+  });
   gsap.from(".indicator", {
     y: 100,
     opacity: 0,
@@ -103,7 +116,7 @@ gsap.from(".animal-intro-section", {
     duration: 2,
     scrollTrigger: {
       trigger: ".marine-creature-1-news",
-      start: "top 60%",
+      start: "top 100%",
       end: "top 30%",
       scrub: 1,
       markers: false,
@@ -115,7 +128,7 @@ gsap.from(".animal-intro-section", {
     duration: 2,
     scrollTrigger: {
       trigger: ".marine-creature-2-news",
-      start: "top 60%",
+      start: "top 100%",
       end: "top 30%",
       scrub: 1,
       markers: false,
