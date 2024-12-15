@@ -1578,6 +1578,21 @@ footer .footer-img-wrappper{
         margin-top: 0rem;
         margin-left: -2rem;
     }
+    .data h4 {
+        padding-top: 0rem;
+        padding-left: .5rem;
+        margin-top: -1.2rem;
+        color: var(--Blue03);
+    }
+    .data-garbage-container .right h2{
+        margin: 1rem .5rem;
+        padding-bottom: 1rem;
+    }
+    .data-garbage-container .column .right {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+    }
     /*news*/
     #page-3 .news-intro-section {
         top: -16%;
