@@ -438,7 +438,7 @@ h1, h3{
 
 #page-3 .decoration-img {
     height: 30rem;
-    margin-top: -35rem;
+    margin-top: -45rem;
 }
 #page-3 .decoration-img-1 {
     margin-left: 0;
@@ -779,6 +779,15 @@ h1, h3{
     color: var(--Blue01);
 }
 
+#page-3 .page3-img {
+    height: 40rem;
+    margin-top: -15rem;
+}
+#page-3 .decoration-img-3 {
+    width: 35rem;
+    height: 35rem;
+    margin-top: -30rem;
+}
 .plastic-link-section>img{
     left: 15rem;
     top: 11rem;
@@ -1380,9 +1389,10 @@ footer .footer-img-wrappper{
         gap: 5rem;
     }
     #page-3 .decoration-img-1 {
-        margin-top: -18rem;
+        margin-top: -25rem;
     }
     #page-3 .decoration-img {
+        height: 30rem;
         margin-top: -45rem;
     }
 
