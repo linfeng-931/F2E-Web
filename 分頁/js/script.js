@@ -98,7 +98,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
 const menuBtn = document.querySelector(".menuBtn");
 const menuList = document.querySelector(".menuList");
 menuBtn.addEventListener("click", displayMenu);
@@ -128,3 +127,117 @@ function displayFAQ(e) {
     ans.classList.add("hidden");
   }
 }
+
+gsap.from(".banner-title", {
+  x: -window.innerWidth,
+  opacity: 0,
+  duration: 2,
+});
+gsap.from(".banner-content", {
+  x: -window.innerWidth,
+  opacity: 0,
+  duration: 2,
+});
+
+gsap.from(".bannerImg", {
+  scale: 0,
+  opacity: 0,
+  duration: 2,
+});
+
+gsap.registerPlugin(ScrollTrigger);
+
+let timeline = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".feature",
+    start: "top 80%",
+    end: "top 20%",
+    scrub: 4,
+    stagger: 0.4,
+    markers: false,
+  },
+});
+
+timeline
+  .from(".feature-title", {
+    y: 100,
+    opacity: 0,
+    duration: 1,
+  })
+  .from(".feature-content", {
+    y: 100,
+    opacity: 0,
+    duration: 1,
+  })
+  .from(".card1", {
+    scale: 0,
+    y: 100,
+    opacity: 0,
+    duration: 1,
+  })
+  .from(".card2", {
+    scale: 0,
+    y: 100,
+    opacity: 0,
+    duration: 1,
+  })
+  .from(".card3", {
+    scale: 0,
+    y: 100,
+    opacity: 0,
+    duration: 1,
+  });
+
+timeline = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".support",
+    start: "top 50%",
+    end: "top 20%",
+    scrub: 4,
+  },
+});
+
+timeline.from(".support-card", {
+  y: 100,
+  scale: 0.4,
+  opacity: 0,
+  duration: 1,
+});
+
+timeline = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".question-wrapper",
+    start: "top 50%",
+    end: "top 80%",
+    scrub: 4,
+    stagger: 0.4,
+    // markers: true,
+  },
+});
+
+timeline
+  .from(".question1", {
+    x: window.innerWidth,
+    opacity: 0,
+    duration: 1,
+  })
+  .from(".question2", {
+    x: -window.innerWidth,
+    opacity: 0,
+    duration: 1,
+  })
+  .from(".question3", {
+    x: window.innerWidth,
+    opacity: 0,
+    duration: 1,
+  })
+  .from(".question4", {
+    x: -window.innerWidth,
+    opacity: 0,
+    duration: 1,
+  })
+  .from(".question5", {
+    x: window.innerWidth,
+    opacity: 0,
+    duration: 1,
+  });
