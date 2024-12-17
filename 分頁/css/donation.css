@@ -13,6 +13,14 @@
   display: none;
 }
 
+#dropdownNavbar {
+  display: none;
+}
+
+#dropdownNavbar.dropdownNavbarshow {
+  display: block;
+}
+
 @keyframes open {
   from {
     opacity: 0;

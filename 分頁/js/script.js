@@ -4,6 +4,14 @@ const slideRow = document.getElementById("slide-wrapper");
 const main = document.querySelector(".slider-container");
 const imgBtn = document.querySelectorAll(".img-wrapper a");
 const tocBtn = document.querySelectorAll("table-of-contents a");
+const dropdownBtn = document.querySelector(".dropdownBtn");
+
+dropdownBtn.addEventListener("click", dropdownShow);
+
+function dropdownShow() {
+  const dropdown = document.getElementById("dropdownNavbar");
+  dropdown.classList.toggle("dropdownNavbarshow"); // 切換 show 類別
+}
 
 let currentIndex = 0;
 
@@ -151,7 +159,7 @@ let timeline = gsap.timeline({
   scrollTrigger: {
     trigger: ".feature",
     start: "top 80%",
-    end: "top 20%",
+    end: "top 30%",
     scrub: 4,
     stagger: 0.4,
     markers: false,
@@ -191,8 +199,8 @@ timeline
 timeline = gsap.timeline({
   scrollTrigger: {
     trigger: ".support",
-    start: "top 50%",
-    end: "top 20%",
+    start: "top 80%",
+    end: "top 40%",
     scrub: 4,
   },
 });
