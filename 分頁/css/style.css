@@ -363,7 +363,9 @@ h1, h3{
 .slide h3{
     margin-bottom: 2rem;
 }
-
+#page-3 .img-bg{
+    margin-bottom: -8rem;
+}
 
 /*indicator*/
 .indicator {
@@ -433,6 +435,17 @@ h1, h3{
     overflow: hidden;
     padding: 50rem 0 26.5rem 0;
   }
+
+#page-3 .decoration-img {
+    height: 30rem;
+    margin-top: -45rem;
+}
+#page-3 .decoration-img-1 {
+    margin-left: 0;
+    margin-top: -10rem;
+    width: 25rem;
+    height: 25rem;
+}
 
   .data-garbage-section h1{
     padding: 0.7rem;
@@ -766,6 +779,15 @@ h1, h3{
     color: var(--Blue01);
 }
 
+#page-3 .page3-img {
+    height: 40rem;
+    margin-top: -15rem;
+}
+#page-3 .decoration-img-3 {
+    width: 35rem;
+    height: 35rem;
+    margin-top: -30rem;
+}
 .plastic-link-section>img{
     left: 15rem;
     top: 11rem;
@@ -1181,6 +1203,7 @@ footer .footer-img-wrappper{
     background-color: var(--Blue01);
     color: var(--White);
 }
+
 @media screen and (min-width: 1920px){
     #page-3 .related-article{
         margin-left: 60%;
@@ -1226,6 +1249,35 @@ footer .footer-img-wrappper{
     }
 
     /*plastic-intro*/
+
+    #page-3 .animal-intro-section {
+        margin-top: 0rem;
+    }
+    .micro-content h3 {
+        line-height: 4rem;
+        font-size: 2.5rem;
+        margin-bottom: 0rem;
+    }
+    .micro-content .related-article {
+        margin-left: 47%;
+    }
+    .micro-content .related-article img {
+        margin-left: 0.225rem;
+    }
+    .micro-content .related-article button {
+        width: 20rem;
+    }
+    .micro-content .related-article .learn-more-btn .learn-more-txt {
+        margin-left: 4rem;
+    }
+    .micro-content .related-article:hover{
+        margin-left: -10%;
+    }
+    .micro-content .related-article:hover button{
+        padding: 1.3rem;
+        padding-left: 5.3rem;    
+    }
+
     .plastic-intro-section .padding{
         padding-top: 8rem;
         padding-bottom: 6.25rem;
@@ -1241,6 +1293,12 @@ footer .footer-img-wrappper{
         top: 5rem;
         width: 18rem;
     }
+    #page-3 .plastic-intro-section>img{
+        left: 28rem;
+        top: 8rem;
+        width: 16rem;
+    }
+    
     .table-of-contents{
         opacity: 0;
         position: absolute;
@@ -1289,9 +1347,15 @@ footer .footer-img-wrappper{
         z-index: -5;
         margin-top: -25rem;
     }
+    #page-3 .full-bg{
+        margin-top: -20rem;
+    }
     .news-intro-section-bg{
         padding-top: 95rem;
         margin-top: 10rem;
+    }
+    #page-3 .news-intro-section-bg{
+        margin-top: -15rem;
     }
     .news-intro-section{
         top: 0;
@@ -1324,6 +1388,14 @@ footer .footer-img-wrappper{
     .news-intro-section .column{
         gap: 5rem;
     }
+    #page-3 .decoration-img-1 {
+        margin-top: -25rem;
+    }
+    #page-3 .decoration-img {
+        height: 30rem;
+        margin-top: -45rem;
+    }
+
     /*plastic-link-section*/
     .plastic-link-bg{
         width: 100%;
@@ -1336,6 +1408,11 @@ footer .footer-img-wrappper{
         margin-left: 5rem;
     }
     .plastic-link-section>img{
+        left: 22rem;
+        top: 28rem;
+        width: 21rem;
+    }
+    #page-3 .plastic-link-section>img{
         left: 22rem;
         top: 28rem;
         width: 21rem;
@@ -1358,6 +1435,18 @@ footer .footer-img-wrappper{
     .plastic-link-section.link-right-section>img{
         left: 20rem;
     }
+    .plastic-link-bg .decoration-img-3 {
+        width: 30rem;
+        height: 30rem;
+        margin-top: -15rem;
+    }
+    #page-3 .plastic-link-bg .decoration-img {
+        margin-top: -30rem;
+        height: 40rem;
+    }
+    #page-3 .plastic-link-section-bg {
+        top: 250rem;
+    }
 }
 
 @media screen and (max-width: 321px) {
@@ -1379,6 +1468,11 @@ footer .footer-img-wrappper{
         overflow: hidden;
     }
     .plastic-intro-section>img{
+        left: 2.5rem;
+        top: 16rem;
+        width: 16rem;
+    }
+    #page-3 .plastic-intro-section>img{
         left: 2.5rem;
         top: 16rem;
         width: 16rem;
@@ -1414,6 +1508,13 @@ footer .footer-img-wrappper{
     }
 
     /*animal-intro*/
+    .micro-content .related-article {
+        margin-left: -10%;
+    }
+    .micro-content .related-article button {
+        width: 18rem;
+    }
+
     .slide{
         margin: 0 0.06rem;
         height: 48rem;
@@ -1443,6 +1544,9 @@ footer .footer-img-wrappper{
         width: 15rem;
         height: 15rem;
         margin-top: -40rem;
+    }
+    #page-3 .decoration-img-1 {
+        margin-left: -8rem;
     }
     .indicator{
         margin-top: 2rem;
@@ -1474,7 +1578,28 @@ footer .footer-img-wrappper{
         margin-top: 0rem;
         margin-left: -2rem;
     }
+    .data h4 {
+        padding-top: 0rem;
+        padding-left: .5rem;
+        margin-top: -1.2rem;
+        color: var(--Blue03);
+    }
+    .data-garbage-container .right h2{
+        margin: 1rem .5rem;
+        padding-bottom: 1rem;
+    }
+    .data-garbage-container .column .right {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+    }
     /*news*/
+    #page-3 .news-intro-section {
+        top: -16%;
+    }
+    #page-3 .news-intro-section-bg {
+        margin-top: -40rem;
+    }
     .news-container img{
         width: 18rem;
     }
@@ -1489,6 +1614,11 @@ footer .footer-img-wrappper{
         width: 30rem;
         height: 30rem;
         margin-top: -35rem;
+    }
+    #page-3 .plastic-link-bg .decoration-img {
+        margin-top: -20rem;
+        height: 35rem;
+        margin-left: 10rem;
     }
     /*plastic-link*/
     .plastic-link-bg{
@@ -1526,6 +1656,11 @@ footer .footer-img-wrappper{
         top: 35rem;
         width: 7rem;
     } 
+    #page-3 .plastic-link-section>img {
+        left: 21rem;
+        top: 32rem;
+        width: 7rem;
+    } 
     .learn-more-btn .learn-more-img {
         width: 2rem;
         height: 2rem;
@@ -1545,6 +1680,22 @@ footer .footer-img-wrappper{
     .plastic-link-section.link-right-section>img {
         margin-top: -4rem;
     }
+    #page-3 .plastic-link-section.link-right-section>img {
+        top: 41rem;
+        left: 20.5rem;
+    }
+    #page-3 .plastic-link-section.link-right-section .column {
+        gap: 2.1rem;
+    }
+    #page-3 .link-right-section .section-title {
+        margin-top: 2rem;
+    }
+    #page-3 .link-right-section .learn-more-btn{
+        gap:0.5rem;
+    }
+    #page-3 .link-right-section .learn-more-txt{
+        gap: 0.5rem;
+    }
     .decoration-img {
         margin-top: -11rem;
     }
@@ -1553,6 +1704,9 @@ footer .footer-img-wrappper{
     }
     #fishingnet-link>img {
         top: 32rem;
+    }
+    #page-3 .plastic-link-section-bg {
+        top: 255rem;
     }
 
 }

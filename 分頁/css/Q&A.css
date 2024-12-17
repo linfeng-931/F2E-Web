@@ -1,5 +1,62 @@
+:root{
+    --White: #FFFFFF;
+    --Gray01: #DEDEDE;
+    --Blue01: #8EB4D9;
+    --Blue02: #0B71D7;
+    --Blue03: #44688B;
+    --Blue04: #023850;
+    --Yellow: #F7D55B;
+    --x: 1200px;
+
+    /* fonts*/
+    --Cinzel: "Cinzel", serif;
+    --Josefin: "Josefin Sans", sans-serif;
+}
+
+html,body{
+    font-size: 16px;
+}
+
 body{
+    background-color: var(--Gray01);
+    font-family: var(--Josefin);
+    height: 100vh;
     overflow: hidden;
+}
+main{
+    width: 100%;
+}
+h2{
+    color: var(--Blue03);
+}
+h1, h3{
+    color: var(--Blue04);
+}
+button{
+    margin-top: 1rem;
+    background-color: var(--Blue01);
+    border: none;
+    font-size: 1rem;
+    font-family: var(--Josefin);
+    color: var(--Blue04);
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+button:hover{
+    background-color: var(--Blue03);
+    color: var(--White);
+}
+a{
+    text-decoration: none;
+    color: var(--Blue04);
+}
+a:hover{
+    color: var(--White);
+}
+span{
+    gap: .5rem;
 }
 .main-active{
     transition: .3s ease;
@@ -16,35 +73,59 @@ body{
 }
 .home{
     position: relative;
-    left: -50%;
+    left: -45%;
     height: 100vh;
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+.home .title{
+    margin-left: -20rem;
+    font-size: 5rem;
+    margin-bottom: 0;
+}
 .home-content{
-    max-width: 40rem;
+    max-width: 30rem;
     display: flex;
-    align-items: center;
     flex-direction: column;
+}
+.home .start-btn{
+    margin-left: 23rem;
 }
 .popup-info{
     position: absolute;
+    display: flex;
+    flex-direction: column;
     width: 30rem;
-    height: 10rem;
+    height: 15rem;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: lightgray;
+    background-color: var(--White);
     opacity: 0;
     pointer-events: none;
     transition: .3s ease;
+    padding: 3rem 2rem;
+    border-radius: 3rem
 }
 
+.popup-info h2{
+    margin-top: 0;
+    text-align: center;
+}
 .popup-info-active{
     opacity: 1;
     pointer-events: auto;
+}
+.popup-info .info{
+   margin-bottom: 1rem;
+   display: flex;
+}
+.popup-info .sub_title{
+    margin-top: 1rem;
+    font-size: 1rem;
 }
 
 .popup-info .btn-group{
@@ -55,7 +136,8 @@ body{
     position: relative;
     left: -60%;
     width: 100%;
-    background-color: antiquewhite;
+    height: 100vh;
+    background-color: var(--White);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,7 +151,7 @@ body{
 .quiz-section .quiz-box{
     position: relative;
     width: 40rem;
-    background-color: antiquewhite;
+    background-color: var(--White);
     display: flex;
     flex-direction: column;
     padding: 1rem;
@@ -99,21 +181,36 @@ body{
 .quiz-header span{
     font-weight: 500;
 }
+.quiz-header .sub_title{
+    font-size: 1.5rem;
+    color: var(--Blue01);
+    font-weight: 600;
+}
 .quiz-header .header-score{
-    background-color: aqua;
+    background-color: var(--Blue03);
+    color: var(--White);
+    padding: .5rem 1rem;
+    border-radius: 1rem;
 }
 .option{
-    padding: 0.5rem;
+    padding: .8rem;
     width: 100%;
     background-color: white;
     cursor: pointer;
-    margin: 0.2rem 0;
+    margin: 0.5rem 0;
+    border-radius: 1rem;
+    transition: .1s ease;
+    transform: scale(.95);
 }
 
 .option:hover{
-    background-color: aquamarine;
+    background-color: var(--Blue02);
+    color: var(--White);
+    transform: scale(1);
 }
-
+.option-list{
+    height: 13rem;
+}
 .option-list .correct{
     background-color: transparent;
     color: green;
@@ -152,6 +249,20 @@ body{
     opacity: 1;
     pointer-events: auto;
     transform: translate(-50%, -50%) scale(1);
+}
+.quiz-footer{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.quiz-footer .next-btn{
+    margin-top: 0;
+}
+.quiz-footer .question-total{
+    color: var(--Blue01);
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 
 .result-box .percentage-container{
