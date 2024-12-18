@@ -442,7 +442,7 @@ h1, h3{
 }
 #page-3 .decoration-img-1 {
     margin-left: 0;
-    margin-top: -10rem;
+    margin-top: -18rem;
     width: 25rem;
     height: 25rem;
 }
@@ -786,7 +786,7 @@ h1, h3{
 #page-3 .decoration-img-3 {
     width: 35rem;
     height: 35rem;
-    margin-top: -30rem;
+    margin-top: -13rem;
 }
 .plastic-link-section>img{
     left: 15rem;
@@ -1153,7 +1153,7 @@ footer .footer-img-wrappper{
     display: flex;
     text-decoration: none;
     align-items: center;
-    margin-left: 87%;
+    margin-left: 83%;
     transition: all .7s;
 }
 .micro-content .related-article:hover{
@@ -1187,7 +1187,7 @@ footer .footer-img-wrappper{
     transition: all .7s;
 }
 .micro-content .related-article:hover .learn-more-btn .learn-more-txt{
-    margin-left: 0rem;
+    margin-left: -1rem;
 }
 .micro-content .related-article .learn-more-btn .learn-more-txt h2{
     color: var(--White);
