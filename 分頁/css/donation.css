@@ -1,4 +1,5 @@
 /*Donation Page*/
+
 .show {
   display: flex;
   flex-direction: column;
@@ -11,6 +12,14 @@
 
 .closeAnimation {
   display: none;
+}
+
+#dropdownNavbar {
+  display: none;
+}
+
+#dropdownNavbar.dropdownNavbarshow {
+  display: block;
 }
 
 @keyframes open {

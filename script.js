@@ -21,13 +21,16 @@ new Chart(ctx, {
 });
 
 // Menu
-// let menuBtn = document.querySelector(".menu-btn");
+// let navTrigger = document.querySelector(".navTrigger");
 // const menu = document.querySelector(".menu");
-// const hamburgerLine = document.querySelector(".hamburger span");
 // menuBtn.addEventListener("click", menuOpen);
 
 // let isMenuOpen = true;
 // let tl = gsap.timeline();
+
+document.querySelector(".navTrigger").addEventListener("click", function () {
+  this.classList.toggle("active");
+});
 // function menuOpen() {
 //   menu.classList.add("menu-open");
 
