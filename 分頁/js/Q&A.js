@@ -297,17 +297,25 @@ function showResultBox(){
     let progressEndValue = (userScore / questions.length) * 100; 
     let speed = 20;
 
-    let progress = setInterval(() =>{
+    // 當 progressEndValue 是 0 時，直接顯示 0%
+    if (progressEndValue === 0) {
+        progressValue.textContent = `0%`;
+        circularProgress.style.background = `conic-gradient(#90ee90 0deg, rgba(255, 255, 255, .1) 0deg)`;
+        return;  // 直接返回，不執行進度條動畫
+    }
+
+    let progress = setInterval(() => {
         progressStarValue++;
 
         progressValue.textContent = `${progressStarValue}%`;
         circularProgress.style.background = `conic-gradient(#90ee90 ${progressStarValue * 3.6}deg, rgba(255, 255, 255, .1) 0deg)`;
 
-        if(progressStarValue == progressEndValue){
+        if (progressStarValue === progressEndValue) {
             clearInterval(progress);
         }
     }, speed);
 }
+
   
    //SAVE DATA TO FIREBASE
 
