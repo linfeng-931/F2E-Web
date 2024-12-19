@@ -58,6 +58,9 @@ a:hover{
 span{
     gap: .5rem;
 }
+.main{
+    transition: .3s ease;
+}
 .main-active{
     transition: .3s ease;
     pointer-events: auto;
@@ -73,16 +76,60 @@ span{
 }
 .home{
     position: relative;
-    left: -45%;
-    height: 100vh;
+    left: -49%;
     width: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 1rem;
 }
+.home .right{
+    width: 40rem;
+}
+.home .left{
+    width: 36rem;
+}
+.left .box{
+    height: 27rem;
+    width: 24rem;
+    padding: 2rem;
+    border-radius: 2rem;
+    background-color: var(--White);
+    color: var(--Blue03);
+}
+.left .sub_title{
+    font-size: 1.5rem;
+    color: var(--Blue01);
+    text-align: center;
+    padding-bottom: 1rem;
+    border-bottom: dashed 2px var(--Blue01);
+    margin-bottom: 1rem;
+}
+.left .data{
+    display: flex;
+    justify-content: space-between;
+}
+.data .left, .right{
+    width: 45%;
+}
+.left li{
+    margin: 1.3rem 0;
+    list-style: none;
+}
+.data_num .number{
+    margin-right: 3rem;
+}
+.left span{
+    padding-right: .5rem;
+}
+.left .list_name{
+    margin-left: 4rem;
+}
+.list_point_container{
+    text-align: right;
+}
+
 .home .title{
-    margin-left: -20rem;
     font-size: 5rem;
     margin-bottom: 0;
 }
@@ -94,7 +141,8 @@ span{
 .home .start-btn{
     margin-left: 23rem;
 }
-.popup-info{
+
+.popup-info, .popup-info2{
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -105,19 +153,21 @@ span{
     transform: translate(-50%, -50%);
     background-color: var(--White);
     opacity: 0;
+    transform: scale(.9) translate(-50%, -50%);
     pointer-events: none;
-    transition: .3s ease;
     padding: 3rem 2rem;
-    border-radius: 3rem
+    border-radius: 3rem;
+    transition: .2s ease;
 }
 
 .popup-info h2{
     margin-top: 0;
     text-align: center;
 }
-.popup-info-active{
+.popup-info-active, .popup-info2-active{
     opacity: 1;
     pointer-events: auto;
+    transform: scale(1) translate(-50%, -50%);
 }
 .popup-info .info{
    margin-bottom: 1rem;
@@ -132,11 +182,49 @@ span{
     display: flex;
     justify-content: space-between;
 }
+.popup-info2 .btn-group{
+    display: flex;
+    justify-content: space-between;
+}
+
+.name_input{
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.name_input label{
+    color:var(--Blue01);
+    font-size: 1.5rem;
+}
+.popup-info2 p{
+    color: var(--Yellow);
+    font-size: 1rem;
+    text-align: center;
+}
+
+input{
+    border: solid 1px var(--Blue03);
+    border-radius: .3rem;
+    padding: .5rem 1rem;
+}
+input::placeholder {
+    font-size: 14px;
+    color: var(--Gray01);
+}
+input:focus {
+    border: solid 2px var(--Blue01);
+}
+
+
+  /*quiz*/
 .quiz-section{
     position: relative;
     left: -60%;
     width: 100%;
-    height: 100vh;
     background-color: var(--White);
     display: flex;
     justify-content: center;
@@ -293,4 +381,9 @@ span{
     position: relative;
     font-size: 2rem;
     font-weight: 600;
+}
+
+.continueBtn-disable{
+    pointer-events: none;
+    opacity: .5;
 }

@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Who's Ocean: Q&A</title>
 
+    <!-- Firebase App is always required and must be first -->
+    <script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-app-compat.js"></script>
+
+    <!-- Add additional services that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-storage-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore-compat.js"></script>
+
     <!--font-family:'Josefin Sans'-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -60,12 +70,42 @@
                 </div>
             </section>
             <section class="home">
-                <h1 class="title">Quiz</h1>
-                <div class="home-content">
-                    <p>Do you want to know how much you understand marine pollution? Try this test which includes questions about the website. </p>
-                    <p>Try to rank higher and thrive for better! </p>
-                </div>
-                <button class="start-btn">Start Quiz</button>
+                <div class="left">
+                    <div class="box">
+                        <div class="sub_title">Quiz-Solving Dynamics</div>
+                        <div class="data">
+                            <div class="data_num">
+                                <!--<li class="number">001</li>
+                                <li class="number">002</li>
+                                <li class="number">003</li>
+                                <li class="number">004</li>
+                                <li class="number">005</li>-->
+                            </div>
+                            <div class="left list_name">
+                                <!--<li>Name</li>
+                                <li>Nae</li>
+                                <li>Nammmmm</li>
+                                <li>Name</li>
+                                <li>Name</li>-->
+                            </div>
+                            <div class="right list_point_container">
+                                <!--<li><span class="list_point">5</span><span>point</span></li>
+                                <li><span class="list_point">5</span><span>point</span></li>
+                                <li><span class="list_point">5</span><span>point</span></li>
+                                <li><span class="list_point">5</span><span>point</span></li>
+                                <li><span class="list_point">5</span><span>point</span></li>-->
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                <div class="right">
+                    <h1 class="title">Quiz</h1>
+                    <div class="home-content">
+                        <p>Do you want to know how much you understand marine pollution? Try this test which includes questions about the website. </p>
+                        <p>Try to rank higher and thrive for better! </p>
+                    </div>
+                    <button class="start-btn">Start Quiz</button>
+                </div>  
             </section>
         </div>
     </main>
@@ -77,12 +117,31 @@
         <span class="info"><span>3. </span><span>The answers to each quiz can be found on this website.</span></span>
         <h2 class="sub_title">Good luck with your quiz!</h2>
 
-        <div class="btn-group">
+       <div class="btn-group">
             <button class="info-btn exit-btn">Exit Quiz</button>
-            <button><a href="#" class="info-btn continue-btn">Continue</a></button>
+            <button class="info-btn info-nextbtn">Next</button>
+        </div>
+        
+    </div>
+    <div class="popup-info2">
+        <div class="name_input">
+            <label for="fname">Nickname</label>
+            <input
+            type="text"
+            class="form-control-plaintext nickname-field"
+            id="nickname"
+            placeholder="Enter your nickname"
+            />
+        </div>
+        <p>*enter your nickname to start the quiz</p>
+
+        <div class="btn-group">
+            <button class="info-btn info-backbtn">Back</button>
+            <button class="info-btn continue-btn">Continue</button>
         </div>
     </div>
 
+    <script src="js/jQuery.js"></script>
     <script src="js/Q&A.js"></script>
 </body>
 </html>
