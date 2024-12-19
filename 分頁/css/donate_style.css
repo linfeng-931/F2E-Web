@@ -47,6 +47,21 @@
 }
  */
 
+.link:hover .line {
+  animation: lineThrough 1s both;
+}
+
+@keyframes lineThrough {
+  form {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
 input::placeholder {
   font-size: 14px;
 }

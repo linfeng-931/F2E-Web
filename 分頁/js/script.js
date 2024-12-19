@@ -5,10 +5,24 @@ const main = document.querySelector(".slider-container");
 const imgBtn = document.querySelectorAll(".img-wrapper a");
 const tocBtn = document.querySelectorAll("table-of-contents a");
 const dropdownBtn = document.querySelector(".dropdownBtn");
+const arrow = document.querySelector(".ri-arrow-down-s-line");
 
+let count = 0;
 dropdownBtn.addEventListener("click", dropdownShow);
 
 function dropdownShow() {
+  if (count % 2 == 0) {
+    gsap.to(".ri-arrow-down-s-line", {
+      rotate: 180,
+    });
+    count++;
+  } else {
+    gsap.to(".ri-arrow-down-s-line", {
+      rotate: 0,
+    });
+    count++;
+  }
+
   const dropdown = document.getElementById("dropdownNavbar");
   dropdown.classList.toggle("dropdownNavbarshow"); // 切換 show 類別
 }
