@@ -44,8 +44,65 @@
       </div>
     </header>
     <nav class="absolute right-4 top-4 z-10">
-      <div class="navTrigger w-7 h-6 cursor-pointer"><i></i><i></i><i></i></div>
-      <div class="menu-link"></div>
+      <ul
+        class="menuList font-Josefin hidden lg:flex flex-row lg:basis-auto lg:items-center lg:ml-auto lg:space-x-8 xl:space-x-14"
+      >
+        <li
+          class="link flex flex-col relative font-semibold text-white mb-5 lg:mb-0"
+        >
+          <a href="./index.html" class="inline-flex flex-col">Home</a>
+          <div class="line h-[2px] bg-white opacity-0"></div>
+        </li>
+        <div class="dropdown-container relative cursor-pointer mb-5 lg:mb-0">
+          <li
+            class="link dropdownBtn inline-flex items-center gap-2 font-semibold text-white hover:text-B500 lg:mb-0"
+          >
+            <a href="#">Introduce</a>
+            <i class="ri-arrow-down-s-line home-drop"></i>
+          </li>
+          <!-- Dropdown menu -->
+          <div
+            id="dropdownNavbar1"
+            class="w-full font-normal bg-white rounded-lg shadow-xl lg:absolute lg:z-20 lg:!w-[11rem] lg:-translate-x-1/2 lg:left-1/2"
+          >
+            <ul
+              class="py-4 font-semibold text-gray-900"
+              aria-labelledby="dropdownLargeButton"
+            >
+              <li>
+                <a
+                  href="./分頁/fishing-net.html"
+                  class="block px-4 py-2 hover:text-gray-400"
+                  >Fishing Net</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./分頁/plastic-bags.html"
+                  class="block px-4 py-2 hover:text-gray-400"
+                  >Plastic Bag</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./分頁/microplastic.html"
+                  class="block px-4 py-2 hover:text-gray-400"
+                  >Microplastic</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <li class="link flex flex-col font-semibold text-white mb-5 lg:mb-0">
+          <a href="./分頁/Q&A.html">Quiz</a>
+          <div class="line h-[2px] bg-white opacity-0"></div>
+        </li>
+        <li class="link flex flex-col font-semibold text-white mb-5 lg:mb-0">
+          <a href="./分頁/donation.html">Support Us</a>
+          <div class="line h-[2px] bg-white opacity-0"></div>
+        </li>
+      </ul>
     </nav>
     <!-- main section -->
     <main>
