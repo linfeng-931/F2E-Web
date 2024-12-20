@@ -43,7 +43,7 @@
         </a>
       </div>
     </header>
-    <nav class="absolute right-4 top-4 z-10">
+    <nav class="absolute right-16 top-4 z-10">
       <ul
         class="menuList font-Josefin hidden lg:flex flex-row lg:basis-auto lg:items-center lg:ml-auto lg:space-x-8 xl:space-x-14"
       >
@@ -170,7 +170,7 @@
         <div class="wrapper mt-8">
           <!-- Item 1 -->
           <div
-            class="carousel-item carousel-item1 h-full w-[90%] md:w-[80%] g:w-[70%] max-w-[60rem] left-1/2 translate-x-50 overflow-hidden relative rounded-lg bg-white shadow-xl shadow-blue-900/50"
+            class="carousel-item carousel-item1 h-full w-[90%] md:w-[80%] lg:w-[70%] max-w-[60rem] left-1/2 translate-x-50 overflow-hidden relative rounded-lg bg-white shadow-xl shadow-blue-900/50"
           >
             <div
               class="carousel-wrapper h-full grid grid-rows-9 grid-cols-1 md:grid-rows-1 md:grid-cols-2"
@@ -277,7 +277,7 @@
           </div>
           <!-- Item 3 -->
           <div
-            class="carousel-item carousel-item3 h-full w-[90%] md:w-[80%] g:w-[70%] max-w-[60rem] left-1/2 translate-x-50 overflow-hidden relative rounded-lg bg-white shadow-xl shadow-blue-900/50"
+            class="carousel-item carousel-item3 h-full w-[90%] md:w-[80%] lg:w-[70%] max-w-[60rem] left-1/2 translate-x-50 overflow-hidden relative rounded-lg bg-white shadow-xl shadow-blue-900/50"
           >
             <div
               class="carousel-wrapper h-full grid grid-rows-9 grid-cols-1 md:grid-rows-1 md:grid-cols-2"
@@ -552,6 +552,52 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+      <!-- QA secion -->
+      <section
+        class="qa w-full h-[100vh] flex justify-center items-center my-8"
+      >
+        <div
+          class="Bcircle relative flex justify-center items-center w-[40rem] h-[40rem]"
+        >
+          <div
+            class="font-Josefin flex flex-col justify-center text-center items-center gap-6 circle-text-wrapper w-[90%]"
+          >
+            <h1 class="text-white text-2xl font-bold md:text-3xl">
+              Test Your Knowledge: How Much Do You Know About the Environment?
+            </h1>
+            <h3
+              class="font-bold text-[rgba(255,255,255,0.8)] text-lg md:text-2xl"
+            >
+              Take the quiz and learn more about the impacts of ocean pollution.
+            </h3>
+            <div class="more-btn mt-[0.5rem] w-[15rem] md:w-[20rem]">
+              <a
+                href="./分頁/Q&A.html"
+                class="qaBtn more-btn-link block w-full relative"
+              >
+                <div class="more-btn-body w-full h-full relative z-20">
+                  <div class="inner">
+                    <span class="txt font-Josefin">Start Quiz</span>
+                    <span class="icon">
+                      <span class="arrow">
+                        <i class="ri-arrow-right-up-line"></i>
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div
+              class="circleBg absolute top-0 left-0 -z-10 w-[40rem] h-[40rem] bg-[url('../image/circle.png')] bg-cover bg-center bg-no-repeat md:bg-contain"
+            ></div>
+          </div>
+          <div
+            class="circle-img w-[20rem] absolute bottom-[-120px] md:right-[-64px] md:bottom-[-84px]"
+          >
+            <img src="./image/question-100.svg" alt="" class="w-full" />
           </div>
         </div>
       </section>

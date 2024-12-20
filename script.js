@@ -240,3 +240,17 @@ panes.forEach((pane, index) => {
     panes[activePaneIndex].classList.add("active");
   });
 });
+
+// qa
+gsap.from(".qa", {
+  y: 100,
+  opacity: 0,
+  duration: 2,
+  scrollTrigger: {
+    trigger: ".qa",
+    start: "top 80%",
+    end: "top 50%",
+    scrub: 1,
+    markers: false,
+  },
+});
