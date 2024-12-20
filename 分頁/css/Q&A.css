@@ -21,7 +21,9 @@ body{
     background-color: var(--Gray01);
     font-family: var(--Josefin);
     height: 100vh;
-    overflow: hidden;
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0;
 }
 main{
     width: 100%;
@@ -123,10 +125,11 @@ span{
     padding-right: .5rem;
 }
 .left .list_name{
-    margin-left: 4rem;
+    margin-left: 2rem;
 }
 .list_point_container{
     text-align: right;
+    width: 40rem;
 }
 
 .home .title{
@@ -141,7 +144,39 @@ span{
 .home .start-btn{
     margin-left: 23rem;
 }
-
+.home-bg{
+    position: absolute;
+    z-index: -10;
+}
+.circle-1{
+    height: 100rem;
+    width: 100rem;
+    background-color: var(--White);
+    border-radius: 45rem;
+    box-shadow: 0 0 .5rem 3px var(--Blue03);
+    margin-top: 78rem;
+    animation:move 20s linear infinite;
+    opacity: .5;
+}
+.circle-2{
+    height: 90rem;
+    width: 90rem;
+    background-color: var(--Blue01);
+    border-radius: 42rem;
+    box-shadow: 0 0 .5rem 3px var(--Blue03);
+    margin-top: -97rem;
+    margin-left: -17rem;
+    rotate: 80deg;
+    animation:move 15s linear infinite;
+}
+@keyframes move{
+    0%{
+      transform: rotate(0deg);
+    }
+    100%{
+      transform: rotate(360deg);
+    }
+  }
 .popup-info, .popup-info2{
     position: absolute;
     display: flex;
@@ -322,10 +357,13 @@ input:focus {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(.9);
-    width: 40rem;
-    background-color: black;
-    color: white;
-    padding: 1rem;
+    width: 30rem;
+    height: 20rem;
+    background-color: var(--White);
+    border-radius: 3rem;
+    color: var(--Blue03);
+    box-shadow: 0 0 1rem 2px var(--Gray01);
+    padding: 2rem 1rem 1rem 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -333,10 +371,19 @@ input:focus {
     pointer-events: none;
     transition: .3s ease;
 }
+.score-text{
+    margin-top: 1rem;
+}
 .quiz-section .result-box-active{
     opacity: 1;
     pointer-events: auto;
     transform: translate(-50%, -50%) scale(1);
+}
+.quiz-section .result-box .buttons{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
 }
 .quiz-footer{
     margin-top: 1rem;
@@ -374,7 +421,7 @@ input:focus {
     position: absolute;
     width: 7rem;
     height: 7rem;
-    background: black;
+    background: var(--White);
     border-radius: 50%;
 }
 .circular-progress .progress-value{
@@ -386,4 +433,96 @@ input:focus {
 .continueBtn-disable{
     pointer-events: none;
     opacity: .5;
+}
+
+@media screen and (max-width: 769px) {
+    .container {
+        width: 100%;
+        overflow: hidden;
+    }
+    .quiz-section {
+        left: -90%;
+    }
+    .quiz-section-active {
+        left: 0;
+        padding: 3rem;
+    }
+
+    .home {
+        left: -67%;
+    }
+    .home .left {
+        width: 0;
+        margin-bottom: -20rem;
+    }
+    .home .right {
+        margin-top: -35rem;
+    }
+    .home-content {
+        max-width: 25rem;
+    }
+    .home .start-btn {
+        margin-left: 18rem;
+    }
+}
+
+@media screen and (max-width: 321px) {
+    .quiz-section {
+        left: -105%;
+    }
+    .quiz-section-active {
+        left: 0;
+        width: 16rem;
+        padding: 2rem;
+    }
+    .question-text{
+        font-size: 1.3rem;
+    }
+    .quiz-section .result-box{
+        width: 16rem;
+    }
+    .home {
+        left: -85%;
+        margin-top: -1rem;
+    }
+    .home .title {
+        font-size: 4rem;
+        margin-bottom: -.2rem;
+    }
+    .left .box {
+        height: 12rem;
+        width: 10rem;
+    }
+    .left .sub_title {
+        margin-bottom: 0;
+        padding-bottom: .5rem;
+        font-size: 1rem;
+    }
+    .box .data{
+        height: 12rem;
+        overflow: hidden;
+        font-size: .65rem;
+    }
+    .data .data_num{
+        width: 2.5rem;
+    }
+    .left .list_name {
+        margin-left: 2.5rem;
+    }
+    .home .right {
+        margin-top: -21rem;
+        width: 13rem;
+    }
+    .home .start-btn {
+        margin: 0 0 1rem 6rem;
+        width: 7rem;
+    }
+    .popup-info, .popup-info2{
+        width: 15rem;
+        height: 19rem;
+    }
+    .popup-info2 .name_input{
+        flex-direction: column;
+    }
+    
 }

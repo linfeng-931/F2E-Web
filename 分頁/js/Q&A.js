@@ -266,7 +266,8 @@ function showData(){
     
     let y = 0;
     while(y<list_of_data.length){
-       data_num.innerHTML += `<li class="number">${list_of_data[y].number}</li>`;
+        let time = new Date(list_of_data[y].timeStamp);
+       data_num.innerHTML += `<li class="number">${time.getUTCMonth()+1}/${time.getUTCDate()}&nbsp${String(time.getHours()).padStart(2, '0')}:${String(time.getUTCMinutes()).padStart(2, '0')}:${String(time.getUTCSeconds()).padStart(2, '0')}</li>`;
        data_name.innerHTML += `<li>${list_of_data[y].nickName}</li>`;
        data_point.innerHTML += `<li><span class="list_point">${list_of_data[y].point}</span><span>point</span></li>`;
 
