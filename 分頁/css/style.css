@@ -31,6 +31,12 @@ h2{
 h1, h3{
     color: var(--Blue04);
 }
+li, ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
 
 /* Header Section */
 .header-js{
@@ -70,6 +76,45 @@ h1, h3{
     display: inline-block;
     width: 5.5555555556vw;
     margin: 0.875rem 0 0 1.5rem;
+}
+
+/*menu*/
+.menulist-container{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: -1rem;
+    z-index: 10;
+}
+.menulist-container ul{
+    display: flex;
+    gap:3rem;
+    background-color: var(--White);
+    padding: 2rem 2rem 1rem 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 .5rem 0 rgba(0, 0, 0, 0.2);
+}
+
+.menulist-container a{
+    color: var(--Blue04);
+    font-size: 1rem;
+    font-weight: 600;
+    padding-bottom: 5px;
+}
+.menulist-container a:hover{
+    opacity: .5;
+}
+.menulist-container a::after{
+    content:" ";
+    display:block; 
+    width: 0%;
+    height: 2.5px;
+    background-color: var(--Blue04);
+    transition: .4s .2s;
+  }
+.menulist-container a:hover::after{
+    width:100%;
 }
 
 /*table-of-contents*/

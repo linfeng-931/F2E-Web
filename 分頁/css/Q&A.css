@@ -22,7 +22,7 @@ body{
     font-family: var(--Josefin);
     height: 100vh;
     width: 100%;
-    overflow-x: hidden;
+    overflow: hidden;
     margin: 0;
 }
 main{
@@ -74,11 +74,12 @@ span{
 .container{
     display: flex;
     height: 100vh;
-    width: 200%;
+    width: 100%;
+    overflow: hidden;
 }
 .home{
     position: relative;
-    left: -49%;
+    left: -34%;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -165,7 +166,7 @@ span{
     border-radius: 42rem;
     box-shadow: 0 0 .5rem 3px var(--Blue03);
     margin-top: -97rem;
-    margin-left: -17rem;
+    margin-left: -29rem;
     rotate: 80deg;
     animation:move 15s linear infinite;
 }
@@ -258,7 +259,7 @@ input:focus {
   /*quiz*/
 .quiz-section{
     position: relative;
-    left: -60%;
+    left: -70%;
     width: 100%;
     background-color: var(--White);
     display: flex;
@@ -270,6 +271,7 @@ input:focus {
 }
 .quiz-section-active{
     left: 0;
+    padding: 0 27% 0 27%;
 }
 .quiz-section .quiz-box{
     position: relative;
@@ -499,7 +501,7 @@ input:focus {
         font-size: 1rem;
     }
     .box .data{
-        height: 12rem;
+        height: 9.5rem;
         overflow: hidden;
         font-size: .65rem;
     }
