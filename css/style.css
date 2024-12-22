@@ -6,6 +6,46 @@
   height: 100%;
 }
 
+.link:hover .line {
+  animation: lineThrough 1s both;
+}
+
+#dropdownNavbar1 {
+  display: none;
+}
+
+#dropdownNavbar1.dropdownNavbarshow1 {
+  display: block;
+}
+
+.qaBtn.more-btn-link::before{
+  background-color: #4881bb;
+}
+
+.circleBg{
+animation: Rotate 10s infinite;
+}
+
+@keyframes Rotate{
+  from{
+    transform:rotate(0)
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes lineThrough {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
 .carousel-item {
   margin-top: 5rem;
 }

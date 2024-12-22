@@ -4,23 +4,23 @@ const slideRow = document.getElementById("slide-wrapper");
 const main = document.querySelector(".slider-container");
 const imgBtn = document.querySelectorAll(".img-wrapper a");
 const tocBtn = document.querySelectorAll("table-of-contents a");
-const dropdownBtn = document.querySelector(".dropdownBtn");
-const arrow = document.querySelector(".ri-arrow-down-s-line");
+const dropdownBtn1 = document.querySelector(".dropdownBtn1");
+const arrow = document.querySelector(".donation-drop");
 
-let count = 0;
-dropdownBtn.addEventListener("click", dropdownShow);
+let donateCount = 0;
+dropdownBtn1.addEventListener("click", donateDropdownShow);
 
-function dropdownShow() {
-  if (count % 2 == 0) {
+function donateDropdownShow() {
+  if (donateCount % 2 == 0) {
     gsap.to(".ri-arrow-down-s-line", {
       rotate: 180,
     });
-    count++;
+    donateCount++;
   } else {
     gsap.to(".ri-arrow-down-s-line", {
       rotate: 0,
     });
-    count++;
+    donateCount++;
   }
 
   const dropdown = document.getElementById("dropdownNavbar");

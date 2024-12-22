@@ -1,3 +1,26 @@
+const dropdownBtn = document.querySelector(".dropdownBtn");
+const arrow = document.querySelector(".home-drop");
+
+let homeCount = 0;
+dropdownBtn.addEventListener("click", homeDropdownShow);
+
+function homeDropdownShow() {
+  if (homeCount % 2 == 0) {
+    gsap.to(".ri-arrow-down-s-line", {
+      rotate: 180,
+    });
+    homeCount++;
+  } else {
+    gsap.to(".ri-arrow-down-s-line", {
+      rotate: 0,
+    });
+    homeCount++;
+  }
+
+  const dropdown = document.getElementById("dropdownNavbar1");
+  dropdown.classList.toggle("dropdownNavbarshow1"); // 切換 show 類別
+}
+
 const ctx = document.getElementById("myChart");
 new Chart(ctx, {
   type: "pie",
@@ -28,9 +51,6 @@ new Chart(ctx, {
 // let isMenuOpen = true;
 // let tl = gsap.timeline();
 
-document.querySelector(".navTrigger").addEventListener("click", function () {
-  this.classList.toggle("active");
-});
 // function menuOpen() {
 //   menu.classList.add("menu-open");
 
@@ -219,4 +239,18 @@ panes.forEach((pane, index) => {
     activePaneIndex = index;
     panes[activePaneIndex].classList.add("active");
   });
+});
+
+// qa
+gsap.from(".qa", {
+  y: 100,
+  opacity: 0,
+  duration: 2,
+  scrollTrigger: {
+    trigger: ".qa",
+    start: "top 80%",
+    end: "top 50%",
+    scrub: 1,
+    markers: false,
+  },
 });
