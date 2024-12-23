@@ -1,8 +1,17 @@
 /*Donation Page*/
+.donate-page{
+  position: relative;
+}
 
 .show {
   display: flex;
   flex-direction: column;
+  margin-left: -10%;
+}
+
+.menu-btn{
+  z-index: 6;
+  margin-top: -.6rem;
 }
 
 .openAnimation {
@@ -20,6 +29,7 @@
 
 #dropdownNavbar.dropdownNavbarshow {
   display: block;
+  position: absolute;
 }
 
 @keyframes open {
@@ -40,4 +50,36 @@
 .ri-recycle-line,
 .ri-speak-line {
   font-size: 2rem;
+}
+
+
+@media screen and (max-width: 769px){
+  .show{
+    display: flex;
+    flex-direction: column;
+    margin-left: -10%;
+    position: absolute;
+    margin: 7rem -1% 0 0;
+    background-color: white;
+    border-radius: 1rem;
+    width: 90%;
+    z-index: 5;
+    padding: 2rem 2rem .5rem 2rem;
+    animation: open ease-out 0.1s;
+    box-shadow: -5px .8rem 1.2rem 0 rgb(0, 0, 0, .2);
+  }
+
+  nav{
+    position: absolute;
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    margin-left: -4rem;
+  }
+} 
+
+@media screen and (max-width: 361px){
+  nav{
+    margin-left: -2.2rem;
+  }
 }

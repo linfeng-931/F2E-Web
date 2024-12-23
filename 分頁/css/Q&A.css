@@ -1,3 +1,4 @@
+@import url('../../css/output.css');
 :root{
     --White: #FFFFFF;
     --Gray01: #DEDEDE;
@@ -28,8 +29,10 @@ body{
 main{
     width: 100%;
 }
-h2{
+h2 {
     color: var(--Blue03);
+    margin: 1rem .5rem 1rem .5rem;
+    font-weight: 900;
 }
 h1, h3{
     color: var(--Blue04);
@@ -41,10 +44,11 @@ button{
     font-size: 1rem;
     font-family: var(--Josefin);
     color: var(--Blue04);
-    padding: 0.5rem 1rem;
+    padding: 0.3rem 1rem;
     font-weight: 600;
-    border-radius: 1rem;
+    border-radius: 2rem;
     cursor: pointer;
+    width: 7rem;
 }
 button:hover{
     background-color: var(--Blue03);
@@ -60,6 +64,15 @@ a:hover{
 span{
     gap: .5rem;
 }
+
+.menuBtn{
+    margin-top: 0;
+}
+.head{
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+}
 .main{
     transition: .3s ease;
 }
@@ -71,7 +84,7 @@ span{
     filter: blur(15px);
     pointer-events: none;
 }
-.container{
+.container-main{
     display: flex;
     height: 100vh;
     width: 100%;
@@ -88,6 +101,7 @@ span{
 }
 .home .right{
     width: 40rem;
+    margin-top: 4rem;
 }
 .home .left{
     width: 36rem;
@@ -141,6 +155,7 @@ span{
     max-width: 30rem;
     display: flex;
     flex-direction: column;
+    margin-top: 2rem;
 }
 .home .start-btn{
     margin-left: 23rem;
@@ -183,7 +198,6 @@ span{
     display: flex;
     flex-direction: column;
     width: 30rem;
-    height: 15rem;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -271,7 +285,7 @@ input:focus {
 }
 .quiz-section-active{
     left: 0;
-    padding: 0 27% 0 27%;
+    padding: 0 30% 0 30%;
 }
 .quiz-section .quiz-box{
     position: relative;
@@ -315,15 +329,15 @@ input:focus {
     background-color: var(--Blue03);
     color: var(--White);
     padding: .5rem 1rem;
-    border-radius: 1rem;
+    border-radius: 2rem;
 }
 .option{
-    padding: .8rem;
+    padding: .6rem;
     width: 100%;
     background-color: white;
     cursor: pointer;
     margin: 0.5rem 0;
-    border-radius: 1rem;
+    border-radius: 2rem;
     transition: .1s ease;
     transform: scale(.95);
 }
@@ -360,7 +374,6 @@ input:focus {
     left: 50%;
     transform: translate(-50%, -50%) scale(.9);
     width: 30rem;
-    height: 20rem;
     background-color: var(--White);
     border-radius: 3rem;
     color: var(--Blue03);
@@ -372,6 +385,14 @@ input:focus {
     opacity: 0;
     pointer-events: none;
     transition: .3s ease;
+}
+.result-box h2{
+    font-size: 1.5rem;
+}
+.quiz-section .result-box button{
+    width: 8rem;
+    margin-top: 0;
+    margin-bottom: .7rem;
 }
 .score-text{
     margin-top: 1rem;
@@ -438,6 +459,13 @@ input:focus {
 }
 
 @media screen and (max-width: 769px) {
+    .hidden{
+        display: none;
+    }
+    .show {
+        display: flex;
+        flex-direction: column;
+    }
     .container {
         width: 100%;
         overflow: hidden;
@@ -447,18 +475,18 @@ input:focus {
     }
     .quiz-section-active {
         left: 0;
-        padding: 3rem;
+        padding: 7rem;
     }
 
     .home {
-        left: -67%;
+        left: -60%;
     }
     .home .left {
         width: 0;
         margin-bottom: -20rem;
     }
     .home .right {
-        margin-top: -35rem;
+        margin-top: -70%;
     }
     .home-content {
         max-width: 25rem;
@@ -474,15 +502,33 @@ input:focus {
     }
     .quiz-section-active {
         left: 0;
-        width: 16rem;
-        padding: 2rem;
+        width: 20rem;
     }
     .question-text{
-        font-size: 1.3rem;
+        font-size: 1rem;
     }
     .quiz-section .result-box{
         width: 16rem;
     }
+    .quiz-header .header-score {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 3rem;
+        font-size: .8rem;
+    }
+
+    .quiz-section .quiz-box{
+        padding-top: 0;
+    }
+
+    .quiz-footer .question-total {
+        font-size: 1rem;
+    }
+    .option {
+        padding: .3rem .5rem;
+        margin: .3rem 0;
+    }
+
     .home {
         left: -85%;
         margin-top: -1rem;
@@ -492,8 +538,8 @@ input:focus {
         margin-bottom: -.2rem;
     }
     .left .box {
-        height: 12rem;
-        width: 10rem;
+        height: 16rem;
+        width: 14rem;
     }
     .left .sub_title {
         margin-bottom: 0;
@@ -512,18 +558,24 @@ input:focus {
         margin-left: 2.5rem;
     }
     .home .right {
-        margin-top: -21rem;
+        margin-top: -100%;
         width: 13rem;
     }
     .home .start-btn {
-        margin: 0 0 1rem 6rem;
+        margin: 1rem 0 1rem 6rem;
         width: 7rem;
     }
-    .popup-info, .popup-info2{
-        width: 15rem;
-        height: 19rem;
+    .popup-info{
+        width: 18rem;
+        height: 27rem;
+        padding: 1.5rem;
+    }
+    .popup-info2{
+        width: 18rem;
+        padding: 1.5rem;
     }
     .popup-info2 .name_input{
+        margin-top: 1.5rem;
         flex-direction: column;
     }
     
