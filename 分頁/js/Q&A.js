@@ -85,6 +85,13 @@ const quiz_Ref = db.collection("quiz");
 const data_Ref = quiz_Ref.doc("data");
 
 
+const menuBtn = document.querySelector(".menuBtn");
+const menuList = document.querySelector(".menuList");
+menuBtn.addEventListener("click", displayMenu);
+function displayMenu() {
+  menuList.classList.toggle("show");
+}
+
 let x = 1;
 let point = 0;
 let flag = 0;
