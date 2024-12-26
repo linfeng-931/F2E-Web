@@ -18,19 +18,49 @@
   display: block;
 }
 
-.qaBtn.more-btn-link::before{
+.qaBtn.more-btn-link::before {
   background-color: #4881bb;
 }
 
-.circleBg{
-animation: Rotate 10s infinite;
+.circleBg {
+  animation: Rotate 10s infinite;
 }
 
-@keyframes Rotate{
-  from{
-    transform:rotate(0)
+.inline-grid > li {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+.inline-grid > li:hover {
+  opacity: 1;
+  transform-origin: left;
+  transform: scale(1.2);
+}
+
+.social-logos > a {
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #4881bb;
+  border-radius: 50%;
+}
+
+.social-logos > a:hover {
+  background-color: #8eb4d9;
+  transform: scale(1.2);
+}
+
+.social-logos > a i {
+  font-size: 1.5rem;
+}
+
+@keyframes Rotate {
+  from {
+    transform: rotate(0);
   }
-  to{
+  to {
     transform: rotate(360deg);
   }
 }
@@ -53,6 +83,15 @@ animation: Rotate 10s infinite;
 #myChart {
   width: 250px !important;
   height: 250px !important;
+}
+
+.footer-widget-title h3::after {
+  content: " ";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  margin-top: 0.5rem;
 }
 
 .pane.active {

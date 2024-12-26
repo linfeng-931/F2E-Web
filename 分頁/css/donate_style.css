@@ -51,6 +51,44 @@
   animation: lineThrough 1s both;
 }
 
+.inline-grid > li {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+.inline-grid > li:hover {
+  opacity: 1;
+  transform-origin: left;
+  transform: scale(1.2);
+}
+
+.social-logos > a {
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #4881bb;
+  border-radius: 50%;
+}
+
+.social-logos > a:hover {
+  background-color: #8eb4d9;
+  transform: scale(1.2);
+}
+
+.social-logos > a i {
+  font-size: 1.5rem;
+}
+.footer-widget-title h3::after {
+  content: " ";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  margin-top: 0.5rem;
+}
+
 @keyframes lineThrough {
   form {
     width: 0;

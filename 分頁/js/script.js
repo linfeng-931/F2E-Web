@@ -211,7 +211,7 @@ timeline = gsap.timeline({
     end: "top 80%",
     scrub: 4,
     stagger: 0.4,
-    // markers: true,
+    //markers: true,
   },
 });
 
