@@ -82,6 +82,7 @@ $(document).ready(function () {
 
   donateBtn.addEventListener("click", show);
   function show() {
+    console.log(true);
     donate.classList.remove("hidden");
     donate.classList.add("flex");
   }
