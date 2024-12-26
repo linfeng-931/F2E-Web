@@ -247,7 +247,7 @@ let sub_list_of_data;
 
 async function fetchData() {
     list_of_data = [];
-  for (let y = 0; y < 11; y++) {
+  for (let y = 0; y < 10; y++) {
     try {
         const doc = await data_Ref.get();  // 等待 Firestore 獲取文檔
         let datanum = "data-" + (x - y);  // 計算屬性名稱
