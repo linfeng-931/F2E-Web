@@ -958,45 +958,59 @@ a{
     position: relative;
     margin-top: 4rem;
     background: linear-gradient(to bottom,#44688B,#023850 );
-    font-family: "Josefin Sans", sans-serif;;
   }
   
-  .footer-section{
+.footer-section .container{
     width: 100%;
     padding:4rem 2rem;
     display:grid;
     justify-content:center;
     color:white;
     gap:1rem;
-  }
-  .container{
-    display: grid;
-    gap: 1rem;
     grid-template-rows: repeat(1, minmax(0, 1fr));
     grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
+}
 
-  .footer-widget{
-    grid-column: span 2 / span 2;
-  }
+footer h3{
+    color: var(--White);
+}
+#page-2 footer h3{
+    color: var(--White);
+}
+#page-3 footer h3{
+    color: var(--White);
+}
+.footer-widget-01{
+    grid-column: span 1 / span 1;
+    width: 90%;
+    margin: auto;
+}
   
-  .footer-logo{
+.footer-logo{
     width:6rem;
     margin-bottom: 2rem;
-  }
+}
   
-  .footer-text{
+.footer-text{
     font-size: 16px;
     line-height: 1.5;
     margin-top: 1rem;
     opacity:0.8;
-  }
+}
   
-  .footer-widget-title{
+.footer-widget-title{
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 20px;
-  }
+}
+.ul-container{
+    display: inline-grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+    width: 80%;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
   
   .inline-grid > li {
     opacity: 0.8;
@@ -1035,6 +1049,13 @@ a{
     height: 2px;
     background-color: #fff;
     margin-top: 0.5rem;
+  }
+
+  .social-media{
+    display: inline-flex;
+    gap: 1rem;
+    width: 100%;
+    margin-top: 1rem;
   }
 
 /*media*/
@@ -1493,11 +1514,15 @@ a{
     }
 
     /*footer*/
-    .container{
+    .footer-section .container{
         grid-template-rows: repeat(2, minmax(0, 1fr));
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 1rem;
     }
+    .footer-widget-01{
+        grid-column:  span 2 / span 2;
+        width: 100%;
+      }
 
     #page-3 .plastic-link-bg .decoration-img {
         margin-top: -30rem;
@@ -1787,10 +1812,13 @@ a{
     }
 
     /*footer*/
-    .container{
-        grid-template-rows: repeat(1, minmax(0, 1fr));
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+    .footer-section .container{
+        grid-template-rows: repeat(3, minmax(0, 1fr));
+        grid-template-columns: repeat(1, minmax(0, 1fr));
         gap: 1rem;
+    }
+    .footer-widget-01{
+        grid-column: auto;
     }
 
 }

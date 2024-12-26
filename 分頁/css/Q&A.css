@@ -496,7 +496,7 @@ input:focus {
     }
 }
 
-@media screen and (max-width: 321px) {
+@media screen and (max-width: 361px) {
     .quiz-section {
         left: -105%;
     }

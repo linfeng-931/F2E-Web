@@ -125,6 +125,11 @@ info_backBtn.onclick = () => {
 continueBtn.onclick = () => {
     if($nicknameField.val() == ''){
         window.alert("Please enter your nickname!");
+        $nicknameField.css("background-color", "#FFECEC");
+    }
+    else if($nicknameField.val().length > 7){
+        window.alert("Max 7 characters.");
+        $nicknameField.css("background-color", "#FFECEC");
     }
     else{
         quizSection.classList.add('quiz-section-active');
@@ -132,6 +137,7 @@ continueBtn.onclick = () => {
         main.classList.remove('main-active');
         quizBox.classList.add('quiz-box-active');
 
+        $nicknameField.css("background-color", "white");
         showQuestions(0);
         questionCounter(1);
         headerScore();
