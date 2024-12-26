@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/output.css" />
+    <link rel="stylesheet" href="./分頁/css/donation.css">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -43,67 +44,91 @@
         </a>
       </div>
     </header>
-    <nav class="absolute right-16 top-4 z-10">
-      <ul
-        class="menuList font-Josefin hidden lg:flex flex-row lg:basis-auto lg:items-center lg:ml-auto lg:space-x-8 xl:space-x-14"
-      >
-        <li
-          class="link flex flex-col relative font-semibold text-white mb-5 lg:mb-0"
-        >
-          <a href="./index.html" class="inline-flex flex-col">Home</a>
-          <div class="line h-[2px] bg-white opacity-0"></div>
-        </li>
-        <div class="dropdown-container relative cursor-pointer mb-5 lg:mb-0">
-          <li
-            class="link dropdownBtn inline-flex items-center gap-2 font-semibold text-white hover:text-B500 lg:mb-0"
-          >
-            <a href="#">Introduce</a>
-            <i class="ri-arrow-down-s-line home-drop"></i>
-          </li>
-          <!-- Dropdown menu -->
+    <section class="bg- py-8 md:mb-8 main-page-menu">
+      <div class="container max-w-[80rem] mx-auto px-4">
+        <nav class="lg:flex items-center mb-0">
           <div
-            id="dropdownNavbar1"
-            class="w-full font-normal bg-white rounded-lg shadow-xl lg:absolute lg:z-20 lg:!w-[11rem] lg:-translate-x-1/2 lg:left-1/2"
+            class="menu-btn flex items-center mb-10 lg:mb-0 lg:justify-between"
           >
-            <ul
-              class="py-4 font-semibold text-gray-900"
-              aria-labelledby="dropdownLargeButton"
+            <img
+              src="../image/logo_blue.png"
+              alt="logo"
+              class="invisible max-w-20"
+            />
+            <button
+              class="menuBtn hover:bg-B200 hover:text-white w-10 h-10 ml-auto flex items-center justify-center border border-B200 text-B200 rounded-md lg:hidden"
             >
-              <li>
-                <a
-                  href="./分頁/fishing-net.html"
-                  class="block px-4 py-2 hover:text-gray-400"
-                  >Fishing Net</a
-                >
-              </li>
-              <li>
-                <a
-                  href="./分頁/plastic-bags.html"
-                  class="block px-4 py-2 hover:text-gray-400"
-                  >Plastic Bag</a
-                >
-              </li>
-              <li>
-                <a
-                  href="./分頁/microplastic.html"
-                  class="block px-4 py-2 hover:text-gray-400"
-                  >Microplastic</a
-                >
-              </li>
-            </ul>
+              <i class="ri-menu-line donation-drop"></i>
+            </button>
           </div>
-        </div>
+          <ul
+            class="menuList font-Josefin hidden lg:flex flex-row lg:basis-auto lg:items-center lg:ml-auto lg:space-x-8 xl:space-x-14"
+          >
+            <li
+              class="link flex flex-col relative font-semibold text-white mb-5 lg:mb-0"
+            >
+              <a href="index.html" class="inline-flex flex-col">Home</a>
+              <div class="line h-[2px] bg-white opacity-0 main-page-line main-page-line"></div>
+            </li>
+            <div
+              class="dropdown-container relative cursor-pointer mb-5 lg:mb-0"
+            >
+              <li
+                class="link dropdownBtn inline-flex items-center gap-2 font-semibold text-white hover:text-gray-400 lg:mb-0"
+              >
+                <a href="#">Introduce</a>
+                <i class="ri-arrow-down-s-line"></i>
+              </li>
+              <!-- Dropdown menu -->
+              <div
+                id="dropdownNavbar"
+                class="w-full font-normal bg-white rounded-lg shadow-xl lg:absolute lg:z-20 lg:!w-[11rem] lg:-translate-x-1/2 lg:left-1/2"
+              >
+                <ul
+                  class="py-4 font-semibold text-gray-900"
+                  aria-labelledby="dropdownLargeButton"
+                >
+                  <li>
+                    <a
+                      href="分頁/fishing-net.html"
+                      class="block px-4 py-2 hover:text-gray-400"
+                      >Fishing Net</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="分頁/plastic-bags.html"
+                      class="block px-4 py-2 hover:text-gray-400"
+                      >Plastic Bag</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="分頁/microplastic.html"
+                      class="block px-4 py-2 hover:text-gray-400"
+                      >Microplastic</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
 
-        <li class="link flex flex-col font-semibold text-white mb-5 lg:mb-0">
-          <a href="./分頁/Q&A.html">Quiz</a>
-          <div class="line h-[2px] bg-white opacity-0"></div>
-        </li>
-        <li class="link flex flex-col font-semibold text-white mb-5 lg:mb-0">
-          <a href="./分頁/donation.html">Support Us</a>
-          <div class="line h-[2px] bg-white opacity-0"></div>
-        </li>
-      </ul>
-    </nav>
+            <li
+              class="link flex flex-col font-semibold text-white mb-5 lg:mb-0"
+            >
+              <a href="分頁/Q&A.html">Quiz</a>
+              <div class="line h-[2px] bg-white opacity-0 main-page-line"></div>
+            </li>
+            <li
+              class="link flex flex-col font-semibold text-white mb-5 lg:mb-0"
+            >
+              <a href="分頁/donation.html">Support Us</a>
+              <div class="line h-[2px] bg-white opacity-0 main-page-line"></div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
     <!-- main section -->
     <main>
       <!-- banner section -->
@@ -678,6 +703,5 @@
   <script src="https://unpkg.com/split-type"></script>
   <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.jss"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
   <script src="script.js"></script>
 </html>

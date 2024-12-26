@@ -17,8 +17,8 @@ function homeDropdownShow() {
     homeCount++;
   }
 
-  const dropdown = document.getElementById("dropdownNavbar1");
-  dropdown.classList.toggle("dropdownNavbarshow1"); // 切換 show 類別
+  const dropdown = document.getElementById("dropdownNavbar");
+  dropdown.classList.toggle("dropdownNavbarshow"); // 切換 show 類別
 }
 
 const ctx = document.getElementById("myChart");
@@ -43,6 +43,12 @@ new Chart(ctx, {
   },
 });
 
+const menuBtn = document.querySelector(".menuBtn");
+const menuList = document.querySelector(".menuList");
+menuBtn.addEventListener("click", displayMenu);
+function displayMenu() {
+  menuList.classList.toggle("show");
+}
 // Menu
 // let navTrigger = document.querySelector(".navTrigger");
 // const menu = document.querySelector(".menu");

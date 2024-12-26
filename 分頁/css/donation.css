@@ -52,6 +52,11 @@
   font-size: 2rem;
 }
 
+.main-page-menu{
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+}
 
 @media screen and (max-width: 769px){
   .show{
@@ -75,6 +80,12 @@
     justify-content: end;
     width: 100%;
     margin-left: -4rem;
+  }
+  .main-page-menu li{
+    color: var(--Blue04)
+  }
+  .main-page-menu .main-page-line{
+    background-color: var(--Blue04);
   }
 } 
 
