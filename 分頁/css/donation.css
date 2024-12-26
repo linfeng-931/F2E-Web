@@ -82,10 +82,10 @@
     margin-left: -4rem;
   }
   .main-page-menu li{
-    color: var(--Blue04)
+    color: #023850;
   }
   .main-page-menu .main-page-line{
-    background-color: var(--Blue04);
+    background-color: #023850;
   }
 } 
 
