@@ -140,7 +140,7 @@ gsap.from(".animal-intro-section", {
     duration: 2,
     scrollTrigger: {
       trigger: ".marine-creature-3-news",
-      start: "top 60%",
+      start: "top 100%",
       end: "top 30%",
       scrub: 1,
       markers: false,

@@ -458,6 +458,16 @@ input:focus {
     opacity: .5;
 }
 
+@media screen and (min-width: 1920px){
+    .home {
+        left: -16%;
+    }
+    .quiz-section-active {
+        padding: 0 33.5% 0 33.5%;
+    }
+
+}
+
 @media screen and (max-width: 769px) {
     .hidden{
         display: none;
@@ -502,13 +512,17 @@ input:focus {
     }
     .quiz-section-active {
         left: 0;
-        width: 20rem;
+        width: 23rem;
+    }
+    .quiz-section .result-box button {
+        width: 7rem;
+        font-size: .8rem;
     }
     .question-text{
         font-size: 1rem;
     }
     .quiz-section .result-box{
-        width: 16rem;
+        width: 19rem;
     }
     .quiz-header .header-score {
         width: 4rem;
